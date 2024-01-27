@@ -1,11 +1,11 @@
 import React from 'react'
 
 interface ExperiencesProps {
-  title?: string;
-  list: string[];
-  company: string;
-  position: string;
-  startDate: string;
+  title?: string
+  list: string[]
+  company: string
+  position: string
+  startDate: string
   endDate: string
   location: string
 }
@@ -13,19 +13,25 @@ interface ExperiencesProps {
 export default function Experiences(props: Readonly<ExperiencesProps>) {
   return (
     <div className="p-4">
-      {
-        props.title && (
-          <p className="text-xl font-semibold text-gray-800 bg-green-300 pl-4 py-2 w-1/3">{props.title}</p>
-        )
-      }
-        <div>
+      {props.title && (
+        <p className="text-xl font-semibold text-gray-800 bg-green-300 pl-4 py-2 w-1/3">
+          {props.title}
+        </p>
+      )}
+      <div>
         <div className="flex mt-4 justify-between items-center">
           <div>
-            <p className="text-xl font-semibold bg-gray-400 px-4 italic text-white">{props.company}</p>
-            <p className="text-lg font-normal text-gray-500 mt-2">{props.position}</p>
+            <p className="text-xl font-semibold bg-gray-400 px-4 italic text-white">
+              {props.company}
+            </p>
+            <p className="text-lg font-normal text-gray-500 mt-2">
+              {props.position}
+            </p>
           </div>
           <div>
-            <p className="text-base text-gray-500">{props.startDate}-{props.endDate}</p>
+            <p className="text-base text-gray-500">
+              {props.startDate}-{props.endDate}
+            </p>
             <p className="text-base text-gray-500 mt-2">{props.location}</p>
           </div>
         </div>
@@ -36,7 +42,7 @@ export default function Experiences(props: Readonly<ExperiencesProps>) {
             ))}
           </ul>
         </div>
-        </div>
       </div>
+    </div>
   )
 }
