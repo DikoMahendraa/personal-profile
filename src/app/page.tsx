@@ -1,10 +1,11 @@
+import dynamic from 'next/dynamic'
 import AboutMe from '@/components/AboutMe'
 import Educations from '@/components/Educations'
 import Experiences from '@/components/Experiences'
 import Footer from '@/components/Footer'
-import Header from '@/components/Header'
 import LeftSide from '@/components/LeftSide'
 import Skills from '@/components/Skills'
+const Header = dynamic(() => import('@/components/Header'), { ssr: false })
 
 export default function Home() {
   return (

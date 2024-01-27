@@ -1,33 +1,51 @@
+'use client'
+
+import { useTheme } from 'next-themes'
 import EnglishFlag from '@/svgs/EnglishFlag'
 import IndonesiaFlag from '@/svgs/IndonesiaFlag '
 import JapanFlag from '@/svgs/JapanFlag'
-import React from 'react'
+import Dark from '@/svgs/Dark'
+import Light from '@/svgs/Light'
 
 export default function Header() {
+  const { theme, setTheme } = useTheme()
+
   return (
-    <nav className="flex justify-between items-center sticky bg-white shadow-lg">
+    <nav className="flex justify-between items-center sticky bg-white shadow-lg pr-4 dark:bg-gray-800">
       <div className="flex">
-        <div className="p-4 text-blue-500">
-          <a className="text-gray-700 font-semibold" href="#about">
+        <div className="p-4">
+          <a
+            className="text-gray-700 font-semibold dark:text-white"
+            href="#about"
+          >
             About Me
           </a>
         </div>
-        <div className="p-4 text-blue-500">
-          <a className="text-gray-700 font-semibold" href="#experience">
+        <div className="p-4">
+          <a
+            className="text-gray-700 font-semibold dark:text-white"
+            href="#experience"
+          >
             Experience
           </a>
         </div>
-        <div className="p-4 text-blue-500">
-          <a className="text-gray-700 font-semibold" href="#education">
+        <div className="p-4">
+          <a
+            className="text-gray-700 font-semibold dark:text-white"
+            href="#education"
+          >
             Education
           </a>
         </div>
-        <div className="p-4 text-blue-500">
-          <a className="text-gray-700 font-semibold" href="#skills">
+        <div className="p-4">
+          <a
+            className="text-gray-700 font-semibold dark:text-white"
+            href="#skills"
+          >
             Skills
           </a>
         </div>
-        <div className="p-4 text-blue-500">
+        <div className="p-4">
           <a
             className="text-gray-400 cursor-default"
             aria-disabled
@@ -65,8 +83,18 @@ export default function Header() {
         </div>
 
         <div className="flex items-center space-x-2 ml-4">
-          <p className="text-sm">Dark</p>
-          <input type="checkbox" className="toggle toggle-sm" />
+          <p className="text-sm italic capitalize">
+            {theme === 'light' ? <Dark /> : <Light />}
+          </p>
+
+          <input
+            type="checkbox"
+            checked={theme === 'light'}
+            className="toggle toggle-sm"
+            onChange={() => {
+              return theme === 'light' ? setTheme('dark') : setTheme('light')
+            }}
+          />
         </div>
       </div>
     </nav>

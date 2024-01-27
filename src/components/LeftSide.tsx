@@ -16,24 +16,36 @@ export default function LeftSide() {
         </div>
       </div>
       <div className="text-center mt-4">
-        <p className="font-bold text-gray-800 text-2xl">DIKO MAHENDRA</p>
-        <p className="text-gray-600 text-lg">Frontend Developer</p>
+        <p className="font-bold text-gray-800 text-2xl dark:text-white">
+          DIKO MAHENDRA
+        </p>
+        <p className="text-gray-600 text-lg dark:text-gray-400">
+          Frontend Developer
+        </p>
       </div>
       <div className="mt-6 text-lg">
-        <p className="font-semibold text-gray-800 text-lg">Whatsapp</p>
-        <p className="text-gray-600 text-base">+628-2384-8980-30</p>
+        <p className="font-semibold text-gray-800 text-lg dark:text-white">
+          Whatsapp
+        </p>
+        <p className="text-gray-600 text-base dark:text-gray-400">
+          +628-2384-8980-30
+        </p>
       </div>
       <div className="mt-4 text-lg">
-        <p className="font-semibold text-gray-800">Email</p>
-        <p className="text-gray-600 text-base">diko.dev99@gmail.com</p>
+        <p className="font-semibold text-gray-800 dark:text-white">Email</p>
+        <p className="text-gray-600 text-base dark:text-gray-400">
+          diko.dev99@gmail.com
+        </p>
       </div>
       <div className="mt-4 text-lg">
-        <p className="font-semibold text-lg text-gray-800">SOCIAL LINKS</p>
+        <p className="font-semibold text-lg text-gray-800 dark:text-white">
+          Social Media
+        </p>
         <div className="flex flex-col">
-          <ul className="list-disc ml-4">
+          <ul className="list-disc dark:marker:text-white marker:text-gray-600 ml-4">
             <li>
               <a
-                href="https://www.facebook/cocomahendr4"
+                href="https://web.facebook.com/diko.mahendra.790"
                 target="_blank"
                 className="link link-info text-base"
               >
@@ -42,7 +54,7 @@ export default function LeftSide() {
             </li>
             <li>
               <a
-                href="https://www.facebook/cocomahendr4"
+                href="https://www.instagram.com/dikomahendr4/"
                 target="_blank"
                 className="link link-info text-base"
               >
@@ -51,29 +63,20 @@ export default function LeftSide() {
             </li>
             <li>
               <a
-                href="https://www.facebook/cocomahendr4"
+                href="https://www.linkedin.com/in/diko-mahendra/"
                 target="_blank"
                 className="link link-info text-base"
               >
-                Youtube
+                Linkedin
               </a>
             </li>
             <li>
               <a
-                href="https://www.facebook/cocomahendr4"
+                href="https://github.com/DikoMahendraa"
                 target="_blank"
                 className="link link-info text-base"
               >
-                Tiktok
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.facebook/cocomahendr4"
-                target="_blank"
-                className="link link-info text-base"
-              >
-                Twitter
+                Github
               </a>
             </li>
           </ul>
@@ -81,7 +84,9 @@ export default function LeftSide() {
       </div>
 
       <div className="mt-8">
-        <button className="btn btn-outline rounded-sm">Download Resume</button>
+        <button className="btn btn-outline rounded-sm dark:btn-info dark:btn-primary">
+          Download Resume
+        </button>
       </div>
     </div>
   )
