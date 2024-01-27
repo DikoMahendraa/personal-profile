@@ -1,1 +1,4 @@
 setup eslint: https://paulintrognon.fr/blog/typescript-prettier-eslint-next-js
+daisyui: https://daisyui.com/components/
+use svg on nextjs: https://blog.logrocket.com/import-svgs-next-js-apps/
+svgr to component: https://react-svgr.com/playground/

@@ -19,13 +19,13 @@ export default function LeftSide() {
         <p className="font-bold text-gray-800 text-2xl">DIKO MAHENDRA</p>
         <p className="text-gray-600 text-lg">Frontend Developer</p>
       </div>
-      <div className="mt-6">
-        <p className="font-semibold text-gray-800 text-lg">Contact Number</p>
-        <p className="text-gray-600">+628-2384-8980-30</p>
+      <div className="mt-6 text-lg">
+        <p className="font-semibold text-gray-800 text-lg">Whatsapp</p>
+        <p className="text-gray-600 text-base">+628-2384-8980-30</p>
       </div>
       <div className="mt-4 text-lg">
         <p className="font-semibold text-gray-800">Email</p>
-        <p className="text-gray-600">diko.dev99@gmail.com</p>
+        <p className="text-gray-600 text-base">diko.dev99@gmail.com</p>
       </div>
       <div className="mt-4 text-lg">
         <p className="font-semibold text-lg text-gray-800">SOCIAL LINKS</p>
@@ -35,7 +35,7 @@ export default function LeftSide() {
               <a
                 href="https://www.facebook/cocomahendr4"
                 target="_blank"
-                className="text-blue-400"
+                className="link link-info text-base"
               >
                 Facebook
               </a>
@@ -44,7 +44,7 @@ export default function LeftSide() {
               <a
                 href="https://www.facebook/cocomahendr4"
                 target="_blank"
-                className="text-blue-400"
+                className="link link-info text-base"
               >
                 Instagram
               </a>
@@ -53,7 +53,7 @@ export default function LeftSide() {
               <a
                 href="https://www.facebook/cocomahendr4"
                 target="_blank"
-                className="text-blue-400"
+                className="link link-info text-base"
               >
                 Youtube
               </a>
@@ -62,7 +62,7 @@ export default function LeftSide() {
               <a
                 href="https://www.facebook/cocomahendr4"
                 target="_blank"
-                className="text-blue-400"
+                className="link link-info text-base"
               >
                 Tiktok
               </a>
@@ -71,7 +71,7 @@ export default function LeftSide() {
               <a
                 href="https://www.facebook/cocomahendr4"
                 target="_blank"
-                className="text-blue-400"
+                className="link link-info text-base"
               >
                 Twitter
               </a>
@@ -81,9 +81,7 @@ export default function LeftSide() {
       </div>
 
       <div className="mt-8">
-        <button className="px-4 py-2 border border-gray-600 hover:bg-slate-400 hover:text-white transition transform ">
-          Download Resume
-        </button>
+        <button className="btn btn-outline rounded-sm">Download Resume</button>
       </div>
     </div>
   )
