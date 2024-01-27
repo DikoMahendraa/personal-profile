@@ -24,13 +24,32 @@ export default function LeftSide() {
      </div>
      <div className="mt-4 text-lg">
        <p className="font-semibold text-lg text-gray-800">SOCIAL LINKS</p>
-       <div>
-         <p className="text-gray-600">Facebook</p>
-         <p className="text-gray-600">Instagram</p>
-         <p className="text-gray-600">Youtube</p>
-         <p className="text-gray-600">Tiktok</p>
-         <p className="text-gray-600">Twitter</p>
+       <div className='flex flex-col'>
+        <ul className='list-disc ml-4'>
+          <li>
+            <a href='www.facebook/cocomahendr4' target='_blank' className="text-blue-400">Facebook</a>
+          </li>
+          <li>
+            <a href='www.facebook/cocomahendr4' target='_blank' className="text-blue-400">Instagram</a>
+          </li>
+          <li>
+            <a href='www.facebook/cocomahendr4' target='_blank' className="text-blue-400">Youtube</a>
+          </li>
+          <li>
+            <a href='www.facebook/cocomahendr4' target='_blank' className="text-blue-400">Tiktok</a>
+          </li>
+          <li>
+            <a href='www.facebook/cocomahendr4' target='_blank' className="text-blue-400">Twitter</a>
+          </li>
+        </ul>
        </div>
+     </div>
+
+
+     <div className='mt-8'>
+      <button className='px-4 py-2 border border-gray-600 hover:bg-slate-400 hover:text-white transition transform '>
+        Download Resume
+      </button>
      </div>
    </div>
   )

@@ -5,8 +5,7 @@ import LeftSide from "@/components/LeftSide";
 
 export default function Home() {
   return (
-    <main className="container mx-auto flex justify-center items-center h-screen">
-     <div className="h-[80rem] w-10/12 rounded-md shadow-xl">
+    <main className="container mx-auto flex justify-center items-center h-screen mt-10">
      <section className="grid grid-cols-3 relative">
         <div className="col-span-1 px-6">
             <LeftSide/>
@@ -16,12 +15,15 @@ export default function Home() {
         <Header />
        <div className="overflow-y-scroll h-[75rem]">
           <AboutMe />
+          
+          <div id="experience" >
           <Experiences
+            location="Slangor - Malaysia"
             endDate="presently"
             startDate="April 2023"
             company="Virtual Spirit Sdn Bhd"
             position="Frontend Developer"
-            title="PENGALAMAN KERJA"
+            title="Experiences"
             list={[
             "Revamp old UI to new UI",
             "Implement responsive design for desktop, tablet and mobile using tailwindCSS",
@@ -32,6 +34,7 @@ export default function Home() {
           ]} 
           /> 
           <Experiences
+            location="Jakarta Selatan - Indonesia"
             company="PT. Telkom Indonesia"
             position="Frontend Engineer"
             startDate="Jan 2022"
@@ -48,7 +51,8 @@ export default function Home() {
             "Apply clean code to all code created",
             "Work with teams, from FE, BE, QA, UI/UX, and PM"
           ]} /> 
-          <Experiences 
+          <Experiences
+            location="Bandung, Indonesia" 
             company="PT. Kaldu Sari Nabati"
             position="Frontend Engineer"
             startDate="Jan 2022"
@@ -60,9 +64,10 @@ export default function Home() {
               "Integrate with endpoints that have been provided by the Backend.",
               "Worked with teams, from FE, BE and PM."
           ]} />
+          </div>
 
-          <div>
-            <p className="text-xl font-semibold text-gray-800">Pendidikan</p>
+          <div id="education">
+            <p className="text-xl font-semibold text-gray-600  bg-green-300 pl-4 py-2 w-1/3">Educations</p>
             <div className="grid grid-cols-2 mt-4">
               <div>
                 <p className="text-xl font-semibold">SMK Negeri 1 Rawajitu Selatan</p>
@@ -91,8 +96,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
-            <p className="text-xl font-semibold text-gray-800 mt-6">Keahlian</p>
+          <div id="skills" className="mt-6">
+          <p className="text-xl font-semibold text-gray-600  bg-green-300 pl-4 py-2 w-1/3">Skills</p>
             <div className="grid grid-cols-2 mt-4">
              <div>
               <p className="mb-2 text-gray-800 text-base font-semibold">Programming Languages</p>
@@ -128,7 +133,6 @@ export default function Home() {
         </div>
         </div>
       </section>
-     </div>
     </main>
   );
 }
