@@ -1,113 +1,134 @@
-import Image from "next/image";
+import AboutMe from "@/components/AboutMe";
+import Experiences from "@/components/Experiences";
+import Header from "@/components/Header";
+import LeftSide from "@/components/LeftSide";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="container mx-auto flex justify-center items-center h-screen">
+     <div className="h-[80rem] w-10/12 rounded-md shadow-xl">
+     <section className="grid grid-cols-3 relative">
+        <div className="col-span-1 px-6">
+            <LeftSide/>
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <div className="col-span-2 h-screen relative">
+        <Header />
+       <div className="overflow-y-scroll h-[75rem]">
+          <AboutMe />
+          <Experiences
+            endDate="presently"
+            startDate="April 2023"
+            company="Virtual Spirit Sdn Bhd"
+            position="Frontend Developer"
+            title="PENGALAMAN KERJA"
+            list={[
+            "Revamp old UI to new UI",
+            "Implement responsive design for desktop, tablet and mobile using tailwindCSS",
+            "Performed unit test for each component, utils and page",
+            "Added some new features for landlord, tenant, and professional roles",
+            "Implemented clean code, adjusted packages modules to the latest version, implemented e2e test using cypress, made folder architecture more readable, implemented storybook for each component, and participated in the process of raising code to production, branch registration to AWS amplify, and adding environment variables in AWS",
+            "worked with the team, from FE, BE QA and also PM"
+          ]} 
+          /> 
+          <Experiences
+            company="PT. Telkom Indonesia"
+            position="Frontend Engineer"
+            startDate="Jan 2022"
+            endDate="Jun 2023"
+            list={[
+            "Fixed several bugs on the agree website, from the appearance to the integratino process",
+            "implement responsive web design for desktop., tablet, and mobile display with perfect pixel (accuracy and similiarity with design / UI on figma 99% )",
+            "Negotiate with UI/UX team for a look that is difficult to develop by Frontend Team",
+            "Contributed to the development of new features for agreepedia, ask experts and discussion forums",
+            "The development process uses agile methods, which include retro, sprint planning, development, review, and release",
+            "Implemented language change features for English and indonesia",
+            "Minimize the use of modules or packages that are needed while they can still be made or modified by yourself",
+            "Create unit tests on component, utilities, and pages, with coverage above 85% to pass the code quality check on sentry",
+            "Apply clean code to all code created",
+            "Work with teams, from FE, BE, QA, UI/UX, and PM"
+          ]} /> 
+          <Experiences 
+            company="PT. Kaldu Sari Nabati"
+            position="Frontend Engineer"
+            startDate="Jan 2022"
+            endDate="Jun 2023"
+            list={[
+              "Added several features to the internal dashboard for product management, as well as adjusting some of the available features according to their respective roles.",
+              "Participated in meetings with clients and presented related progress and features that have been developed.",
+              "Added the registration feature into several steps, namely registering with email and cellphone number and verifying the data of the cellphone number and email.",
+              "Integrate with endpoints that have been provided by the Backend.",
+              "Worked with teams, from FE, BE and PM."
+          ]} />
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+          <div>
+            <p className="text-xl font-semibold text-gray-800">Pendidikan</p>
+            <div className="grid grid-cols-2 mt-4">
+              <div>
+                <p className="text-xl font-semibold">SMK Negeri 1 Rawajitu Selatan</p>
+                <p className="text-xl font-normal text-gray-500 mt-2">
+                  Computer & Network Engineering
+                </p>
+                <p className="text-lg font-normal text-gray-400 mt-2">
+                  2017 - 2019
+                </p>
+                <p className="text-lg font-normal text-gray-400">
+                  Tulang Bawang, Lampung, Indonesia.
+                </p>
+              </div>
+              <div>
+                <p className="text-xl font-semibold">Pondok IT QODR</p>
+                <p className="text-xl font-normal text-gray-500 mt-2">
+                  Frontend Developer
+                </p>
+                <p className="text-lg font-normal text-gray-400 mt-2">
+                  Jul 2019 - Jan 2022
+                </p>
+                <p className="text-lg font-normal text-gray-400">
+                  Bantul Dligno, Yogyakarta - Indonesia
+                </p>
+              </div>
+            </div>
+          </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+          <div>
+            <p className="text-xl font-semibold text-gray-800 mt-6">Keahlian</p>
+            <div className="grid grid-cols-2 mt-4">
+             <div>
+              <p className="mb-2 text-gray-800 text-base font-semibold">Programming Languages</p>
+                <ul className="list-disc list-item ml-5">
+                  <li className="text-gray-600">Javascript</li>
+                  <li className="text-gray-600">Typescript</li>
+                </ul>
+             </div>
+             <div>
+                <p className="mb-2 text-gray-800 text-base font-semibold">Tools </p>
+                <ul className="list-disc list-item ml-5">
+                  <li className="text-gray-600">Postman</li>
+                  <li className="text-gray-600">Figma</li>
+                  <li className="text-gray-600">Jira</li>
+                </ul>
+             </div>
+            </div>
+             <div>
+                <p className="mb-2 text-gray-800 text-base font-semibold">
+                  Library / Framework / Services</p>
+                <ul className="list-disc list-item ml-5">
+                  <li className="text-gray-600">React Js</li>
+                  <li className="text-gray-600">Next Js</li>
+                  <li className="text-gray-600">Firebase</li>
+                  <li className="text-gray-600">Git</li>
+                  <li className="text-gray-600">TailwindCSS</li>
+                  <li className="text-gray-600">REST API</li>
+                  <li className="text-gray-600">GraphQL</li>
+                  <li className="text-gray-600">React Native</li>
+                </ul>
+             </div>
+          </div>
+        </div>
+        </div>
+      </section>
+     </div>
     </main>
   );
 }
