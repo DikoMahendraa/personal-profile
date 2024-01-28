@@ -6,9 +6,35 @@ import IndonesiaFlag from '@/svgs/IndonesiaFlag '
 import JapanFlag from '@/svgs/JapanFlag'
 import Dark from '@/svgs/Dark'
 import Light from '@/svgs/Light'
+import { Locale } from '../../i18n-config'
+import Link from 'next/link'
 
-export default function Header() {
+export default function Header({ lang }: { lang: Locale }) {
   const { theme, setTheme } = useTheme()
+
+  const setFlag = () => {
+    switch (lang) {
+      case 'en':
+        return (
+          <p className="flex gap-2">
+            <EnglishFlag width={20} height={15} /> English
+          </p>
+        )
+      case 'jp':
+        return (
+          <p className="flex gap-2">
+            <JapanFlag width={20} height={15} /> Japan
+          </p>
+        )
+      case 'id':
+      default:
+        return (
+          <p className="flex gap-2">
+            <IndonesiaFlag width={20} height={15} /> Indonesia
+          </p>
+        )
+    }
+  }
 
   return (
     <nav className="flex justify-between items-center sticky bg-white shadow-lg pr-4 dark:bg-gray-800">
@@ -57,27 +83,27 @@ export default function Header() {
       </div>
       <div className="flex items-center">
         <div className="dropdown dropdown-hover">
-          <div tabIndex={0} role="button" className="btn m-1">
-            <IndonesiaFlag width={20} height={15} /> Indonesia
+          <div tabIndex={0} role="button" className="btn btn-sm m-1">
+            {setFlag()}
           </div>
           <ul
             tabIndex={0}
             className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>
+              <Link locale="en" href="/en">
                 <EnglishFlag width={20} height={15} /> English
-              </a>
+              </Link>
             </li>
             <li>
-              <a>
+              <Link locale="id" href="/id">
                 <IndonesiaFlag width={20} height={15} /> Indonesia
-              </a>
+              </Link>
             </li>
             <li>
-              <a>
+              <Link locale="jp" href="/jp">
                 <JapanFlag width={20} height={15} /> Japan
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

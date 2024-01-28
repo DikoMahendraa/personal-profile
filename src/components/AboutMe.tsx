@@ -1,16 +1,17 @@
 import React from 'react'
+import { Locale } from '../../i18n-config'
+import { getDictionary } from '../../get-dictionary'
 
-export default function AboutMe() {
+export default async function AboutMe({ lang }: { lang: Locale }) {
+  const t = await getDictionary(lang)
+
   return (
     <div id="tentang" className="p-4">
       <p className="text-xl font-semibold text-gray-800 dark:text-white">
-        About Me
+        {t.profile.about.title_aboutme}
       </p>
       <p className="mt-2 text-gray-600 dark:text-gray-300">
-        I am web developer with ± 2 years of experience using NextJs, React Js
-        and also React Native. interested in learning new things, used to
-        working under pressure, working well with team, used to working remotely
-        and ready to adjust skills according to company needs.
+        {t.profile.about.description}
       </p>
     </div>
   )

@@ -1,0 +1,117 @@
+{
+  "profile": {
+    "user": {
+      "name": "DIKO MAHENDRA",
+      "position": "フロントエンド開発者",
+      "whatsapp": "+628-2384-8980-30",
+      "title_social_media": "ソーシャルメディア",
+      "email": "diko.dev99@gmail.com",
+      "button_download": "ダウンロード",
+      "social_media": [
+        {
+          "url": "https://web.facebook.com/diko.mahendra.790",
+          "name": "Facebook"
+        },
+        {
+          "url": "https://www.instagram.com/dikomahendr4/",
+          "name": "Instagram"
+        },
+        {
+          "url": "https://www.linkedin.com/in/diko-mahendra/",
+          "name": "Linkedin"
+        },
+        {
+          "url": "https://github.com/DikoMahendraa",
+          "name": "Github"
+        }
+      ]
+    },
+    "educations": {
+      "title_education": "Educations",
+      "schools": [
+        {
+          "name": "SMK Negeri 1 Rawajitu Selatan",
+          "major": "コンピューター・ネットワーク工学",
+          "since": "2017 - May 2019",
+          "place": "Tulang Bawang Lampung, Indonesia."
+        },
+        {
+          "name": "Pondok IT QODR",
+          "major": "フロントエンド開発者",
+          "since": "Jul 2019 - Jan 2022",
+          "place": "Bantul Dligno, Yogyakarta - Indonesia"
+        }
+      ]
+    },
+    "experiences": {
+      "title_experience": "エクスペリエンス",
+      "company": [
+        {
+          "name": "Virtual Spirit Sdn Bhd",
+          "position": "フロントエンド開発者",
+          "time": "April 2023 - presently",
+          "country": "Slangor - Malaysia",
+          "description": [
+            "古いUIを新しいUIに刷新",
+            "tailwindCSSを使用して、デスクトップ、タブレット、モバイル用のレスポンシブデザインを実装する。",
+            "各コンポーネント、ユーティリティ、ページの単体テストを実施。",
+            "家主、借主、専門職の役割に関する新機能を追加しました。",
+            "クリーンコードの実装、パッケージモジュールの最新バージョンへの調整、cypressを使ったe2eテストの実装、フォルダアーキテクチャの可読性向上、各コンポーネントのストーリーブックの実装、本番環境へのコード上げ、AWS amplifyへのブランチ登録、AWSへの環境変数追加などの工程に参加。",
+            "FE、BE QA、PMのチームと協力。"
+          ]
+        },
+        {
+          "name": "PT. Telkom Indonesia",
+          "position": "フロントエンドエンジニア",
+          "time": "Jan 2022 - Jun 2023",
+          "country": "Jakarta Selatan - Indonesia",
+          "description": [
+            "アグリーウェブサイトの外観から統合プロセスまで、いくつかのバグを修正した。",
+            "デスクトップ、タブレット、モバイルディスプレイ用のレスポンシブウェブデザインを、完璧なピクセルで実装する。",
+            "UI/UXチームと交渉し、フロントエンドチームでは開発困難なルックに仕上げる。",
+            "agreepedia、ask experts、ディスカッション・フォーラムの新機能開発に貢献。",
+            "開発プロセスでは、レトロ、スプリント計画、開発、レビュー、リリースを含むアジャイル手法を採用している。",
+            "英語とインドネシア語の言語変更機能を実装。",
+            "必要なモジュールやパッケージは、自分で作ったり変更したりできるうちは、最小限の使用にとどめる。",
+            "コンポーネント、ユーティリティ、ページの単体テストをカバレッジ85%以上で作成し、セントリーのコード品質チェックに合格する。",
+            "作成されたすべてのコードにクリーンコードを適用する。",
+            "FE、BE、QA、UI/UX、PMなどのチームと連携。"
+          ]
+        },
+        {
+          "name": "PT. Kaldu Sari Nabati",
+          "position": "フロントエンドエンジニア",
+          "time": "May 2022 - Sept 2022",
+          "country": "Bandung, Indonesia",
+          "description": [
+            "製品管理用の社内ダッシュボードにいくつかの機能を追加し、それぞれの役割に応じて利用可能な機能の一部を調整した。",
+            "顧客とのミーティングに参加し、関連する進捗状況や開発された機能を発表。",
+            "電子メールと携帯電話番号の登録、携帯電話番号と電子メールのデータの検証という、いくつかのステップに分かれた登録機能を追加した。",
+            "バックエンドから提供されたエンドポイントと統合する。",
+            "FE、BE、PMの各チームと協力。"
+          ]
+        }
+      ]
+    },
+    "about": {
+      "title_aboutme": "私について",
+      "description": "NextJs、React Js、React Nativeの使用経験が±2年のウェブ開発者です。新しいことを学ぶことに興味があり、プレッシャーの中で働くことに慣れており、チームプレーが得意で、リモートワークにも慣れています。"
+    },
+    "skills": {
+      "title_skills": "スキル",
+      "title_programming": "プログラミング言語",
+      "title_library": "ライブラリー / フレームワーク / サービス",
+      "title_tools": "ツール",
+      "programming": ["Javascript", "Typescript"],
+      "library": [
+        "React Js",
+        "Next Js",
+        "Firebase",
+        "Git",
+        "TailwindCSS",
+        "REST API"
+      ],
+      "tools": ["Postman", "Figma", "Jira"]
+    }
+  }
+}

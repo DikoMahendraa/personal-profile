@@ -5,18 +5,17 @@ interface CardExperienceProps {
   list: string[]
   company: string
   position: string
-  startDate: string
-  endDate: string
+  time: string
   location: string
 }
 
 export default function CardExperience({
   company,
-  endDate,
+
   location,
   list,
   position,
-  startDate,
+  time,
   title,
 }: Readonly<CardExperienceProps>) {
   return (
@@ -37,9 +36,7 @@ export default function CardExperience({
             </p>
           </div>
           <div>
-            <p className="text-base text-gray-500 dark:text-gray-300">
-              {startDate} - {endDate}
-            </p>
+            <p className="text-base text-gray-500 dark:text-gray-300">{time}</p>
             <p className="text-base text-gray-500 mt-2 dark:text-gray-300">
               {location}
             </p>

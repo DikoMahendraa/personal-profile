@@ -1,7 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
+import { Locale } from '../../i18n-config'
+import { getDictionary } from '../../get-dictionary'
 
-export default function LeftSide() {
+export default async function LeftSide({ lang }: { lang: Locale }) {
+  const t = await getDictionary(lang)
+
   return (
     <div className="w-full mt-20">
       <div className="flex items-center justify-center">
@@ -17,10 +21,10 @@ export default function LeftSide() {
       </div>
       <div className="text-center mt-4">
         <p className="font-bold text-gray-800 text-2xl dark:text-white">
-          DIKO MAHENDRA
+          {t.profile.user.name}
         </p>
         <p className="text-gray-600 text-lg dark:text-gray-400">
-          Frontend Developer
+          {t.profile.user.position}
         </p>
       </div>
       <div className="mt-6 text-lg">
@@ -28,64 +32,39 @@ export default function LeftSide() {
           Whatsapp
         </p>
         <p className="text-gray-600 text-base dark:text-gray-400">
-          +628-2384-8980-30
+          {t.profile.user.whatsapp}
         </p>
       </div>
       <div className="mt-4 text-lg">
         <p className="font-semibold text-gray-800 dark:text-white">Email</p>
         <p className="text-gray-600 text-base dark:text-gray-400">
-          diko.dev99@gmail.com
+          {t.profile.user.email}
         </p>
       </div>
       <div className="mt-4 text-lg">
         <p className="font-semibold text-lg text-gray-800 dark:text-white">
-          Social Media
+          {t.profile.user.title_social_media}
         </p>
         <div className="flex flex-col">
           <ul className="list-disc dark:marker:text-white marker:text-gray-600 ml-4">
-            <li>
-              <a
-                href="https://web.facebook.com/diko.mahendra.790"
-                target="_blank"
-                className="link link-info text-base"
-              >
-                Facebook
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/dikomahendr4/"
-                target="_blank"
-                className="link link-info text-base"
-              >
-                Instagram
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/diko-mahendra/"
-                target="_blank"
-                className="link link-info text-base"
-              >
-                Linkedin
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/DikoMahendraa"
-                target="_blank"
-                className="link link-info text-base"
-              >
-                Github
-              </a>
-            </li>
+            {t.profile.user.social_media.map((item) => (
+              <li key={item.name}>
+                <a
+                  href={item.url}
+                  target="_blank"
+                  className="link link-info text-base"
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
 
       <div className="mt-8">
         <button className="btn btn-outline rounded-sm dark:btn-info dark:btn-primary">
-          Download Resume
+          {t.profile.user.button_download}
         </button>
       </div>
     </div>
