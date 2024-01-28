@@ -3,3 +3,4 @@ daisyui: https://daisyui.com/components/
 use svg on nextjs: https://blog.logrocket.com/import-svgs-next-js-apps/
 svgr to component: https://react-svgr.com/playground/
 setup dark mode: https://github.com/pacocoursey/next-themes / https://github.com/pacocoursey/next-themes?tab=readme-ov-file
+i18n: https://github.com/vercel/next.js/tree/canary/examples/app-dir-i18n-routing

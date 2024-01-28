@@ -26,12 +26,6 @@ const nextConfig = {
 
     return config
   },
-  i18n: {
-    locales: ['id', 'en', 'jp'],
-    defaultLocale: 'en',
-    localeDetection: false,
-  },
-  trailingSlash: true,
 }
 
 module.exports = nextConfig

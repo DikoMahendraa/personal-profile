@@ -52,7 +52,7 @@
           "time": "April 2023 - sekarang",
           "country": "Slangor - Malaysia",
           "description": [
-            "Merubah UI lama ke UI barð",
+            "Merubah UI lama ke UI baru.",
             "Menerapkan responsive design untuk desktop, tablet, dan juga mobile menggunakan tailwindcss",
             "Melakukan unit test untuk setiap component, utils dan halaman.",
             "Menambahkan beberapa fitur baru untuk role landlord, tenant, dan juga professional.",
