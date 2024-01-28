@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { Locale } from '../../i18n-config'
 import { getDictionary } from '../../get-dictionary'
+import ButtonDownload from './ButtonDownload'
 
 export default async function LeftSide({ lang }: { lang: Locale }) {
   const t = await getDictionary(lang)
@@ -70,11 +71,7 @@ export default async function LeftSide({ lang }: { lang: Locale }) {
         </div>
       </div>
 
-      <div className="mt-8">
-        <button className="btn btn-outline rounded-sm dark:btn-info dark:btn-primary">
-          {t.profile.user.button_download}
-        </button>
-      </div>
+      <ButtonDownload text={t.profile.user.button_download} />
     </div>
   )
 }
