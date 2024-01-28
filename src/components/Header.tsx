@@ -36,40 +36,47 @@ export default function Header({ lang }: { lang: Locale }) {
     }
   }
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <nav className="flex justify-between items-center sticky bg-white shadow-lg pr-4 dark:bg-gray-800">
       <div className="flex">
         <div className="p-4">
-          <a
+          <button
+            onClick={() => scrollToSection('about')}
             className="text-gray-700 font-semibold dark:text-white"
-            href="#about"
           >
             About Me
-          </a>
+          </button>
         </div>
         <div className="p-4">
-          <a
+          <button
             className="text-gray-700 font-semibold dark:text-white"
-            href="#experience"
+            onClick={() => scrollToSection('experience')}
           >
             Experience
-          </a>
+          </button>
         </div>
         <div className="p-4">
-          <a
+          <button
             className="text-gray-700 font-semibold dark:text-white"
-            href="#education"
+            onClick={() => scrollToSection('education')}
           >
             Education
-          </a>
+          </button>
         </div>
         <div className="p-4">
-          <a
+          <button
             className="text-gray-700 font-semibold dark:text-white"
-            href="#skills"
+            onClick={() => scrollToSection('skills')}
           >
             Skills
-          </a>
+          </button>
         </div>
         <div className="p-4">
           <a
