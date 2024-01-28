@@ -31,15 +31,23 @@ export default async function LeftSide({ lang }: { lang: Locale }) {
         <p className="font-semibold text-gray-800 text-lg dark:text-white">
           Whatsapp
         </p>
-        <p className="text-gray-600 text-base dark:text-gray-400">
+        <a
+          target="_blank"
+          href={` https://wa.me/${t.profile.user.whatsapp.split('-').join('')}`}
+          className="link link-info"
+        >
           {t.profile.user.whatsapp}
-        </p>
+        </a>
       </div>
       <div className="mt-4 text-lg">
         <p className="font-semibold text-gray-800 dark:text-white">Email</p>
-        <p className="text-gray-600 text-base dark:text-gray-400">
+        <a
+          target="_blank"
+          href={`mailto:${t.profile.user.email}`}
+          className="link link-info"
+        >
           {t.profile.user.email}
-        </p>
+        </a>
       </div>
       <div className="mt-4 text-lg">
         <p className="font-semibold text-lg text-gray-800 dark:text-white">
