@@ -51,6 +51,8 @@
           "position": "フロントエンド開発者",
           "time": "April 2023 - presently",
           "country": "Slangor - Malaysia",
+          "techonology": "Git, NextJS, Typescript, (Jest, RTL, Cypress), i18n, React Query, React Hooks Form, Jotai, Zod, TailwindCSS.",
+          "title_tech_used": "使用した技術とツール",
           "description": [
             "古いUIを新しいUIに刷新",
             "tailwindCSSを使用して、デスクトップ、タブレット、モバイル用のレスポンシブデザインを実装する。",
@@ -65,6 +67,8 @@
           "position": "フロントエンドエンジニア",
           "time": "Jan 2022 - Jun 2023",
           "country": "Jakarta Selatan - Indonesia",
+          "techonology": "Git, Jira, NextJs, (Jest, RTL), i18n, React Hooks Form, Redux, TailwindCSS.",
+          "title_tech_used": "使用した技術とツール",
           "description": [
             "アグリーウェブサイトの外観から統合プロセスまで、いくつかのバグを修正した。",
             "デスクトップ、タブレット、モバイルディスプレイ用のレスポンシブウェブデザインを、完璧なピクセルで実装する。",
@@ -83,6 +87,8 @@
           "position": "フロントエンドエンジニア",
           "time": "May 2022 - Sept 2022",
           "country": "Bandung, Indonesia",
+          "techonology": "Git, NextJS, Typescript, i18n, React Query, React Hooks Form.",
+          "title_tech_used": "使用した技術とツール",
           "description": [
             "製品管理用の社内ダッシュボードにいくつかの機能を追加し、それぞれの役割に応じて利用可能な機能の一部を調整した。",
             "顧客とのミーティングに参加し、関連する進捗状況や開発された機能を発表。",

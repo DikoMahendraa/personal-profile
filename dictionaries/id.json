@@ -51,6 +51,8 @@
           "position": "Frontend Developer",
           "time": "April 2023 - sekarang",
           "country": "Slangor - Malaysia",
+          "techonology": "Git, NextJS, Typescript, (Jest, RTL, Cypress), i18n, React Query, React Hooks Form, Jotai, Zod, TailwindCSS.",
+          "title_tech_used": "Teknologi & Tools yg digunakan:",
           "description": [
             "Merubah UI lama ke UI baru.",
             "Menerapkan responsive design untuk desktop, tablet, dan juga mobile menggunakan tailwindcss",
@@ -65,6 +67,8 @@
           "position": "Frontend Engineer",
           "time": "Jan 2022 - Jun 2023",
           "country": "Jakarta Selatan - Indonesia",
+          "techonology": "Git, Jira, NextJs, (Jest, RTL), i18n, React Hooks Form, Redux, TailwindCSS.",
+          "title_tech_used": "Teknologi & Tools yg digunakan:",
           "description": [
             "Memperbaiki beberapa bug yg ada pada website agree, mulai dari tampilan hingga proses integrasi.",
             "Menerapkan responsive web design untuk tampilan desktop, tablet, dan juga mobile dengan perfect pixel (akurasi dan kesamaan dengan design / UI pada figma 99%).",
@@ -83,6 +87,8 @@
           "position": "Frontend Engineer",
           "time": "May 2022 - Sept 2022",
           "country": "Bandung, Indonesia",
+          "techonology": "Git, NextJS, Typescript, i18n, React Query, React Hooks Form",
+          "title_tech_used": "Teknologi & Tools yg digunakan:",
           "description": [
             "Menambahkan beberapa fitur pada dashboard internal untuk management product, serta menyesuaikan beberapa fitur yg tersedia sesuai dengan role nya masing-masingß",
             "Ikut hadir dalam meeting dengan client serta mempresentasikan terkait progress serta fitur yg sudah selesai dikembangkanß",

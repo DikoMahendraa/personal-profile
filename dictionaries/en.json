@@ -51,6 +51,8 @@
           "position": "Frontend Developer",
           "time": "April 2023 - presently",
           "country": "Slangor - Malaysia",
+          "techonology": "Git, NextJS, Typescript, (Jest, RTL, Cypress), i18n, React Query, React Hooks Form, Jotai, Zod, TailwindCSS.",
+          "title_tech_used": "Technology & Tools used:",
           "description": [
             "Revamp old UI to new UI",
             "Implement responsive design for desktop, tablet and mobile using tailwindCSS",
@@ -64,6 +66,8 @@
           "name": "PT. Telkom Indonesia",
           "position": "Frontend Engineer",
           "time": "Jan 2022 - Jun 2023",
+          "techonology": "Git, Jira, NextJs, (Jest, RTL), i18n, React Hooks Form, Redux, TailwindCSS.",
+          "title_tech_used": "Technology & Tools used:",
           "country": "Jakarta Selatan - Indonesia",
           "description": [
             "Fixed several bugs on the agree website, from the appearance to the integratino process.",
@@ -81,6 +85,8 @@
         {
           "name": "PT. Kaldu Sari Nabati",
           "position": "Frontend Engineer",
+          "techonology": "Git, NextJS, Typescript, i18n, React Query, React Hooks Form",
+          "title_tech_used": "Technology & Tools used:",
           "time": "May 2022 - Sept 2022",
           "country": "Bandung, Indonesia",
           "description": [

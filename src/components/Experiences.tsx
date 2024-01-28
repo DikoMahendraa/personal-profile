@@ -16,6 +16,8 @@ export default async function Experiences({ lang }: { lang: Locale }) {
           time={item.time}
           company={item.name}
           position={item.position}
+          techTitle={item.title_tech_used}
+          techUsed={item.techonology}
           title={index === 0 ? t.profile.experiences.title_experience : ''}
           list={item.description}
         />

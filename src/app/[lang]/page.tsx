@@ -25,7 +25,7 @@ export default async function Home({
 
         <div className="col-span-2 h-screen relative">
           <Header lang={lang} />
-          <div className="overflow-y-scroll h-[75rem]">
+          <div className="overflow-y-scroll mt-4 h-[75rem]">
             <AboutMe lang={lang} />
             <Experiences lang={lang} />
             <Educations lang={lang} />

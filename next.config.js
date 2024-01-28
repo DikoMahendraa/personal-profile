@@ -26,6 +26,14 @@ const nextConfig = {
 
     return config
   },
+  async rewrites() {
+    return [
+      {
+        source: '/',
+        destination: '/en',
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig

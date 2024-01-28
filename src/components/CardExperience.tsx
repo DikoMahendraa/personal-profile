@@ -7,11 +7,14 @@ interface CardExperienceProps {
   position: string
   time: string
   location: string
+  techTitle: string
+  techUsed: string
 }
 
 export default function CardExperience({
   company,
-
+  techTitle,
+  techUsed,
   location,
   list,
   position,
@@ -48,6 +51,12 @@ export default function CardExperience({
               <li key={description}>{description}</li>
             ))}
           </ul>
+        </div>
+        <div className="mt-4">
+          <p className="font-semibold text-gray-500">{techTitle}</p>
+          <p className="font-normal underline dark:text-gray-300">
+            « {techUsed}
+          </p>
         </div>
       </div>
     </div>
