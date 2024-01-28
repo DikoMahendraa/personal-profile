@@ -1,0 +1,117 @@
+{
+  "profile": {
+    "user": {
+      "name": "DIKO MAHENDRA",
+      "position": "Frontend Developer",
+      "whatsapp": "+628-2384-8980-30",
+      "email": "diko.dev99@gmail.com",
+      "title_social_media": "Sosial Media",
+      "button_download": "Unduh Resume",
+      "social_media": [
+        {
+          "url": "https://web.facebook.com/diko.mahendra.790",
+          "name": "Facebook"
+        },
+        {
+          "url": "https://www.instagram.com/dikomahendr4/",
+          "name": "Instagram"
+        },
+        {
+          "url": "https://www.linkedin.com/in/diko-mahendra/",
+          "name": "Linkedin"
+        },
+        {
+          "url": "https://github.com/DikoMahendraa",
+          "name": "Github"
+        }
+      ]
+    },
+    "educations": {
+      "title_education": "Pendidikan",
+      "schools": [
+        {
+          "name": "SMK Negeri 1 Rawajitu Selatan",
+          "major": "Teknik Komputer & Jaringan",
+          "since": "2017 - Mei 2019",
+          "place": "Tulang Bawang, Lampung, Indonesia."
+        },
+        {
+          "name": "Pondok IT QODR",
+          "major": "Frontend Developer",
+          "since": "Jul 2019 - Jan 2022",
+          "place": "Bantul Dligno, Yogyakarta - Indonesia"
+        }
+      ]
+    },
+    "experiences": {
+      "title_experience": "Pengalaman Kerja",
+      "company": [
+        {
+          "name": "Virtual Spirit Sdn Bhd",
+          "position": "Frontend Developer",
+          "time": "April 2023 - sekarang",
+          "country": "Slangor - Malaysia",
+          "description": [
+            "Merubah UI lama ke UI barð",
+            "Menerapkan responsive design untuk desktop, tablet, dan juga mobile menggunakan tailwindcss",
+            "Melakukan unit test untuk setiap component, utils dan halaman.",
+            "Menambahkan beberapa fitur baru untuk role landlord, tenant, dan juga professional.",
+            "Menerapkan clean code, menyesuaikan package/module ke versi terbaru, menerapkan e2e test menggunakan cypress, merapihkan arsitektur folder lebih readable, menerapkan storybook untuk setiap component, dan ikut serta dalam proses menaikan code ke production, registrasi branch ke AWS amplify, dan menambahkan environment variable di AWS.",
+            "Bekerja dengan tim, mulai dari FE, BE, QA dan juga PM."
+          ]
+        },
+        {
+          "name": "PT. Telkom Indonesia",
+          "position": "Frontend Engineer",
+          "time": "Jan 2022 - Jun 2023",
+          "country": "Jakarta Selatan - Indonesia",
+          "description": [
+            "Memperbaiki beberapa bug yg ada pada website agree, mulai dari tampilan hingga proses integrasi.",
+            "Menerapkan responsive web design untuk tampilan desktop, tablet, dan juga mobile dengan perfect pixel (akurasi dan kesamaan dengan design / UI pada figma 99%).",
+            "Melakukan negosiasi dengan tim UI/UX terhadap sebuah tampilan yg di rasa sulit untuk dikembangkan oleh tim Frontend.",
+            "Ikut berkontribusi dalam pengembangan fitur baru untuk agreepedia, tanya ahli serta forum diskusi.",
+            "Proses development menggunakan metode agile, yg dimana terdapat retro, sprint planning, development, review, rilis.",
+            "Menerapakn fitur perubahan bahasa untuk inggris dan indonesia.",
+            "Meminimalisir penggunaan module atau package yg dibutuhkan selagi masih bisa dibuat atau di modifikasi sendiri.",
+            "Membuat unit testing terhadap component, utils, serta halaman. dengan coverage di atas 85% untuk lolos pada pengecekan kualitas code pada sentry.",
+            "Menerapkan clean code terhadap seluruh code yg dibuat.",
+            "Bekerja dengan tim mulai dari FE, BE, QA , UI/UX, dan juga PM."
+          ]
+        },
+        {
+          "name": "PT. Kaldu Sari Nabati",
+          "position": "Frontend Engineer",
+          "time": "May 2022 - Sept 2022",
+          "country": "Bandung, Indonesia",
+          "description": [
+            "Menambahkan beberapa fitur pada dashboard internal untuk management product, serta menyesuaikan beberapa fitur yg tersedia sesuai dengan role nya masing-masingß",
+            "Ikut hadir dalam meeting dengan client serta mempresentasikan terkait progress serta fitur yg sudah selesai dikembangkanß",
+            "Menambahkan fitur registrasi menjadi beberapa langkah yaitu mendaftar dengan email dan juga nomor hp serta melakukan verifikasi terhadap data tersebut nomor hp dan juga email tersebutß",
+            "Melakukan integrasi dengan endpoint yg sudah disediakan oleh backendß",
+            "Bekerja dengan tim, mulai dari FE, BE, dan juga PM."
+          ]
+        }
+      ]
+    },
+    "about": {
+      "title_aboutme": "Tentang Saya",
+      "description": "Saya seorang Web Developer dengan pengalaman ± 2 tahun menggunakan NextJs, React Js dan juga React Native. tertarik untuk belajar hal baru, terbiasa bekerja dibawah tekanan, bekerja dengan baik dengan tim, terbiasa bekerja remote dan siap menyesuaikan skill sesui dengan kebutuhan perusahaan."
+    },
+    "skills": {
+      "title_skills": "Keahlian",
+      "title_programming": "Bahasa Pemograman",
+      "title_library": "Library / Framework / Services",
+      "title_tools": "Alat & Bantuan",
+      "programming": ["Javascript", "Typescript"],
+      "library": [
+        "React Js",
+        "Next Js",
+        "Firebase",
+        "Git",
+        "TailwindCSS",
+        "REST API"
+      ],
+      "tools": ["Postman", "Figma", "Jira"]
+    }
+  }
+}

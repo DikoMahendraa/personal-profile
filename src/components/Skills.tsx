@@ -1,67 +1,60 @@
 import React from 'react'
+import { Locale } from '../../i18n-config'
+import { getDictionary } from '../../get-dictionary'
 
-export default function Skills() {
+export default async function Skills({ lang }: { lang: Locale }) {
+  const t = await getDictionary(lang)
+
   return (
     <div id="skills" className="mt-10">
       <p className="text-xl font-semibold text-gray-600 dark:text-white">
-        Skills
+        {t.profile.skills.title_skills}
       </p>
       <div className="grid grid-cols-2 mt-4">
         <div>
           <p className="mb-2 text-lg text-gray-800 font-semibold dark:text-white">
-            Programming Languages
+            {t.profile.skills.title_programming}
           </p>
           <ul className="list-disc list-item ml-5">
-            <li className="text-gray-600 text-base dark:text-gray-300">
-              Javascript
-            </li>
-            <li className="text-gray-600 text-base dark:text-gray-300">
-              Typescript
-            </li>
+            {t.profile.skills.programming.map((item) => (
+              <li
+                key={item}
+                className="text-gray-600 text-base dark:text-gray-300"
+              >
+                {item}
+              </li>
+            ))}
           </ul>
         </div>
         <div>
           <p className="mb-2 text-gray-800 text-lg font-semibold dark:text-white">
-            Tools{' '}
+            {t.profile.skills.title_tools}
           </p>
           <ul className="list-disc list-item ml-5">
-            <li className="text-gray-600 text-base dark:text-gray-300">
-              Postman
-            </li>
-            <li className="text-gray-600 text-base dark:text-gray-300">
-              Figma
-            </li>
-            <li className="text-gray-600 text-base dark:text-gray-300">Jira</li>
+            {t.profile.skills.tools.map((item) => (
+              <li
+                key={item}
+                className="text-gray-600 text-base dark:text-gray-300"
+              >
+                {item}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
       <div>
         <p className="mb-2 text-gray-800 text-lg font-semibold dark:text-white">
-          Library / Framework / Services
+          {t.profile.skills.title_library}
         </p>
         <ul className="list-disc list-item ml-5">
-          <li className="text-gray-600 text-base dark:text-gray-300">
-            React Js
-          </li>
-          <li className="text-gray-600 text-base dark:text-gray-300">
-            Next Js
-          </li>
-          <li className="text-gray-600 text-base dark:text-gray-300">
-            Firebase
-          </li>
-          <li className="text-gray-600 text-base dark:text-gray-300">Git</li>
-          <li className="text-gray-600 text-base dark:text-gray-300">
-            TailwindCSS
-          </li>
-          <li className="text-gray-600 text-base dark:text-gray-300">
-            REST API
-          </li>
-          <li className="text-gray-600 text-base dark:text-gray-300">
-            GraphQL
-          </li>
-          <li className="text-gray-600 text-base dark:text-gray-300">
-            React Native
-          </li>
+          {t.profile.skills.library.map((item) => (
+            <li
+              key={item}
+              className="text-gray-600 text-base dark:text-gray-300"
+            >
+              {item}
+            </li>
+          ))}
         </ul>
       </div>
     </div>

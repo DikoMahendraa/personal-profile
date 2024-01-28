@@ -1,0 +1,117 @@
+{
+  "profile": {
+    "user": {
+      "name": "DIKO MAHENDRA",
+      "position": "Frontend Developer",
+      "whatsapp": "+628-2384-8980-30",
+      "email": "diko.dev99@gmail.com",
+      "title_social_media": "Social Media",
+      "button_download": "Download Resume",
+      "social_media": [
+        {
+          "url": "https://web.facebook.com/diko.mahendra.790",
+          "name": "Facebook"
+        },
+        {
+          "url": "https://www.instagram.com/dikomahendr4/",
+          "name": "Instagram"
+        },
+        {
+          "url": "https://www.linkedin.com/in/diko-mahendra/",
+          "name": "Linkedin"
+        },
+        {
+          "url": "https://github.com/DikoMahendraa",
+          "name": "Github"
+        }
+      ]
+    },
+    "educations": {
+      "title_education": "Educations",
+      "schools": [
+        {
+          "name": "SMK Negeri 1 Rawajitu Selatan",
+          "major": "Computer & Network Engineering",
+          "since": "2017 - May 2019",
+          "place": "Tulang Bawang, Lampung, Indonesia."
+        },
+        {
+          "name": "Pondok IT QODR",
+          "major": "Frontend Developer",
+          "since": "Jul 2019 - Jan 2022",
+          "place": "Bantul Dligno, Yogyakarta - Indonesia"
+        }
+      ]
+    },
+    "experiences": {
+      "title_experience": "Experiences",
+      "company": [
+        {
+          "name": "Virtual Spirit Sdn Bhd",
+          "position": "Frontend Developer",
+          "time": "April 2023 - presently",
+          "country": "Slangor - Malaysia",
+          "description": [
+            "Revamp old UI to new UI",
+            "Implement responsive design for desktop, tablet and mobile using tailwindCSS",
+            "Performed unit test for each component, utils and page.",
+            "Added some new features for landlord, tenant, and professional roles.",
+            "Implemented clean code, adjusted packages modules to the latest version, implemented e2e test using cypress, made folder architecture more readable, implemented storybook for each component, and participated in the process of raising code to production, branch registration to AWS amplify, and adding environment variables in AWS.",
+            "Worked with the team, from FE, BE QA and also PM."
+          ]
+        },
+        {
+          "name": "PT. Telkom Indonesia",
+          "position": "Frontend Engineer",
+          "time": "Jan 2022 - Jun 2023",
+          "country": "Jakarta Selatan - Indonesia",
+          "description": [
+            "Fixed several bugs on the agree website, from the appearance to the integratino process.",
+            "implement responsive web design for desktop., tablet, and mobile display with perfect pixel (accuracy and similiarity with design / UI on figma 99% ).",
+            "Negotiate with UI/UX team for a look that is difficult to develop by Frontend Team.",
+            "Contributed to the development of new features for agreepedia, ask experts and discussion forums.",
+            "The development process uses agile methods, which include retro, sprint planning, development, review, and release.",
+            "Implemented language change features for English and indonesia.",
+            "Minimize the use of modules or packages that are needed while they can still be made or modified by yourself.",
+            "Create unit tests on component, utilities, and pages, with coverage above 85% to pass the code quality check on sentry",
+            "Apply clean code to all code created.",
+            "Work with teams, from FE, BE, QA, UI/UX, and PM."
+          ]
+        },
+        {
+          "name": "PT. Kaldu Sari Nabati",
+          "position": "Frontend Engineer",
+          "time": "May 2022 - Sept 2022",
+          "country": "Bandung, Indonesia",
+          "description": [
+            "Added several features to the internal dashboard for product management, as well as adjusting some of the available features according to their respective roles.",
+            "Participated in meetings with clients and presented related progress and features that have been developed.",
+            "Added the registration feature into several steps, namely registering with email and cellphone number and verifying the data of the cellphone number and email.",
+            "Integrate with endpoints that have been provided by the Backend.",
+            "Worked with teams, from FE, BE and PM."
+          ]
+        }
+      ]
+    },
+    "about": {
+      "title_aboutme": "About Me",
+      "description": "I am web developer with ± 2 years of experience using NextJs, React Js and also React Native. interested in learning new things, used to working under pressure, working well with team, used to working remotely and ready to adjust skills according to company needs."
+    },
+    "skills": {
+      "title_skills": "Skills",
+      "title_programming": "Programming Languages",
+      "title_library": "Library / Framework / Services",
+      "title_tools": "Tools",
+      "programming": ["Javascript", "Typescript"],
+      "library": [
+        "React Js",
+        "Next Js",
+        "Firebase",
+        "Git",
+        "TailwindCSS",
+        "REST API"
+      ],
+      "tools": ["Postman", "Figma", "Jira"]
+    }
+  }
+}
