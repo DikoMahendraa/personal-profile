@@ -6,7 +6,7 @@ export default async function AboutMe({ lang }: { lang: Locale }) {
   const t = await getDictionary(lang)
 
   return (
-    <div id="about" className="p-4">
+    <div id="about" className="lg:p-4 px-6 mt-6 lg:pt-0 scroll-pt-24 lg:mt-0">
       <p className="text-xl font-semibold text-gray-800 dark:text-white">
         {t.profile.about.title_aboutme}
       </p>
