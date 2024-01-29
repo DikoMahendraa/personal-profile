@@ -6,7 +6,7 @@ export default async function Educations({ lang }: { lang: Locale }) {
   const t = await getDictionary(lang)
 
   return (
-    <div id="education" className="mt-10">
+    <div id="education" className="mt-10 lg:px-0 px-6">
       <p className="text-xl font-semibold text-gray-600 dark:text-white">
         {t.profile.educations.title_education}
       </p>

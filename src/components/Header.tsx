@@ -9,7 +9,13 @@ import Light from '@/svgs/Light'
 import { Locale } from '../../i18n-config'
 import Link from 'next/link'
 
-export default function Header({ lang }: { lang: Locale }) {
+export default function Header({ lang, content }: {
+  lang: Locale; content: Array<{
+    href: string;
+    name: string;
+    disabled: boolean
+  }>
+}) {
   const { theme, setTheme } = useTheme()
 
   const setFlag = () => {
@@ -44,48 +50,47 @@ export default function Header({ lang }: { lang: Locale }) {
   }
 
   return (
-    <nav className="flex justify-between items-center sticky bg-white shadow-lg pr-4 dark:bg-gray-800">
+    <nav className="flex justify-between items-center sticky top-0 w-full bg-white shadow-lg lg:pr-4 p-6 lg:p-2 dark:bg-gray-800">
       <div className="flex">
-        <div className="p-4">
-          <button
-            onClick={() => scrollToSection('about')}
-            className="text-gray-700 font-semibold dark:text-white"
-          >
-            About Me
-          </button>
-        </div>
-        <div className="p-4">
-          <button
-            className="text-gray-700 font-semibold dark:text-white"
-            onClick={() => scrollToSection('experience')}
-          >
-            Experience
-          </button>
-        </div>
-        <div className="p-4">
-          <button
-            className="text-gray-700 font-semibold dark:text-white"
-            onClick={() => scrollToSection('education')}
-          >
-            Education
-          </button>
-        </div>
-        <div className="p-4">
-          <button
-            className="text-gray-700 font-semibold dark:text-white"
-            onClick={() => scrollToSection('skills')}
-          >
-            Skills
-          </button>
-        </div>
-        <div className="p-4">
-          <a
-            className="text-gray-400 cursor-default"
-            aria-disabled
-            href="#portofolio"
-          >
-            Portofolio <i className="text-xs">(coming soon)</i>
-          </a>
+        {
+          content?.map((item) => (
+            <div key={item.name} className="p-4 lg:block hidden">
+              <button
+                disabled={!!item.disabled}
+                onClick={() => scrollToSection(item.href)}
+                className="text-gray-700 font-semibold dark:text-white"
+              >
+                {item.name} {
+                  item.disabled && <i className="text-xs">(coming soon)</i>
+                }
+              </button>
+            </div>
+          ))
+        }
+        <div className="dropdown dropdown-hover lg:hidden flex">
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle text-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" />
+            </svg>
+          </div>
+          <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box">
+            {
+              content?.map((item) => (
+                <li key={item.name}>
+                  <button
+                    disabled={!!item.disabled}
+                    onClick={() => scrollToSection(item.href)}
+                    className="bg-base-100 text-lg btn-wide"
+                  >
+                    {item.name} {
+                      item.disabled &&
+                      <i className="text-xs">(coming soon)</i>
+                    }
+                  </button>
+                </li>
+              ))
+            }
+          </ul>
         </div>
       </div>
       <div className="flex items-center">
@@ -130,6 +135,6 @@ export default function Header({ lang }: { lang: Locale }) {
           />
         </div>
       </div>
-    </nav>
+    </nav >
   )
 }

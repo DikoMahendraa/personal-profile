@@ -6,7 +6,7 @@ export default async function Skills({ lang }: { lang: Locale }) {
   const t = await getDictionary(lang)
 
   return (
-    <div id="skills" className="mt-10">
+    <div id="skills" className="mt-10 lg:px-0 px-6 mb-14">
       <p className="text-xl font-semibold text-gray-600 dark:text-white">
         {t.profile.skills.title_skills}
       </p>

@@ -8,7 +8,7 @@ export default async function Experiences({ lang }: { lang: Locale }) {
   const t = await getDictionary(lang)
 
   return (
-    <div id="experience">
+    <div id="experience" className='lg:px-0 px-2'>
       {t.profile.experiences.company.map((item, index) => (
         <CardExperience
           key={item.name}

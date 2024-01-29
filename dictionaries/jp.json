@@ -1,5 +1,32 @@
 {
   "profile": {
+    "navbar": [
+      {
+        "href": "about",
+        "name": "私について",
+        "disabled": false
+      },
+      {
+        "href": "experience",
+        "name": "エクスペリエンス",
+        "disabled": false
+      },
+      {
+        "href": "education",
+        "name": "エデュケーション",
+        "disabled": false
+      },
+      {
+        "href": "skills",
+        "name": "ノウハウ",
+        "disabled": false
+      },
+      {
+        "href": "portofolio",
+        "name": "ポルトフォリオ",
+        "disabled": true
+      }
+    ],
     "user": {
       "name": "DIKO MAHENDRA",
       "position": "フロントエンド開発者",
@@ -108,7 +135,10 @@
       "title_programming": "プログラミング言語",
       "title_library": "ライブラリー / フレームワーク / サービス",
       "title_tools": "ツール",
-      "programming": ["Javascript", "Typescript"],
+      "programming": [
+        "Javascript",
+        "Typescript"
+      ],
       "library": [
         "React Js",
         "Next Js",
@@ -117,7 +147,11 @@
         "TailwindCSS",
         "REST API"
       ],
-      "tools": ["Postman", "Figma", "Jira"]
+      "tools": [
+        "Postman",
+        "Figma",
+        "Jira"
+      ]
     }
   }
 }

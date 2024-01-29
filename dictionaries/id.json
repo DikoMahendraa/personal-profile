@@ -1,5 +1,32 @@
 {
   "profile": {
+    "navbar": [
+      {
+        "href": "about",
+        "name": "Tentang Saya",
+        "disabled": false
+      },
+      {
+        "href": "experience",
+        "name": "Pengalaman Kerja",
+        "disabled": false
+      },
+      {
+        "href": "education",
+        "name": "Pendidikan",
+        "disabled": false
+      },
+      {
+        "href": "skills",
+        "name": "Keahlian",
+        "disabled": false
+      },
+      {
+        "href": "portofolio",
+        "name": "Portofolio",
+        "disabled": true
+      }
+    ],
     "user": {
       "name": "DIKO MAHENDRA",
       "position": "Frontend Developer",
@@ -108,7 +135,10 @@
       "title_programming": "Bahasa Pemograman",
       "title_library": "Library / Framework / Services",
       "title_tools": "Alat & Bantuan",
-      "programming": ["Javascript", "Typescript"],
+      "programming": [
+        "Javascript",
+        "Typescript"
+      ],
       "library": [
         "React Js",
         "Next Js",
@@ -117,7 +147,11 @@
         "TailwindCSS",
         "REST API"
       ],
-      "tools": ["Postman", "Figma", "Jira"]
+      "tools": [
+        "Postman",
+        "Figma",
+        "Jira"
+      ]
     }
   }
 }
