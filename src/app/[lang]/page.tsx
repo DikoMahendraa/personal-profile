@@ -13,9 +13,9 @@ const Header = dynamic(() => import('@/components/Header'), { ssr: false })
 
 export default async function Home({
   params: { lang },
-}: {
+}: Readonly<{
   params: { lang: Locale }
-}) {
+}>) {
   const t = await getDictionary(lang)
 
   return (
@@ -28,7 +28,7 @@ export default async function Home({
 
         <div className="lg:col-span-2 col-span-1 lg:h-screen h-full relative">
           <Header content={t.profile.navbar} lang={lang} />
-          <div className="overflow-y-scroll lg:mt-4 lg:h-[75rem] h-[60rem]">
+          <div className="overflow-y-scroll lg:mt-4 lg:h-[75rem] h-full">
             <AboutMe lang={lang} />
             <Experiences lang={lang} />
             <Educations lang={lang} />
