@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Providers } from './providers'
+import { Providers } from './(home)/providers'
 import { Locale } from '../../../i18n-config'
 
 import '../globals.css'
