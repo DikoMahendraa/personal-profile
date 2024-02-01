@@ -9,10 +9,14 @@ import Light from '@/svgs/Light'
 import { Locale } from '../../i18n-config'
 import Link from 'next/link'
 
-export default function Header({ lang, content }: {
-  lang: Locale; content: Array<{
-    href: string;
-    name: string;
+export default function Header({
+  lang,
+  content,
+}: {
+  lang: Locale
+  content: Array<{
+    href: string
+    name: string
     disabled: boolean
   }>
 }) {
@@ -50,46 +54,57 @@ export default function Header({ lang, content }: {
   }
 
   return (
-    <nav className="flex justify-between items-center sticky top-0 w-full bg-white shadow-lg lg:pr-4 p-6 lg:p-2 dark:bg-gray-800">
+    <nav className="flex justify-between items-center sticky top-0 w-full bg-white shadow-lg lg:pr-4 p-4 lg:p-2 dark:bg-gray-800">
       <div className="flex">
-        {
-          content?.map((item) => (
-            <div key={item.name} className="p-4 lg:block hidden">
-              <button
-                disabled={!!item.disabled}
-                onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 font-semibold dark:text-white"
-              >
-                {item.name} {
-                  item.disabled && <i className="text-xs">(coming soon)</i>
-                }
-              </button>
-            </div>
-          ))
-        }
+        {content?.map((item) => (
+          <div key={item.name} className="p-4 lg:block hidden">
+            <button
+              disabled={!!item.disabled}
+              onClick={() => scrollToSection(item.href)}
+              className="text-gray-700 font-semibold dark:text-white"
+            >
+              {item.name}{' '}
+              {item.disabled && <i className="text-xs">(coming soon)</i>}
+            </button>
+          </div>
+        ))}
         <div className="dropdown dropdown-hover lg:hidden flex">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle text-gray-300">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" />
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost btn-circle text-gray-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h7"
+              />
             </svg>
           </div>
-          <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box">
-            {
-              content?.map((item) => (
-                <li key={item.name}>
-                  <button
-                    disabled={!!item.disabled}
-                    onClick={() => scrollToSection(item.href)}
-                    className="bg-base-100 text-lg btn-wide"
-                  >
-                    {item.name} {
-                      item.disabled &&
-                      <i className="text-xs">(coming soon)</i>
-                    }
-                  </button>
-                </li>
-              ))
-            }
+          <ul
+            tabIndex={0}
+            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box"
+          >
+            {content?.map((item) => (
+              <li key={item.name}>
+                <button
+                  disabled={!!item.disabled}
+                  onClick={() => scrollToSection(item.href)}
+                  className="bg-base-100 text-lg btn-wide"
+                >
+                  {item.name}{' '}
+                  {item.disabled && <i className="text-xs">(coming soon)</i>}
+                </button>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
@@ -135,6 +150,6 @@ export default function Header({ lang, content }: {
           />
         </div>
       </div>
-    </nav >
+    </nav>
   )
 }
