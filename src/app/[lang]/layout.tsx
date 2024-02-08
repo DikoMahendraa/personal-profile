@@ -1,7 +1,11 @@
 import type { Metadata } from 'next'
 import { Providers } from './(home)/providers'
-import { Locale } from '../../../i18n-config'
+import dynamic from 'next/dynamic'
 
+const Header = dynamic(() => import('@/components/Header'), { ssr: false })
+
+import { Locale } from '../../../i18n-config'
+import { getDictionary } from '../../../get-dictionary'
 import '../globals.css'
 
 export const metadata: Metadata = {
@@ -16,13 +20,18 @@ export default async function RootLayout({
   children: React.ReactNode
   params: { lang: Locale }
 }>) {
+  const t = await getDictionary(lang)
+
   return (
     <html lang={lang} suppressHydrationWarning>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <body className="dark:bg-gray-800">
-        <Providers>{children}</Providers>
+      <body className="dark:bg-gray-800 min-h-screen relative">
+        <Providers>
+          <Header content={t.profile.navbar} lang={lang} />
+          {children}
+        </Providers>
       </body>
     </html>
   )

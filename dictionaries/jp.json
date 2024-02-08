@@ -24,7 +24,12 @@
       {
         "href": "portofolio",
         "name": "ポルトフォリオ",
-        "disabled": true
+        "disabled": false
+      },
+      {
+        "href": "articles",
+        "name": "Articles",
+        "disabled": false
       }
     ],
     "user": {
@@ -135,10 +140,7 @@
       "title_programming": "プログラミング言語",
       "title_library": "ライブラリー / フレームワーク / サービス",
       "title_tools": "ツール",
-      "programming": [
-        "Javascript",
-        "Typescript"
-      ],
+      "programming": ["Javascript", "Typescript"],
       "library": [
         "React Js",
         "Next Js",
@@ -147,11 +149,7 @@
         "TailwindCSS",
         "REST API"
       ],
-      "tools": [
-        "Postman",
-        "Figma",
-        "Jira"
-      ]
+      "tools": ["Postman", "Figma", "Jira"]
     }
   }
 }

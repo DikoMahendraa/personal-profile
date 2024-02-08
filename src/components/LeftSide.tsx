@@ -4,13 +4,13 @@ import { Locale } from '../../i18n-config'
 import { getDictionary } from '../../get-dictionary'
 import ButtonDownload from './ButtonDownload'
 
-export default async function LeftSide({ lang }: { lang: Locale }) {
+export default async function LeftSide({ lang }: Readonly<{ lang: Locale }>) {
   const t = await getDictionary(lang)
 
   return (
     <div className="w-full mt-20">
       <div className="flex items-center justify-center">
-        <div className="relative w-[20rem] h-[20rem] rounded-lg">
+        <div className="relative w-[15rem] h-[15rem] rounded-full overflow-hidden mb-4 border-4 border-gray-400">
           <Image
             alt="image-profile"
             src="/me.jpeg"

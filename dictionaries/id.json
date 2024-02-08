@@ -24,7 +24,12 @@
       {
         "href": "portofolio",
         "name": "Portofolio",
-        "disabled": true
+        "disabled": false
+      },
+      {
+        "href": "articles",
+        "name": "Artikel",
+        "disabled": false
       }
     ],
     "user": {
@@ -135,10 +140,7 @@
       "title_programming": "Bahasa Pemograman",
       "title_library": "Library / Framework / Services",
       "title_tools": "Alat & Bantuan",
-      "programming": [
-        "Javascript",
-        "Typescript"
-      ],
+      "programming": ["Javascript", "Typescript"],
       "library": [
         "React Js",
         "Next Js",
@@ -147,11 +149,7 @@
         "TailwindCSS",
         "REST API"
       ],
-      "tools": [
-        "Postman",
-        "Figma",
-        "Jira"
-      ]
+      "tools": ["Postman", "Figma", "Jira"]
     }
   }
 }

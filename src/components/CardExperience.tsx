@@ -24,9 +24,9 @@ export default function CardExperience({
   return (
     <div className="p-4">
       {title && (
-        <p className="text-xl font-semibold text-gray-800 dark:text-white">
+        <h1 className="text-2xl font-semibold text-gray-800 dark:text-white">
           {title}
-        </p>
+        </h1>
       )}
       <div>
         <div className="flex mt-4 justify-between items-center">

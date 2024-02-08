@@ -2,14 +2,14 @@ import React from 'react'
 import { Locale } from '../../i18n-config'
 import { getDictionary } from '../../get-dictionary'
 
-export default async function Educations({ lang }: { lang: Locale }) {
+export default async function Educations({ lang }: Readonly<{ lang: Locale }>) {
   const t = await getDictionary(lang)
 
   return (
     <div id="education" className="mt-10 lg:px-0 px-6">
-      <p className="text-xl font-semibold text-gray-600 dark:text-white">
+      <h1 className="text-2xl font-semibold text-gray-600 dark:text-white">
         {t.profile.educations.title_education}
-      </p>
+      </h1>
       <div className="grid grid-cols-2 mt-4">
         {t.profile.educations.schools.map((item) => (
           <div key={item.name}>
