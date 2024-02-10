@@ -4,31 +4,37 @@
       {
         "href": "about",
         "name": "私について",
+        "scrollable": true,
         "disabled": false
       },
       {
         "href": "experience",
         "name": "エクスペリエンス",
+        "scrollable": true,
         "disabled": false
       },
       {
         "href": "education",
         "name": "エデュケーション",
+        "scrollable": true,
         "disabled": false
       },
       {
         "href": "skills",
         "name": "ノウハウ",
+        "scrollable": true,
         "disabled": false
       },
       {
         "href": "portofolio",
         "name": "ポルトフォリオ",
+        "scrollable": false,
         "disabled": false
       },
       {
         "href": "articles",
-        "name": "Articles",
+        "name": "記事",
+        "scrollable": false,
         "disabled": false
       }
     ],
@@ -133,7 +139,7 @@
     },
     "about": {
       "title_aboutme": "私について",
-      "description": "NextJs、React Js、React Nativeの使用経験が±2年のウェブ開発者です。新しいことを学ぶことに興味があり、プレッシャーの中で働くことに慣れており、チームプレーが得意で、リモートワークにも慣れています。"
+      "description": "NextJs、React Js、React Nativeの使用経験が±3年のウェブ開発者です。新しいことを学ぶことに興味があり、プレッシャーの中で働くことに慣れており、チームプレーが得意で、リモートワークにも慣れています。"
     },
     "skills": {
       "title_skills": "スキル",
@@ -150,6 +156,78 @@
         "REST API"
       ],
       "tools": ["Postman", "Figma", "Jira"]
+    },
+    "portofolio": {
+      "label_role": "ポジション",
+      "label_description": "何をしたんだ？",
+      "label_tech_used": "使用されている技術は？",
+      "personal": [],
+      "company": [
+        {
+          "name": "VTR",
+          "description": "Cypressを使った自動化のためのQA指導、Jestを使ったユニットテストの実装、本番環境へのアプリケーションのデプロイ方法の学習、AWS amplifyへのブランチの登録方法の学習、Frontendの友人たちとの毎月のセッションの共有など。",
+          "role": "Frontend Engineer",
+          "tech": "NextJs, Typescript, i18n, Jotai, Zod, React Hook Form, React Query, TailwindCSS, Jest, Cypress",
+          "link": "https://vtrconnect.com",
+          "available": true
+        },
+        {
+          "name": "Agreeculture.id",
+          "role": "Frontend Engineer",
+          "description": "フロントエンドのバグを修正し、Ask an Expert、Agreepedia、ディスカッションフォーラムなどの新機能を追加しました。また、レスポンシブデザイン（モバイル、タブレット、デスクトップ）への移行作業にも参加しました。",
+          "tech": "NextJs, i18n, TailwindCSS, styled-component, redux, react hooks form.",
+          "available": true,
+          "link": "agreeculture.id"
+        },
+        {
+          "name": "Dashboard Zeus & Hermes",
+          "description": "Zeusダッシュボードと製品管理用Hermesのメンテナンス、ダッシュボードへのCRUD機能の追加、Rest APIとの統合、ダッシュボードへの翻訳機能(i18n)の追加。",
+          "role": "Frontend Developer",
+          "tech": "NextJs, Typescript, i18n, Micro Frontend, AntDesign, Jira, React Storybook, Styled Component.",
+          "available": false,
+          "link": "not available to show"
+        },
+        {
+          "name": "Dana Syariah",
+          "description": "ランディングページやdsahboardから始まるWebアプリケーションの0からの開発を手伝い、必要ないくつかのモジュール/パッケージのインストール、開発プロセスをより速くするためのコンポーネントメンテナンスのためのストーリーブックの実装、言語機能（国際化）のインストール、React Nativeを使用した既存のアプリケーションの開発を引き続き手伝い、いくつかの機能を追加し、また、乱雑なコードやフォルダ構造をリファクタリングする。",
+          "available": true,
+          "role": "Frontend Web & Mobile React Native",
+          "tech": "React Native, NextJs, Typescript, i18n, React Storybook, AntDesign, Redux.",
+          "link": ""
+        },
+        {
+          "name": "Mirocks Insurance - India",
+          "description": "GraphQLやTypescriptといった新しい技術を学んだり、クリーンコードについて学んだり、インターフェースのバグを修正したり、ドキュメントのアップロードやフォームのバリデーションといった新機能を追加したり。",
+          "role": "Internship Frontend Developer",
+          "tech": "GraphQL, typescript, Nextjs, AntDesign Pro, i18n, Redux.",
+          "link": "",
+          "available": false
+        },
+        {
+          "name": "Certie & Hobids",
+          "description": "0からUIアプリケーションを作成する。,BE、PM、そしてクライアントと、取り組むプロジェクトについて話し合う、プロジェクトに適したUIテンプレートを見つける。デザインツールとしてUI/UXとfigmaを学び、アトミックデザインパターンでプロジェクトのアーキテクチャを作成する。",
+          "role": "Frontend Engineer",
+          "tech": "ReactJs, Nextjs, Javascript, TailwindCSS, Ant Design, Redux.",
+          "link": "",
+          "available": false
+        },
+        {
+          "name": "Dashboard Zurich Insurance",
+          "description": "0からダッシュボード管理を作成し、いくつかの分析機能、署名されたドキュメント、アクティビティログ、ユーザー管理、そしてすべてのデータ（保留、無効、拒否、検証）を追加し、チームと協力する。",
+          "role": "Junior Frontend Developer",
+          "tech": "VueJs, NuxtJs, Vuetify, Vuex.",
+          "link": "",
+          "available": false
+        },
+        {
+          "name": "Landing Page Qatros",
+          "role": "Junior Frontend Developer",
+          "description": "vuejsを1週間学んだ後、社内向けのランディングページ（新しいUI）を開発し、チームワークを学んだり、新しい技術について議論したり、社内で共有セッションを行ったりして、直接実装した。",
+          "tech": "VueJs, Bootstrap",
+          "link": "",
+          "available": false
+        }
+      ]
     }
   }
 }

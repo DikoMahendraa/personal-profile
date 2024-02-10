@@ -4,31 +4,37 @@
       {
         "href": "about",
         "name": "About Me",
-        "disabled": false
+        "disabled": false,
+        "scrollable": true
       },
       {
         "href": "experience",
         "name": "Experience",
-        "disabled": false
+        "disabled": false,
+        "scrollable": true
       },
       {
         "href": "education",
         "name": "Education",
-        "disabled": false
+        "disabled": false,
+        "scrollable": true
       },
       {
         "href": "skills",
         "name": "Skills",
-        "disabled": false
+        "disabled": false,
+        "scrollable": true
       },
       {
         "href": "portofolio",
         "name": "Portofolio",
+        "scrollable": false,
         "disabled": false
       },
       {
         "href": "articles",
         "name": "Articles",
+        "scrollable": false,
         "disabled": false
       }
     ],
@@ -133,7 +139,7 @@
     },
     "about": {
       "title_aboutme": "About Me",
-      "description": "I am web developer with ± 2 years of experience using NextJs, React Js and also React Native. interested in learning new things, used to working under pressure, working well with team, used to working remotely and ready to adjust skills according to company needs."
+      "description": "I am web developer with ± 3 years of experience using NextJs, React Js and also React Native. interested in learning new things, used to working under pressure, working well with team, used to working remotely and ready to adjust skills according to company needs."
     },
     "skills": {
       "title_skills": "Skills",
@@ -150,6 +156,78 @@
         "REST API"
       ],
       "tools": ["Postman", "Figma", "Jira"]
+    },
+    "portofolio": {
+      "label_role": "position",
+      "label_description": "What did you do?",
+      "label_tech_used": "What are the technologies used?",
+      "personal": [],
+      "company": [
+        {
+          "name": "VTR",
+          "description": "Help clean up messy code to become reusable and refactor, fix bugs in Frontend code. continue to help mentoring QA for automation using cypress. implement unit testing using Jest, learn how to deploy applications to production, learn how to register branches to AWS amplify, continue to learn sharing sessions every month with Frontend friends and much more.",
+          "role": "Frontend Engineer",
+          "tech": "NextJs, Typescript, i18n, Jotai, Zod, React Hook Form, React Query, TailwindCSS, Jest, Cypress",
+          "link": "https://vtrconnect.com",
+          "available": true
+        },
+        {
+          "name": "Agreeculture.id",
+          "role": "Frontend Engineer",
+          "description": "Fixed bugs in the Frontend code, added some new features such as Ask an Expert, Agreepedia, and also the Discussion Forum. I also participated in the migration process for responsive design (mobile, tablet, & desktop). nerapin clean code, and many more.",
+          "tech": "NextJs, i18n, TailwindCSS, styled-component, redux, react hooks form.",
+          "available": true,
+          "link": "agreeculture.id"
+        },
+        {
+          "name": "Dashboard Zeus & Hermes",
+          "description": "Maintenance of Zeus dashboard and also Hermes for product management, add some CRUD features in the dashboard. integration with Rest API. and add translation feature (i18n) in the dashboard.",
+          "role": "Frontend Developer",
+          "tech": "NextJs, Typescript, i18n, Micro Frontend, AntDesign, Jira, React Storybook, Styled Component.",
+          "available": false,
+          "link": "not available to show"
+        },
+        {
+          "name": "Dana Syariah",
+          "description": "Help develop from 0 for web applications starting from the landing page & also the dsahboard, installation of several modules / packages needed, implementation of storybooks for component maintenance to make the development process much faster, installation of language features (i18n), continue to help develop existing applications using React Native, add some features and also refactoring code and folder structure that is messy.",
+          "available": true,
+          "role": "Frontend Web & Mobile React Native",
+          "tech": "React Native, NextJs, Typescript, i18n, React Storybook, AntDesign, Redux.",
+          "link": ""
+        },
+        {
+          "name": "Mirocks Insurance - India",
+          "description": "I actually learned more here, starting from communicating and presenting in English. learning new technologies such as GraphQL and Typescript, learning about clean code. and fixing some bugs in the interface, adding some new features such as uploading documents and form validation.",
+          "role": "Internship Frontend Developer",
+          "tech": "GraphQL, typescript, Nextjs, AntDesign Pro, i18n, Redux.",
+          "link": "",
+          "available": false
+        },
+        {
+          "name": "Certie & Hobids",
+          "description": "create a web application from 0, discuss with BE, PM and also the client regarding the project to be worked on, find a UI template that is suitable for the project. learn UI/UX and figma as design tools, create project architecture with atomic design patterns. then deploy the project to cpanel.",
+          "role": "Frontend Engineer",
+          "tech": "ReactJs, Nextjs, Javascript, TailwindCSS, Ant Design, Redux.",
+          "link": "",
+          "available": false
+        },
+        {
+          "name": "Dashboard Zurich Insurance",
+          "description": "Create dashboard management from 0, add some analytics features, signed docs, activity logs, user management, and also all data (pending, invalid, rejected and verified), work with the team. then apply state management using vuex.",
+          "role": "Junior Frontend Developer",
+          "tech": "VueJs, NuxtJs, Vuetify, Vuex.",
+          "link": "",
+          "available": false
+        },
+        {
+          "name": "Landing Page Qatros",
+          "role": "Junior Frontend Developer",
+          "description": "learning vuejs for 1 week, then direct implementation by developing landing pages (with a new UI) for internal companies, learning to work with teams, discussing new technologies, and conducting sharing sessions in the office.",
+          "tech": "VueJs, Bootstrap",
+          "link": "",
+          "available": false
+        }
+      ]
     }
   }
 }

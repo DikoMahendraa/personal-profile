@@ -1,25 +1,42 @@
-import Link from 'next/link'
 import React from 'react'
+import { getDictionary } from '../../../../get-dictionary'
+import { Locale } from '@@/i18n-config'
+import CardPortofolio from '@/components/CardPortofolio'
 
-export default function PagePortofolio() {
+export default async function PagePortofolio({
+  params: { lang },
+}: Readonly<{
+  params: { lang: Locale }
+}>) {
+  const t = await getDictionary(lang)
+
   return (
     <div className="container mx-auto">
       <div className="my-6 gap-4 dark:text-gray-200 grid grid-cols-3">
-        {Array.from({ length: 8 }).map((idx) => (
-          <div className="lg:col-span-1 col-span-3" key={idx as string}>
-            <div className="rounded-md shadow-xl p-4 cursor-pointer hover:bg-gray-100/50 dark:hover:bg-gray-900/10">
-              <h2 className="font-semibold">VTR</h2>
-              <p className="mt-4">
-                Aplikasi real estate untuk perusahaan US, memiliki beberapa role
-                diantaranya tenant, landlord, dan juga professional
-              </p>
-              <Link href="https://vtrconnect.com" target="_blank">
-                <p className="text-info mt-4">https://vtrconnect.com</p>
-              </Link>
-            </div>
-          </div>
+        {t.profile.portofolio.company.map((item) => (
+          <CardPortofolio
+            labelDescription={t.profile.portofolio.label_description}
+            labelRole={t.profile.portofolio.label_role}
+            labelTech={t.profile.portofolio.label_tech_used}
+            {...item}
+            key={item.name}
+          />
         ))}
       </div>
+
+      <dialog id="showProjectDetail" className="modal">
+        <div className="modal-box">
+          <h3 className="font-bold text-lg">Hello!</h3>
+          <p className="py-4">
+            Press ESC key or click the button below to close
+          </p>
+          <div className="modal-action">
+            <form method="dialog">
+              <button className="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </div>
   )
 }

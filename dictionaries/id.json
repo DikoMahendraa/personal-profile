@@ -4,31 +4,37 @@
       {
         "href": "about",
         "name": "Tentang Saya",
-        "disabled": false
+        "disabled": false,
+        "scrollable": true
       },
       {
         "href": "experience",
         "name": "Pengalaman Kerja",
-        "disabled": false
+        "disabled": false,
+        "scrollable": true
       },
       {
         "href": "education",
         "name": "Pendidikan",
+        "scrollable": true,
         "disabled": false
       },
       {
         "href": "skills",
         "name": "Keahlian",
+        "scrollable": true,
         "disabled": false
       },
       {
         "href": "portofolio",
         "name": "Portofolio",
+        "scrollable": false,
         "disabled": false
       },
       {
         "href": "articles",
         "name": "Artikel",
+        "scrollable": false,
         "disabled": false
       }
     ],
@@ -133,7 +139,7 @@
     },
     "about": {
       "title_aboutme": "Tentang Saya",
-      "description": "Saya seorang Web Developer dengan pengalaman ± 2 tahun menggunakan NextJs, React Js dan juga React Native. tertarik untuk belajar hal baru, terbiasa bekerja dibawah tekanan, bekerja dengan baik dengan tim, terbiasa bekerja remote dan siap menyesuaikan skill sesui dengan kebutuhan perusahaan."
+      "description": "Saya seorang Web Developer dengan pengalaman ± 3 tahun menggunakan NextJs, React Js dan juga React Native. tertarik untuk belajar hal baru, terbiasa bekerja dibawah tekanan, bekerja dengan baik dengan tim, terbiasa bekerja remote dan siap menyesuaikan skill sesui dengan kebutuhan perusahaan."
     },
     "skills": {
       "title_skills": "Keahlian",
@@ -150,6 +156,78 @@
         "REST API"
       ],
       "tools": ["Postman", "Figma", "Jira"]
+    },
+    "portofolio": {
+      "label_role": "Jabatan",
+      "label_description": "Ngapain aja ?",
+      "label_tech_used": "Teknologi yg dipake ?",
+      "personal": [],
+      "company": [
+        {
+          "name": "VTR",
+          "description": "Bantu ngerapihin kode yg berantakan buat jadi reusable dan direfactor, benerin bug di code Frontend. terus bantu mentoring QA buat automation pakai cypress. implementasi unit testing pake Jest, belajar cara deploy aplikasi ke production, belajar cara register branch ke AWS amplify, terus belajar sharing session tiap bulan bareng temen2 Frontend dan masih banyak lagi",
+          "role": "Frontend Engineer",
+          "tech": "NextJs, Typescript, i18n, Jotai, Zod, React Hook Form, React Query, TailwindCSS, Jest, Cypress",
+          "link": "https://vtrconnect.com",
+          "available": true
+        },
+        {
+          "name": "Agreeculture.id",
+          "role": "Frontend Engineer",
+          "description": "Benerin bug di kode Frontend, nambahin beberapa fitur baru kayak Tanya Ahli, Agreepedia, dan juga Forum Diskusi. aku juga ikut proses migrasi untuk responsive design (mobile, tablet, & desktop). nerapin clean code, dan masih banyak lagi",
+          "tech": "NextJs, i18n, TailwindCSS, styled-component, redux, react hooks form.",
+          "available": true,
+          "link": "agreeculture.id"
+        },
+        {
+          "name": "Dashboard Zeus & Hermes",
+          "description": "Maintenance dashboard Zeus dan juga Hermes untuk management produk, nambahin beberapa fitur CRUD di dashboardnya. integrasi dengan Rest API. dan nambahin fitur translation (i18n) di dashboardnya.",
+          "role": "Frontend Developer",
+          "tech": "NextJs, Typescript, i18n, Micro Frontend, AntDesign, Jira, React Storybook, Styled Component.",
+          "available": false,
+          "link": "not available to show"
+        },
+        {
+          "name": "Dana Syariah",
+          "description": "Bantu develop dari 0 untuk aplikasi web mulai dari landing page & juga dsahboardnya, instalasi beberapa module/package yg diperlukan, implementasi storybook untuk maintenance component biar proses development jauh lebih cepat, instalasi fitur bahasa (i18n), terus ikut bantu develop aplikasi yg sudah ada menggunakan React Native, nambahin beberapa fitur dan juga refactoring code dan folder struktur yg berantakan.",
+          "available": true,
+          "role": "Frontend Web & Mobile React Native",
+          "tech": "React Native, NextJs, Typescript, i18n, React Storybook, AntDesign, Redux.",
+          "link": ""
+        },
+        {
+          "name": "Mirocks Insurance - India",
+          "description": "sebenernya disini aku lebih banyak belajar, mulai dari berkomunikasi dan presentasi pakai bahasa inggris. belajar teknologoi baru seperti GraphQL dan juga Typescript, belajar tentang clean code. dan memperbaiki beberapa bug pada tampilan, menambahkan beberapa fitur baru seperti upload documentsnya dan juga validasi form.",
+          "role": "Internship Frontend Developer",
+          "tech": "GraphQL, typescript, Nextjs, AntDesign Pro, i18n, Redux.",
+          "link": "",
+          "available": false
+        },
+        {
+          "name": "Certie & Hobids",
+          "description": "buat aplikasi web dari 0, diskusi bareng BE, PM dan juga client terkait project yg akan dikerjakan, nyari template UI yg cocok untuk project tsb. belajar UI/UX dan figma sebagai tools design, buat arsitektur project dengan atomic design pattern. terus deployment project ke cpanel",
+          "role": "Frontend Engineer",
+          "tech": "ReactJs, Nextjs, Javascript, TailwindCSS, Ant Design, Redux.",
+          "link": "",
+          "available": false
+        },
+        {
+          "name": "Dashboard Zurich Insurance",
+          "description": "buat dashboard management dari 0, nambahin beberapa fitur analisa, signed docs, activity log, user management, dan juga semua data (pending, invalid, ditolak dan verifikasi), bekerja bareng tim. terus nerapin state management pake vuex.",
+          "role": "Junior Frontend Developer",
+          "tech": "VueJs, NuxtJs, Vuetify, Vuex.",
+          "link": "",
+          "available": false
+        },
+        {
+          "name": "Landing Page Qatros",
+          "role": "Junior Frontend Developer",
+          "description": "belajar vuejs selama 1 pekan, kemudian impelementasi langsung dengan cara ngedevelop landing page (dengan tampilan UI yg baru) untuk internal perusahaan, belajar bekerja bareng tim, diskusi terkait teknologi baru, dan ngisi sharing session di kantor",
+          "tech": "VueJs, Bootstrap",
+          "link": "",
+          "available": false
+        }
+      ]
     }
   }
 }

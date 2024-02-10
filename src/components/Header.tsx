@@ -20,13 +20,12 @@ export default function Header({
     href: string
     name: string
     disabled: boolean
+    scrollable: boolean
   }>
 }>) {
   const router = useRouter()
   const pathname = usePathname()
   const { theme, setTheme } = useTheme()
-
-  const lastPath = pathname.split('/').pop()
 
   const setFlag = () => {
     switch (lang) {
@@ -53,39 +52,30 @@ export default function Header({
   }
 
   const scrollToSection = useCallback(
-    (sectionId: string) => {
+    (sectionId: string, scrollable: boolean) => {
       const section = document.getElementById(sectionId)
 
-      if (sectionId.includes('portofolio')) {
-        router.push(`/${lang}/${sectionId}`)
-      } else {
+      if (scrollable) {
+        if (pathname.includes('portofolio') || pathname.includes('articles')) {
+          router.push(`/${lang}`)
+        }
         section?.scrollIntoView({ behavior: 'smooth' })
+      } else {
+        router.push(`/${lang}/${sectionId}`)
       }
     },
-    [lang, router]
+    [lang, pathname, router]
   )
-
-  const listMenu = pathname.includes('portofolio')
-    ? content.slice(4, content.length)
-    : content.slice(0, 5)
 
   return (
     <nav className="bg-white dark:bg-gray-800 sticky top-0 w-full z-10 shadow-lg lg:pr-4 p-4 lg:p-2">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          {pathname.includes('portofolio') && (
-            <Link
-              href="/"
-              className="dark:text-gray-800 bg-gray-300 p-2 rounded-md px-6"
-            >
-              Kembali
-            </Link>
-          )}
-          {listMenu?.map((item) => (
+          {content?.map((item) => (
             <div key={item.name} className="p-4 lg:block hidden">
               <button
                 disabled={item.disabled}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => scrollToSection(item.href, item.scrollable)}
                 className="text-gray-700 font-semibold dark:text-white"
               >
                 {item.name}{' '}
@@ -121,7 +111,7 @@ export default function Header({
                 <li key={item.name}>
                   <button
                     disabled={!!item.disabled}
-                    onClick={() => scrollToSection(item.href)}
+                    onClick={() => scrollToSection(item.href, item.scrollable)}
                     className="bg-base-100 text-lg btn-wide"
                   >
                     {item.name}{' '}
@@ -142,17 +132,17 @@ export default function Header({
               className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link locale={false} href={`/en/${lastPath}`}>
+                <Link locale="en" href="/en">
                   <EnglishFlag width={20} height={15} /> English
                 </Link>
               </li>
               <li>
-                <Link locale={false} href={`/id/${lastPath}`}>
+                <Link locale="id" href="/id">
                   <IndonesiaFlag width={20} height={15} /> Indonesia
                 </Link>
               </li>
               <li>
-                <Link locale={false} href={`/jp/${lastPath}`}>
+                <Link locale="jp" href="/jp">
                   <JapanFlag width={20} height={15} /> Japan
                 </Link>
               </li>
