@@ -164,6 +164,7 @@
       "personal": [],
       "company": [
         {
+          "images": "/portofolio/vtr.png",
           "name": "VTR",
           "description": "Cypressを使った自動化のためのQA指導、Jestを使ったユニットテストの実装、本番環境へのアプリケーションのデプロイ方法の学習、AWS amplifyへのブランチの登録方法の学習、Frontendの友人たちとの毎月のセッションの共有など。",
           "role": "Frontend Engineer",
@@ -172,6 +173,7 @@
           "available": true
         },
         {
+          "images": "/portofolio/agree.png",
           "name": "Agreeculture.id",
           "role": "Frontend Engineer",
           "description": "フロントエンドのバグを修正し、Ask an Expert、Agreepedia、ディスカッションフォーラムなどの新機能を追加しました。また、レスポンシブデザイン（モバイル、タブレット、デスクトップ）への移行作業にも参加しました。",
@@ -180,6 +182,7 @@
           "link": "agreeculture.id"
         },
         {
+          "images": "/portofolio/nabati.png",
           "name": "Dashboard Zeus & Hermes",
           "description": "Zeusダッシュボードと製品管理用Hermesのメンテナンス、ダッシュボードへのCRUD機能の追加、Rest APIとの統合、ダッシュボードへの翻訳機能(i18n)の追加。",
           "role": "Frontend Developer",
@@ -188,6 +191,7 @@
           "link": "not available to show"
         },
         {
+          "images": "/portofolio/dana.png",
           "name": "Dana Syariah",
           "description": "ランディングページやdsahboardから始まるWebアプリケーションの0からの開発を手伝い、必要ないくつかのモジュール/パッケージのインストール、開発プロセスをより速くするためのコンポーネントメンテナンスのためのストーリーブックの実装、言語機能（国際化）のインストール、React Nativeを使用した既存のアプリケーションの開発を引き続き手伝い、いくつかの機能を追加し、また、乱雑なコードやフォルダ構造をリファクタリングする。",
           "available": true,
@@ -196,6 +200,7 @@
           "link": ""
         },
         {
+          "images": "/portofolio/not-found.png",
           "name": "Mirocks Insurance - India",
           "description": "GraphQLやTypescriptといった新しい技術を学んだり、クリーンコードについて学んだり、インターフェースのバグを修正したり、ドキュメントのアップロードやフォームのバリデーションといった新機能を追加したり。",
           "role": "Internship Frontend Developer",
@@ -204,14 +209,26 @@
           "available": false
         },
         {
-          "name": "Certie & Hobids",
+          "images": "/portofolio/certie.png",
+          "name": "Certie",
           "description": "0からUIアプリケーションを作成する。,BE、PM、そしてクライアントと、取り組むプロジェクトについて話し合う、プロジェクトに適したUIテンプレートを見つける。デザインツールとしてUI/UXとfigmaを学び、アトミックデザインパターンでプロジェクトのアーキテクチャを作成する。",
           "role": "Frontend Engineer",
-          "tech": "ReactJs, Nextjs, Javascript, TailwindCSS, Ant Design, Redux.",
+          "tech": "Nextjs, Javascript, TailwindCSS, Ant Design, Redux.",
+          "link": "",
+          "available": false
+        },
+
+        {
+          "images": "/portofolio/hobids.png",
+          "name": "Hobids",
+          "description": "0からWebアプリケーションを作成し、BEやPM、クライアントとプロジェクトについて話し合い、UIイメージをコードに落とし込む。, nFEにおけるフォルダー・アーキテクチャーを決定し、その外観とプロトタイプをクライアントに提示する。",
+          "role": "Frontend Engineer",
+          "tech": "Nextjs, Javascript, TailwindCSS, Ant Design, Redux.",
           "link": "",
           "available": false
         },
         {
+          "images": "/portofolio/zurich.png",
           "name": "Dashboard Zurich Insurance",
           "description": "0からダッシュボード管理を作成し、いくつかの分析機能、署名されたドキュメント、アクティビティログ、ユーザー管理、そしてすべてのデータ（保留、無効、拒否、検証）を追加し、チームと協力する。",
           "role": "Junior Frontend Developer",
@@ -220,6 +237,7 @@
           "available": false
         },
         {
+          "images": "/portofolio/qatros.png",
           "name": "Landing Page Qatros",
           "role": "Junior Frontend Developer",
           "description": "vuejsを1週間学んだ後、社内向けのランディングページ（新しいUI）を開発し、チームワークを学んだり、新しい技術について議論したり、社内で共有セッションを行ったりして、直接実装した。",

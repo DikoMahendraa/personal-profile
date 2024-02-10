@@ -3,6 +3,7 @@
 import { CircleUserRound, Code2, ListTodo } from 'lucide-react'
 import React from 'react'
 import Collapse from './Collapse'
+import Image from 'next/image'
 
 export default function CardPortofolio(
   item: Readonly<{
@@ -13,6 +14,7 @@ export default function CardPortofolio(
     role: string
     description: string
     tech: string
+    images: string
   }>
 ) {
   const onShowModal = () => {
@@ -23,9 +25,21 @@ export default function CardPortofolio(
     )?.showModal?.()
   }
   return (
-    <div className="lg:col-span-1 col-span-3">
-      <div className="rounded-md shadow-xl p-4 cursor-pointer hover:bg-gray-100/50 dark:hover:bg-gray-900/10">
+    <div className="lg:col-span-1 col-span-3 border dark:border-gray-700 border-gray-200 rounded-lg dark:shadow-lg">
+      <div className="rounded-md dark:shadow-xl p-4 cursor-pointer hover:bg-gray-100/50 dark:hover:bg-gray-900/10">
         <h2 className="text-xl font-semibold uppercase">{item.name}</h2>
+        <div className="relative h-[15rem] w-full mt-6 mb-4">
+          <Image
+            className="rounded-md"
+            alt={`images-${item.name}`}
+            priority
+            objectFit="contain"
+            quality={50}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            src={item.images}
+          />
+        </div>
         <Collapse
           icon={<CircleUserRound />}
           label={item.labelRole}

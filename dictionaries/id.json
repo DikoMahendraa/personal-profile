@@ -164,6 +164,7 @@
       "personal": [],
       "company": [
         {
+          "images": "/portofolio/vtr.png",
           "name": "VTR",
           "description": "Bantu ngerapihin kode yg berantakan buat jadi reusable dan direfactor, benerin bug di code Frontend. terus bantu mentoring QA buat automation pakai cypress. implementasi unit testing pake Jest, belajar cara deploy aplikasi ke production, belajar cara register branch ke AWS amplify, terus belajar sharing session tiap bulan bareng temen2 Frontend dan masih banyak lagi",
           "role": "Frontend Engineer",
@@ -172,6 +173,7 @@
           "available": true
         },
         {
+          "images": "/portofolio/agree.png",
           "name": "Agreeculture.id",
           "role": "Frontend Engineer",
           "description": "Benerin bug di kode Frontend, nambahin beberapa fitur baru kayak Tanya Ahli, Agreepedia, dan juga Forum Diskusi. aku juga ikut proses migrasi untuk responsive design (mobile, tablet, & desktop). nerapin clean code, dan masih banyak lagi",
@@ -180,6 +182,7 @@
           "link": "agreeculture.id"
         },
         {
+          "images": "/portofolio/nabati.png",
           "name": "Dashboard Zeus & Hermes",
           "description": "Maintenance dashboard Zeus dan juga Hermes untuk management produk, nambahin beberapa fitur CRUD di dashboardnya. integrasi dengan Rest API. dan nambahin fitur translation (i18n) di dashboardnya.",
           "role": "Frontend Developer",
@@ -188,6 +191,7 @@
           "link": "not available to show"
         },
         {
+          "images": "/portofolio/dana.png",
           "name": "Dana Syariah",
           "description": "Bantu develop dari 0 untuk aplikasi web mulai dari landing page & juga dsahboardnya, instalasi beberapa module/package yg diperlukan, implementasi storybook untuk maintenance component biar proses development jauh lebih cepat, instalasi fitur bahasa (i18n), terus ikut bantu develop aplikasi yg sudah ada menggunakan React Native, nambahin beberapa fitur dan juga refactoring code dan folder struktur yg berantakan.",
           "available": true,
@@ -196,6 +200,7 @@
           "link": ""
         },
         {
+          "images": "/portofolio/not-found.png",
           "name": "Mirocks Insurance - India",
           "description": "sebenernya disini aku lebih banyak belajar, mulai dari berkomunikasi dan presentasi pakai bahasa inggris. belajar teknologoi baru seperti GraphQL dan juga Typescript, belajar tentang clean code. dan memperbaiki beberapa bug pada tampilan, menambahkan beberapa fitur baru seperti upload documentsnya dan juga validasi form.",
           "role": "Internship Frontend Developer",
@@ -204,7 +209,8 @@
           "available": false
         },
         {
-          "name": "Certie & Hobids",
+          "images": "/portofolio/certie.png",
+          "name": "Certie",
           "description": "buat aplikasi web dari 0, diskusi bareng BE, PM dan juga client terkait project yg akan dikerjakan, nyari template UI yg cocok untuk project tsb. belajar UI/UX dan figma sebagai tools design, buat arsitektur project dengan atomic design pattern. terus deployment project ke cpanel",
           "role": "Frontend Engineer",
           "tech": "ReactJs, Nextjs, Javascript, TailwindCSS, Ant Design, Redux.",
@@ -212,6 +218,16 @@
           "available": false
         },
         {
+          "images": "/portofolio/hobids.png",
+          "name": "Hobids",
+          "description": "buat aplikasi web dari 0, diskusi bareng BE, PM dan juga client terkait project yg akan dikerjakan, merealisasikan UI figma ke dalam kode. menentukan arsitektur folder pada FE, dan mempresentasikan ke client terkait tampilan dan prototype yg sudah dkerjakan.",
+          "role": "Frontend Engineer",
+          "tech": "ReactJs, Nextjs, Javascript, TailwindCSS, Ant Design, Redux.",
+          "link": "",
+          "available": false
+        },
+        {
+          "images": "/portofolio/zurich.png",
           "name": "Dashboard Zurich Insurance",
           "description": "buat dashboard management dari 0, nambahin beberapa fitur analisa, signed docs, activity log, user management, dan juga semua data (pending, invalid, ditolak dan verifikasi), bekerja bareng tim. terus nerapin state management pake vuex.",
           "role": "Junior Frontend Developer",
@@ -220,6 +236,7 @@
           "available": false
         },
         {
+          "images": "/portofolio/qatros.png",
           "name": "Landing Page Qatros",
           "role": "Junior Frontend Developer",
           "description": "belajar vuejs selama 1 pekan, kemudian impelementasi langsung dengan cara ngedevelop landing page (dengan tampilan UI yg baru) untuk internal perusahaan, belajar bekerja bareng tim, diskusi terkait teknologi baru, dan ngisi sharing session di kantor",
