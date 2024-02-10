@@ -2,8 +2,9 @@
 
 import React from 'react'
 import { usePathname } from 'next/navigation'
+import { FileDown } from 'lucide-react'
 
-export default function ButtonDownload({ text }: { text: string }) {
+export default function ButtonDownload({ text }: Readonly<{ text: string }>) {
   const pathname = usePathname()
 
   const handleDownload = () => {
@@ -18,13 +19,11 @@ export default function ButtonDownload({ text }: { text: string }) {
   }
 
   return (
-    <div className="mt-8">
-      <button
-        onClick={handleDownload}
-        className="btn btn-outline rounded-sm dark:btn-info dark:btn-primary"
-      >
-        {text}
-      </button>
-    </div>
+    <button
+      onClick={handleDownload}
+      className="btn btn-outline rounded-sm dark:btn-info dark:btn-primary"
+    >
+      <FileDown /> {text}
+    </button>
   )
 }

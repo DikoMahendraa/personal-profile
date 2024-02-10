@@ -229,5 +229,10 @@
         }
       ]
     }
+  },
+  "notFound": {
+    "heading": "404 - Ups",
+    "description": "Sorry, Page not found.",
+    "buttonBack": "Main page"
   }
 }

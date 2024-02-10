@@ -1,6 +1,6 @@
 import React from 'react'
-import { Locale } from '../../i18n-config'
-import { getDictionary } from '../../get-dictionary'
+import { Locale } from '@@/i18n-config'
+import { getDictionary } from '@@/get-dictionary'
 
 export default async function AboutMe({ lang }: Readonly<{ lang: Locale }>) {
   const t = await getDictionary(lang)

@@ -1,6 +1,29 @@
 import React from 'react'
-import { Locale } from '../../i18n-config'
-import { getDictionary } from '../../get-dictionary'
+
+import { Locale } from '@@/i18n-config'
+import { getDictionary } from '@@/get-dictionary'
+import { Code2 } from 'lucide-react'
+
+const SectionDescription = ({
+  title,
+  items,
+}: {
+  title: string
+  items: Array<string>
+}) => (
+  <div>
+    <p className="mb-2 text-gray-800 text-lg font-semibold dark:text-white flex items-center gap-2">
+      <Code2 /> {title}
+    </p>
+    <ul className="list-disc list-item ml-5">
+      {items.map((item) => (
+        <li key={item} className="text-gray-600 text-base dark:text-gray-300">
+          {item}
+        </li>
+      ))}
+    </ul>
+  </div>
+)
 
 export default async function Skills({ lang }: Readonly<{ lang: Locale }>) {
   const t = await getDictionary(lang)
@@ -11,52 +34,19 @@ export default async function Skills({ lang }: Readonly<{ lang: Locale }>) {
         {t.profile.skills.title_skills}
       </h1>
       <div className="grid grid-cols-2 mt-4">
-        <div>
-          <p className="mb-2 text-lg text-gray-800 font-semibold dark:text-white">
-            {t.profile.skills.title_programming}
-          </p>
-          <ul className="list-disc list-item ml-5">
-            {t.profile.skills.programming.map((item) => (
-              <li
-                key={item}
-                className="text-gray-600 text-base dark:text-gray-300"
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <p className="mb-2 text-gray-800 text-lg font-semibold dark:text-white">
-            {t.profile.skills.title_tools}
-          </p>
-          <ul className="list-disc list-item ml-5">
-            {t.profile.skills.tools.map((item) => (
-              <li
-                key={item}
-                className="text-gray-600 text-base dark:text-gray-300"
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <SectionDescription
+          items={t.profile.skills.programming}
+          title={t.profile.skills.title_programming}
+        />
+        <SectionDescription
+          items={t.profile.skills.tools}
+          title={t.profile.skills.title_tools}
+        />
       </div>
-      <div>
-        <p className="mb-2 text-gray-800 text-lg font-semibold dark:text-white">
-          {t.profile.skills.title_library}
-        </p>
-        <ul className="list-disc list-item ml-5">
-          {t.profile.skills.library.map((item) => (
-            <li
-              key={item}
-              className="text-gray-600 text-base dark:text-gray-300"
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <SectionDescription
+        items={t.profile.skills.library}
+        title={t.profile.skills.title_library}
+      />
     </div>
   )
 }

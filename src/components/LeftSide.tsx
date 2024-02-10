@@ -1,11 +1,36 @@
 import React from 'react'
 import Image from 'next/image'
-import { Locale } from '../../i18n-config'
-import { getDictionary } from '../../get-dictionary'
+import {
+  AtSign,
+  Facebook,
+  Github,
+  Instagram,
+  Linkedin,
+  Phone,
+} from 'lucide-react'
+
+import { Locale } from '@@/i18n-config'
+import { getDictionary } from '@@/get-dictionary'
 import ButtonDownload from './ButtonDownload'
 
 export default async function LeftSide({ lang }: Readonly<{ lang: Locale }>) {
   const t = await getDictionary(lang)
+
+  const setIconSocialMedia = (type: string) => {
+    switch (type) {
+      case 'Facebook':
+        return <Facebook size={20} />
+      case 'Instagram':
+        return <Instagram size={18} />
+      case 'Instagram':
+        return <Instagram size={18} />
+      case 'Linkedin':
+        return <Linkedin size={18} />
+      case 'Github':
+      default:
+        return <Github size={18} />
+    }
+  }
 
   return (
     <div className="w-full mt-20">
@@ -32,42 +57,50 @@ export default async function LeftSide({ lang }: Readonly<{ lang: Locale }>) {
         <p className="font-semibold text-gray-800 text-lg dark:text-white">
           Whatsapp
         </p>
-        <a
-          target="_blank"
-          href={` https://wa.me/${t.profile.user.whatsapp.split('-').join('')}`}
-          className="link link-info"
-        >
-          {t.profile.user.whatsapp}
-        </a>
+        <p className="text-white flex text-base items-center gap-2 mt-2">
+          <Phone size={18} />
+          <a
+            target="_blank"
+            href={` https://wa.me/${t.profile.user.whatsapp.split('-').join('')}`}
+            className="link link-info"
+          >
+            {t.profile.user.whatsapp}
+          </a>
+        </p>
       </div>
       <div className="mt-4 text-lg">
         <p className="font-semibold text-gray-800 dark:text-white">Email</p>
-        <a
-          target="_blank"
-          href={`mailto:${t.profile.user.email}`}
-          className="link link-info"
-        >
-          {t.profile.user.email}
-        </a>
+        <p className="flex items-center text-base gap-2 mt-2 text-white">
+          <AtSign size={18} />
+          <a
+            target="_blank"
+            href={`mailto:${t.profile.user.email}`}
+            className="link link-info"
+          >
+            {t.profile.user.email}
+          </a>
+        </p>
       </div>
-      <div className="mt-4 text-lg">
+      <div className="mt-4 text-lg mb-8">
         <p className="font-semibold text-lg text-gray-800 dark:text-white">
           {t.profile.user.title_social_media}
         </p>
         <div className="flex flex-col">
-          <ul className="list-disc dark:marker:text-white marker:text-gray-600 ml-4">
-            {t.profile.user.social_media.map((item) => (
-              <li key={item.name}>
-                <a
-                  href={item.url}
-                  target="_blank"
-                  className="link link-info text-base"
-                >
-                  {item.name}
-                </a>
-              </li>
-            ))}
-          </ul>
+          {t.profile.user.social_media.map((item) => (
+            <p
+              key={item.name}
+              className="flex text-white items-center gap-2 mt-2"
+            >
+              {setIconSocialMedia(item.name)}
+              <a
+                href={item.url}
+                target="_blank"
+                className="link link-info text-base"
+              >
+                {item.name}
+              </a>
+            </p>
+          ))}
         </div>
       </div>
 

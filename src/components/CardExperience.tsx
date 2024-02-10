@@ -1,3 +1,4 @@
+import { Building, CalendarDays, MapPin, UserRound } from 'lucide-react'
 import React from 'react'
 
 interface CardExperienceProps {
@@ -31,16 +32,21 @@ export default function CardExperience({
       <div>
         <div className="flex mt-4 justify-between items-center">
           <div>
-            <p className="text-xl font-semibold text-gray-800 dark:text-white">
+            <p className="text-xl font-semibold text-gray-800 dark:text-white flex items-center gap-2">
+              <Building />
               {company}
             </p>
-            <p className="text-lg font-normal text-gray-500 mt-2 dark:text-gray-400">
-              {position}
+            <p className="text-lg font-normal text-gray-500 mt-2 dark:text-gray-400 flex items-center gap-2">
+              <UserRound /> {position}
             </p>
           </div>
           <div>
-            <p className="text-base text-gray-500 dark:text-gray-300">{time}</p>
-            <p className="text-base text-gray-500 mt-2 dark:text-gray-300">
+            <p className="text-base text-gray-500 dark:text-gray-300 flex items-center gap-2">
+              <CalendarDays size={18} />
+              {time}
+            </p>
+            <p className="text-base text-gray-500 mt-2 dark:text-gray-300 flex items-center gap-2">
+              <MapPin size={18} />
               {location}
             </p>
           </div>

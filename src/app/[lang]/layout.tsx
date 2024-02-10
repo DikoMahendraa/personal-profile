@@ -4,9 +4,9 @@ import dynamic from 'next/dynamic'
 
 const Header = dynamic(() => import('@/components/Header'), { ssr: false })
 
-import { Locale } from '../../../i18n-config'
-import { getDictionary } from '../../../get-dictionary'
-import '../globals.css'
+import { Locale } from '@@/i18n-config'
+import { getDictionary } from '@@/get-dictionary'
+import '@/app/globals.css'
 
 export const metadata: Metadata = {
   title: 'Personal Profile - Diko Mahendra',

@@ -1,5 +1,6 @@
 'use client'
 
+import { CircleUserRound, Code2, ListTodo } from 'lucide-react'
 import React from 'react'
 
 export default function CardPortofolio(
@@ -23,13 +24,13 @@ export default function CardPortofolio(
   return (
     <div className="lg:col-span-1 col-span-3">
       <div className="rounded-md shadow-xl p-4 cursor-pointer hover:bg-gray-100/50 dark:hover:bg-gray-900/10">
-        <h2 className="text-xl font-semibold">{item.name}</h2>
+        <h2 className="text-xl font-semibold uppercase">{item.name}</h2>
         <button
           tabIndex={0}
           className="collapse shadow-md dark:bg-gray-800 collapse-plus mt-4 text-left"
         >
-          <div className="collapse-title text-base font-semibold">
-            {item.labelRole}
+          <div className="collapse-title flex items-center gap-2 text-gray-400 capitalize text-base font-semibold">
+            <CircleUserRound /> {item.labelRole}
           </div>
           <div className="collapse-content">
             <p className="font-normal">{item.role}</p>
@@ -39,8 +40,8 @@ export default function CardPortofolio(
           tabIndex={0}
           className="collapse shadow-md dark:bg-gray-800 collapse-plus text-left"
         >
-          <div className="collapse-title text-base font-semibold">
-            {item.labelDescription}
+          <div className="collapse-title text-gray-400 capitalize text-base font-semibold flex items-center gap-2">
+            <ListTodo /> {item.labelDescription}
           </div>
           <div className="collapse-content">
             <p className="font-normal">{item.description}</p>
@@ -50,8 +51,8 @@ export default function CardPortofolio(
           tabIndex={0}
           className="collapse shadow-md dark:bg-gray-800 collapse-plus text-left"
         >
-          <div className="collapse-title text-base font-semibold">
-            {item.labelTech}
+          <div className="collapse-title flex items-center gap-2 text-gray-400 capitalize text-base font-semibold">
+            <Code2 /> {item.labelTech}
           </div>
           <div className="collapse-content">
             <p className="font-normal">{item.tech}</p>

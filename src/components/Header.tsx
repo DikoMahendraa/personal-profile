@@ -3,13 +3,14 @@
 import Link from 'next/link'
 import { useCallback } from 'react'
 import { useTheme } from 'next-themes'
+import { usePathname, useRouter } from 'next/navigation'
+
 import EnglishFlag from '@/svgs/EnglishFlag'
 import IndonesiaFlag from '@/svgs/IndonesiaFlag '
 import JapanFlag from '@/svgs/JapanFlag'
 import Dark from '@/svgs/Dark'
 import Light from '@/svgs/Light'
-import { Locale } from '../../i18n-config'
-import { usePathname, useRouter } from 'next/navigation'
+import { Locale } from '@@/i18n-config'
 
 export default function Header({
   lang,

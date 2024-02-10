@@ -229,5 +229,10 @@
         }
       ]
     }
+  },
+  "notFound": {
+    "heading": "404 - Ups",
+    "description": "ページが見つかりません。",
+    "buttonBack": " メインページ"
   }
 }

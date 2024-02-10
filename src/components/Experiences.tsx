@@ -1,8 +1,7 @@
 import React from 'react'
 import CardExperience from './CardExperience'
-import { Locale } from '../../i18n-config'
-
-import { getDictionary } from '../../get-dictionary'
+import { Locale } from '@@/i18n-config'
+import { getDictionary } from '@@/get-dictionary'
 
 export default async function Experiences({
   lang,

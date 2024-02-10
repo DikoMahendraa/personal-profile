@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 import LeftSide from '@/components/LeftSide'
 import Skills from '@/components/Skills'
 
-import { Locale } from '../../../../i18n-config'
+import { Locale } from '@@/i18n-config'
 
 export default async function Home({
   params: { lang },
