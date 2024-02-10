@@ -2,6 +2,7 @@
 
 import { CircleUserRound, Code2, ListTodo } from 'lucide-react'
 import React from 'react'
+import Collapse from './Collapse'
 
 export default function CardPortofolio(
   item: Readonly<{
@@ -25,39 +26,22 @@ export default function CardPortofolio(
     <div className="lg:col-span-1 col-span-3">
       <div className="rounded-md shadow-xl p-4 cursor-pointer hover:bg-gray-100/50 dark:hover:bg-gray-900/10">
         <h2 className="text-xl font-semibold uppercase">{item.name}</h2>
-        <button
-          tabIndex={0}
-          className="collapse shadow-md dark:bg-gray-800 collapse-plus mt-4 text-left"
-        >
-          <div className="collapse-title flex items-center gap-2 text-gray-400 capitalize text-base font-semibold">
-            <CircleUserRound /> {item.labelRole}
-          </div>
-          <div className="collapse-content">
-            <p className="font-normal">{item.role}</p>
-          </div>
-        </button>
-        <button
-          tabIndex={0}
-          className="collapse shadow-md dark:bg-gray-800 collapse-plus text-left"
-        >
-          <div className="collapse-title text-gray-400 capitalize text-base font-semibold flex items-center gap-2">
-            <ListTodo /> {item.labelDescription}
-          </div>
-          <div className="collapse-content">
-            <p className="font-normal">{item.description}</p>
-          </div>
-        </button>
-        <button
-          tabIndex={0}
-          className="collapse shadow-md dark:bg-gray-800 collapse-plus text-left"
-        >
-          <div className="collapse-title flex items-center gap-2 text-gray-400 capitalize text-base font-semibold">
-            <Code2 /> {item.labelTech}
-          </div>
-          <div className="collapse-content">
-            <p className="font-normal">{item.tech}</p>
-          </div>
-        </button>
+        <Collapse
+          icon={<CircleUserRound />}
+          label={item.labelRole}
+          description={item.role}
+        />
+        <Collapse
+          icon={<ListTodo />}
+          label={item.labelDescription}
+          description={item.description}
+        />
+        <Collapse
+          icon={<Code2 />}
+          label={item.labelTech}
+          description={item.tech}
+        />
+
         <div className="mt-4 flex items-center gap-2">
           <button
             onClick={onShowModal}

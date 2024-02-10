@@ -2,6 +2,7 @@ import React from 'react'
 import { getDictionary } from '@@/get-dictionary'
 import { Locale } from '@@/i18n-config'
 import CardPortofolio from '@/components/CardPortofolio'
+import Image from 'next/image'
 
 export default async function PagePortofolio({
   params: { lang },
@@ -27,9 +28,54 @@ export default async function PagePortofolio({
       <dialog id="showProjectDetail" className="modal">
         <div className="modal-box">
           <h3 className="font-bold text-lg">Hello!</h3>
-          <p className="py-4">
-            Press ESC key or click the button below to close
-          </p>
+          <div>
+            <div className="carousel carousel-center p-4 space-x-4 bg-neutral rounded-box">
+              <div className="carousel-item">
+                <div className="relative w-[20rem] h-[5rem]">
+                  <Image
+                    objectFit="cover"
+                    fill={true}
+                    src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+                    alt="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+                    className="rounded-box"
+                  />
+                </div>
+              </div>
+              <div className="carousel-item">
+                <div className="relative w-[20rem] h-[5rem]">
+                  <Image
+                    objectFit="cover"
+                    fill={true}
+                    src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+                    alt="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+                    className="rounded-box"
+                  />
+                </div>
+              </div>
+              <div className="carousel-item">
+                <div className="relative w-[20rem] h-[5rem]">
+                  <Image
+                    objectFit="cover"
+                    fill={true}
+                    src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+                    alt="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+                    className="rounded-box"
+                  />
+                </div>
+              </div>
+              <div className="carousel-item">
+                <div className="relative w-[20rem] h-[5rem]">
+                  <Image
+                    objectFit="cover"
+                    fill={true}
+                    src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+                    alt="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+                    className="rounded-box"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="modal-action">
             <form method="dialog">
               <button className="btn">Close</button>
