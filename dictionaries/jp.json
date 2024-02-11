@@ -254,6 +254,15 @@
           "tech": "Bootstrap, NuxtJs, ThreeJs, Blender, Liveness Module",
           "link": "",
           "available": false
+        },
+        {
+          "images": "/portofolio/woowa.png",
+          "name": "Woowa Dashboard",
+          "role": "Internship Frontend Developer",
+          "description": "Woowaダッシュボードに適したテンプレートを選択します, 購入したテンプレートを修正し、必要なディスプレイのニーズに合わせて調整し続ける。CSSフレームワークとステート・マネージメントreduxの使い方を学び、チームワークとコラボレーションのためのツールとしてgitの使い方を学んだ。",
+          "tech": "ReactJs, Dashboard Template, Redux, Bootstrap.",
+          "link": "",
+          "available": false
         }
       ]
     }

@@ -70,7 +70,7 @@ export default function Header({
 
   return (
     <nav className="bg-white dark:bg-gray-800 sticky top-0 w-full z-10 shadow-lg lg:pr-4 p-4 lg:p-2">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="lg:container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           {content?.map((item) => (
             <div key={item.name} className="p-4 lg:block hidden">

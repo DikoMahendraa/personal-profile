@@ -253,6 +253,15 @@
           "tech": "Bootstrap, NuxtJs, ThreeJs, Blender, Liveness Module",
           "link": "",
           "available": false
+        },
+        {
+          "images": "/portofolio/woowa.png",
+          "name": "Woowa Dashboard",
+          "role": "Internship Frontend Developer",
+          "description": "Melakukan pemilihan template yg cocok untuk woowa Dashboard, modifikasi template yg sudah di beli terus disesuaikan dengan kebutuhan tampilan yg dibutuhkan. belajar menggunakan framework css dan juga state management redux. belajar bekerja dengan tim dan menggunakan git sebagai tools untuk kolaborasi.",
+          "tech": "ReactJs, Dashboard Template, Redux, Bootstrap.",
+          "link": "",
+          "available": false
         }
       ]
     }

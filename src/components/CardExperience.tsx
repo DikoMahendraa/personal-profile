@@ -30,8 +30,8 @@ export default function CardExperience({
         </h1>
       )}
       <div>
-        <div className="flex mt-4 justify-between items-center">
-          <div>
+        <div className="lg:flex sm:flex mt-4 justify-between items-center xs:grid sm grid-cols-2">
+          <div className="xs:col-span-2">
             <p className="lg:text-xl text-base font-semibold text-gray-800 dark:text-white flex items-center gap-2">
               <Building />
               {company}
@@ -40,7 +40,7 @@ export default function CardExperience({
               <UserRound /> {position}
             </p>
           </div>
-          <div>
+          <div className="xs:col-span-2 xs:mt-4 lg:mt-0">
             <p className="lg:text-base text-sm text-gray-500 dark:text-gray-300 flex items-center gap-2">
               <CalendarDays size={18} />
               {time}

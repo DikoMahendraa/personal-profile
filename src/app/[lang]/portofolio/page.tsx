@@ -12,7 +12,7 @@ export default async function PagePortofolio({
   const t = await getDictionary(lang)
 
   return (
-    <div className="container mx-auto relative">
+    <div className="lg:container px-4 lg:px-0 mx-auto relative">
       <div
         role="alert"
         className="alert lg:sticky top-20 lg:top-[72px] bg-yellow-500 z-[5] border-none lg:mt-10 mt-4 mb-5 flex items-start"
@@ -22,7 +22,7 @@ export default async function PagePortofolio({
           {t.profile.portofolio.alert}
         </p>
       </div>
-      <div className="my-6 gap-4 dark:text-gray-200 grid grid-cols-3">
+      <div className="my-6 lg:gap-4 dark:text-gray-200 grid grid-cols-3">
         {t.profile.portofolio.company.map((item) => (
           <CardPortofolio
             labelDescription={t.profile.portofolio.label_description}
