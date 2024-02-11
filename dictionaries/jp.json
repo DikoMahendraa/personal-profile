@@ -158,6 +158,7 @@
       "tools": ["Postman", "Figma", "Jira"]
     },
     "portofolio": {
+      "alert": "警告: いくつかのプロジェクトは、いくつかの要因(ドキュメントの欠落、プライバシーの問題、実行されなくなったプロジェクト)により、利用できなくなる可能性があります。",
       "label_role": "ポジション",
       "label_description": "何をしたんだ？",
       "label_tech_used": "使用されている技術は？",

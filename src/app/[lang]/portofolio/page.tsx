@@ -19,9 +19,7 @@ export default async function PagePortofolio({
       >
         <MessageSquareWarning size={30} />
         <p className="dark:text-gray-800 italic text-left">
-          Warning: Pada beberapa project mungkin sudah tidak tersedia karena
-          beberapa faktor, (hilang dokumentasi, privasi, dan project yg sudah
-          tidak berjalan)
+          {t.profile.portofolio.alert}
         </p>
       </div>
       <div className="my-6 gap-4 dark:text-gray-200 grid grid-cols-3">
