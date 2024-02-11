@@ -2,8 +2,6 @@ import React from 'react'
 import { Locale } from '@@/i18n-config'
 import { getDictionary } from '@@/get-dictionary'
 
-const xxx = 'testing git action'
-
 export default async function AboutMe({ lang }: Readonly<{ lang: Locale }>) {
   const t = await getDictionary(lang)
 
