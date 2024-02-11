@@ -245,6 +245,15 @@
           "tech": "VueJs, Bootstrap",
           "link": "",
           "available": false
+        },
+        {
+          "images": "/portofolio/liveness.png",
+          "name": "Liveness Detection",
+          "role": "Junior Frontend Developer",
+          "description": "ジェスチャーや表情のための3DアセットをThreeJsを使って実装し、ライブネス検出のためのパッケージ統合を行う。",
+          "tech": "Bootstrap, NuxtJs, ThreeJs, Blender, Liveness Module",
+          "link": "",
+          "available": false
         }
       ]
     }

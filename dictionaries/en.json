@@ -244,6 +244,15 @@
           "tech": "VueJs, Bootstrap",
           "link": "",
           "available": false
+        },
+        {
+          "images": "/portofolio/liveness.png",
+          "name": "Liveness Detection",
+          "role": "Junior Frontend Developer",
+          "description": "Create a landing page for the livenesss detection application from 0, make it responsive design for desktop, tablet, and mobile. implement 3D assets for gesture and expression using ThreeJs, and package integration for liveness detection.",
+          "tech": "Bootstrap, NuxtJs, ThreeJs, Blender, Liveness Module",
+          "link": "",
+          "available": false
         }
       ]
     }

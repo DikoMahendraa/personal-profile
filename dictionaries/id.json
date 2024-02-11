@@ -244,6 +244,15 @@
           "tech": "VueJs, Bootstrap",
           "link": "",
           "available": false
+        },
+        {
+          "images": "/portofolio/liveness.png",
+          "name": "Liveness Detection",
+          "role": "Junior Frontend Developer",
+          "description": "buat landing page untuk aplikasi livenesss detection dari 0, buat tampilannya jadi responsive design untuk desktop, tablet, dan juga mobile. implementasi 3D asset untuk gesture dan juga expression pake ThreeJs, dan integrasi package untuk liveness detection",
+          "tech": "Bootstrap, NuxtJs, ThreeJs, Blender, Liveness Module",
+          "link": "",
+          "available": false
         }
       ]
     }
