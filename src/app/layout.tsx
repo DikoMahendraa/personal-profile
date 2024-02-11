@@ -12,10 +12,9 @@ export default async function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html>
+    <html lang="en">
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
       <body className="dark:bg-gray-800 min-h-screen relative">{children}</body>
     </html>
   )

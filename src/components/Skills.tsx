@@ -12,7 +12,7 @@ const SectionDescription = ({
   items: Array<string>
 }) => (
   <div>
-    <p className="mb-2 text-gray-800 text-lg font-semibold dark:text-white flex items-center gap-2">
+    <p className="mb-2 text-gray-800 lg:text-lg text-base font-semibold dark:text-white flex items-center gap-2">
       <Code2 /> {title}
     </p>
     <ul className="list-disc list-item ml-5">
@@ -30,10 +30,10 @@ export default async function Skills({ lang }: Readonly<{ lang: Locale }>) {
 
   return (
     <div id="skills" className="mt-10 lg:px-0 px-6 mb-14">
-      <h1 className="text-2xl font-semibold text-gray-600 dark:text-white">
+      <h1 className="lg:text-2xl text-lg font-semibold text-gray-600 dark:text-white">
         {t.profile.skills.title_skills}
       </h1>
-      <div className="grid grid-cols-2 mt-4">
+      <div className="grid grid-cols-2 my-5">
         <SectionDescription
           items={t.profile.skills.programming}
           title={t.profile.skills.title_programming}
