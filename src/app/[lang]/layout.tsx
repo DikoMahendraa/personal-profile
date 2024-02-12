@@ -11,12 +11,26 @@ const Header = dynamic(() => import('@/components/Header'), { ssr: false })
 
 export const metadata: Metadata = {
   openGraph: {
-    type: 'website',
     title: 'Hi Everyone — I am Diko Mahendra',
     description:
       'a frontend developer with more than 3 years of experience, building web-based applications and also mobile applications. using javascript typescript, implementing clean code and reusable code, working with a team. and ready to adjust to the technology needed by the company.',
-    url: 'https://cocome.vercel.app/',
-    images: '/og-cover.png',
+    url: 'https://cocome.vercel.app',
+    siteName: 'cocome.vercel.app',
+    images: [
+      {
+        url: '/og-cover.png',
+        width: 800,
+        height: 600,
+      },
+      {
+        url: '/og-cover.png',
+        width: 1800,
+        height: 1600,
+        alt: 'cover-meta',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
   },
 }
 
