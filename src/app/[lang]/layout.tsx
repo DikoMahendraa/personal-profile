@@ -18,12 +18,12 @@ export const metadata: Metadata = {
     siteName: 'cocome.vercel.app',
     images: [
       {
-        url: '/og-cover.png',
+        url: 'https://ibb.co/GC0NXcg',
         width: 800,
         height: 600,
       },
       {
-        url: '/og-cover.png',
+        url: 'https://ibb.co/GC0NXcg',
         width: 1800,
         height: 1600,
         alt: 'cover-meta',
