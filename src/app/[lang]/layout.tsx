@@ -42,10 +42,7 @@ export default async function RootLayout({
         property="og:description"
         content="a frontend developer with more than 3 years of experience, building web-based applications and also mobile applications. using javascript typescript, implementing clean code and reusable code, working with a team. and ready to adjust to the technology needed by the company."
       />
-      <meta
-        property="og:image"
-        content="https://metatags.io/images/meta-tags.png"
-      />
+      <meta property="og:image" content="/og-cover.png" />
 
       {/* <!-- Twitter --> */}
       <meta property="twitter:card" content="summary_large_image" />
@@ -58,10 +55,7 @@ export default async function RootLayout({
         property="twitter:description"
         content="a frontend developer with more than 3 years of experience, building web-based applications and also mobile applications. using javascript typescript, implementing clean code and reusable code, working with a team. and ready to adjust to the technology needed by the company."
       />
-      <meta
-        property="twitter:image"
-        content="https://metatags.io/images/meta-tags.png"
-      />
+      <meta property="twitter:image" content="/og-cover.png" />
 
       <body className="dark:bg-gray-800 min-h-screen relative">
         <Providers>
