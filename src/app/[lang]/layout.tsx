@@ -27,6 +27,42 @@ export default async function RootLayout({
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+      <title>Hi Everyone — I am Diko Mahendra</title>
+      <meta name="title" content="Hi Everyone — I am Diko Mahendra" />
+      <meta
+        name="description"
+        content="a frontend developer with more than 3 years of experience, building web-based applications and also mobile applications. using javascript typescript, implementing clean code and reusable code, working with a team. and ready to adjust to the technology needed by the company."
+      />
+
+      {/* <!-- Open Graph / Facebook --> */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://metatags.io/" />
+      <meta property="og:title" content="Hi Everyone — I am Diko Mahendra" />
+      <meta
+        property="og:description"
+        content="a frontend developer with more than 3 years of experience, building web-based applications and also mobile applications. using javascript typescript, implementing clean code and reusable code, working with a team. and ready to adjust to the technology needed by the company."
+      />
+      <meta
+        property="og:image"
+        content="https://metatags.io/images/meta-tags.png"
+      />
+
+      {/* <!-- Twitter --> */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content="https://metatags.io/" />
+      <meta
+        property="twitter:title"
+        content="Hi Everyone — I am Diko Mahendra"
+      />
+      <meta
+        property="twitter:description"
+        content="a frontend developer with more than 3 years of experience, building web-based applications and also mobile applications. using javascript typescript, implementing clean code and reusable code, working with a team. and ready to adjust to the technology needed by the company."
+      />
+      <meta
+        property="twitter:image"
+        content="https://metatags.io/images/meta-tags.png"
+      />
+
       <body className="dark:bg-gray-800 min-h-screen relative">
         <Providers>
           <Header content={t.profile.navbar} lang={lang} />
