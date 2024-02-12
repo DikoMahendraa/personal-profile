@@ -1,17 +1,31 @@
 'use client'
 
-import React from 'react'
+import React, { useCallback } from 'react'
 import { usePathname } from 'next/navigation'
 import { FileDown } from 'lucide-react'
 
 export default function ButtonDownload({ text }: Readonly<{ text: string }>) {
   const pathname = usePathname()
 
+  const pdfID = '/docs/diko-id.pdf'
+  const pdfEN = '/docs/diko-en.pdf'
+  const pdfJP = '/docs/diko-jp.pdf'
+
+  const setPdf = useCallback(() => {
+    switch (pathname) {
+      case '/en':
+        return pdfEN
+      case '/jp':
+        return pdfJP
+      case '/id':
+      default:
+        return pdfID
+    }
+  }, [pathname])
+
   const handleDownload = () => {
-    const pdfID = '/docs/diko-id.pdf'
-    const pdfEnJp = '/docs/diko-en.pdf'
     const link = document.createElement('a')
-    link.href = pathname?.includes('id') ? pdfID : pdfEnJp
+    link.href = setPdf()
     link.download = 'resume.pdf'
     document.body.appendChild(link)
     link.click()
