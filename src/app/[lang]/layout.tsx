@@ -16,7 +16,6 @@ export const metadata: Metadata = {
     description:
       'a frontend developer with more than 3 years of experience, building web-based applications and also mobile applications. using javascript typescript, implementing clean code and reusable code, working with a team. and ready to adjust to the technology needed by the company.',
     url: 'https://cocome.vercel.app/',
-    images: '/og-cover.png',
   },
 }
 
