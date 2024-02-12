@@ -22,8 +22,6 @@ export default async function LeftSide({ lang }: Readonly<{ lang: Locale }>) {
         return <Facebook size={20} />
       case 'Instagram':
         return <Instagram size={18} />
-      case 'Instagram':
-        return <Instagram size={18} />
       case 'Linkedin':
         return <Linkedin size={18} />
       case 'Github':
