@@ -38,7 +38,9 @@ export default async function LeftSide({ lang }: Readonly<{ lang: Locale }>) {
             alt="image-profile"
             src="/me.jpeg"
             fill
-            objectFit="cover"
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            quality={50}
             className="rounded-md"
           />
         </div>

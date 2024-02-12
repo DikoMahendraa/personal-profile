@@ -164,12 +164,48 @@
       "label_tech_used": "Teknologi yg dipake ?",
       "personal": [
         {
-          "images": "/portofolio/company/dana.png",
-          "name": "Dana Syariah",
-          "description": "Bantu develop dari 0 untuk aplikasi web mulai dari landing page & juga dsahboardnya, instalasi beberapa module/package yg diperlukan, implementasi storybook untuk maintenance component biar proses development jauh lebih cepat, instalasi fitur bahasa (i18n), terus ikut bantu develop aplikasi yg sudah ada menggunakan React Native, nambahin beberapa fitur dan juga refactoring code dan folder struktur yg berantakan.",
+          "images": "/portofolio/personal/burgerapp.png",
+          "name": "Burger App",
+          "description": "Slicing UI menggunakan React Native, menginstall dan menjalankan aplikasi React Native CLI, running project RN di real device melalui kabel usb dan juga jaringan Wifi. melakukan reusable dan refactoring code.",
           "available": true,
-          "role": "Frontend Web & Mobile React Native",
-          "tech": "React Native, NextJs, Typescript, i18n, React Storybook, AntDesign, Redux.",
+          "role": "Mobile React Native",
+          "tech": "React Native",
+          "link": ""
+        },
+        {
+          "images": "/portofolio/personal/tartile.png",
+          "name": "Tartil Me",
+          "description": "Initialisasi project menggunakan NuxtJs, slicing halaman dan component, menerapkan clean code. menambahkan beberapa fitur untuk pencarian surah, qori dll. melakukan integrasi dengan data yg dibuat oleh backend.",
+          "available": true,
+          "role": "Frontend Developer",
+          "tech": "NuxtJs, Bootstrap",
+          "link": ""
+        },
+        {
+          "images": "/portofolio/personal/doctor.png",
+          "name": "My Doctor App",
+          "description": "Mengikuti course dari 0, mulai dari setup project RN, slicing component. menggunakan atomic design pattern, melakukan integrasi dengan firebase untuk authentikasi dan untuk fitur chatting.",
+          "available": true,
+          "role": "Mobile React Native",
+          "tech": "React Native, Firebase",
+          "link": ""
+        },
+        {
+          "images": "/portofolio/personal/financial.png",
+          "name": "Financial Planner",
+          "description": "mencari inspirasi design di dribble, melakukan modifikasi dan menambahkan beberapa UI baru menggunakan tools figma, menerapkan atomic design pattern sebagai folder struktur. slicing layout,  menerapkan clean code, integrasi dengan firebase dan reusable component",
+          "available": true,
+          "role": "NextJs, Typescript, Firebase, TailwindCSS, figma",
+          "tech": "React Native",
+          "link": ""
+        },
+        {
+          "images": "/portofolio/personal/taskio.png",
+          "name": "Task IO",
+          "description": "mencari inspirasi design di dribble, melakukan modifikasi dan menambahkan beberapa UI baru menggunakan tools figma, menerapkan atomic design pattern sebagai folder struktur. menerapkan clean code dan reusable component. slicing UI dan integrasi dengan Supabase",
+          "available": true,
+          "role": "NextJs, Typescript, Supabase, TailwindCSS, figma",
+          "tech": "React Native",
           "link": ""
         }
       ],

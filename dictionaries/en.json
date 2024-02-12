@@ -162,7 +162,53 @@
       "label_role": "position",
       "label_description": "What did you do?",
       "label_tech_used": "What are the technologies used?",
-      "personal": [],
+      "personal": [
+        {
+          "images": "/portofolio/personal/burgerapp.png",
+          "name": "Burger City",
+          "description": "Slicing UI using React Native, installing and running the React Native CLI application, running RN projects on real devices via usb cable and Wifi network. reusable and refactoring code.",
+          "available": true,
+          "role": "React Native Developer",
+          "tech": "React Native",
+          "link": ""
+        },
+        {
+          "images": "/portofolio/personal/tartile.png",
+          "name": "Tartil Me",
+          "description": "Initializing the project using NuxtJs, slicing pages and components, implementing clean code. adding some features for searching surahs, qori etc. integrating with data created by the backend.",
+          "available": true,
+          "role": "Frontend Developer",
+          "tech": "NuxtJs, Bootstrap",
+          "link": ""
+        },
+        {
+          "images": "/portofolio/personal/doctor.png",
+          "name": "My Doctor",
+          "description": "Followed the course from 0, starting from RN project setup, slicing components. using atomic design pattern, integrating with firebase for authentication and for chat features.",
+          "available": true,
+          "role": "React Native Developer",
+          "tech": "React Native, Firebase",
+          "link": ""
+        },
+        {
+          "images": "/portofolio/personal/financial.png",
+          "name": "Financial Planner",
+          "description": "Determine the technology to be used, apply atomic design pattern as a folder structure. apply clean code and reusable components. integration with firebase.",
+          "available": true,
+          "role": "Frontend Developer",
+          "tech": "NextJs, Typescript, Firebase, TailwindCSS",
+          "link": ""
+        },
+        {
+          "images": "/portofolio/personal/taskio.png",
+          "name": "Task IO",
+          "description": "mencari inspirasi design di dribble, melakukan modifikasi dan menambahkan beberapa UI baru menggunakan tools figma, menerapkan atomic design pattern sebagai folder struktur. menerapkan clean code dan reusable component. slicing UI dan integrasi dengan Supabase",
+          "available": true,
+          "role": "NextJs, Typescript, Supabase, TailwindCSS, figma",
+          "tech": "React Native",
+          "link": ""
+        }
+      ],
       "company": [
         {
           "images": "/portofolio/company/vtr.png",

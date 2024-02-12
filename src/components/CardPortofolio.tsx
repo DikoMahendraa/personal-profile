@@ -30,14 +30,13 @@ export default function CardPortofolio(
         <h2 className="text-xl font-semibold uppercase">{item.name}</h2>
         <div className="relative h-[15rem] w-full mt-6 mb-4">
           <Image
-            className="rounded-md"
-            alt={`images-${item.name}`}
-            priority
-            objectFit="contain"
-            quality={50}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            alt="image-profile"
             src={item.images}
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            quality={50}
+            className="rounded-md"
           />
         </div>
         <Collapse

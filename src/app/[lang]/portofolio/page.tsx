@@ -33,6 +33,18 @@ export default async function PagePortofolio({
           />
         ))}
       </div>
+
+      <div className="my-6 gap-4 dark:text-gray-200 grid grid-cols-3 pb-16">
+        {t.profile.portofolio.personal.map((item) => (
+          <CardPortofolio
+            labelDescription={t.profile.portofolio.label_description}
+            labelRole={t.profile.portofolio.label_role}
+            labelTech={t.profile.portofolio.label_tech_used}
+            {...item}
+            key={item.name}
+          />
+        ))}
+      </div>
     </div>
   )
 }
