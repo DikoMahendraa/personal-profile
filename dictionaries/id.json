@@ -139,7 +139,7 @@
     },
     "about": {
       "title_aboutme": "Tentang Saya",
-      "description": "Saya seorang Web Developer dengan pengalaman ± 3 tahun menggunakan NextJs, React Js dan juga React Native. tertarik untuk belajar hal baru, terbiasa bekerja dibawah tekanan, bekerja dengan baik dengan tim, terbiasa bekerja remote dan siap menyesuaikan skill sesui dengan kebutuhan perusahaan."
+      "description": "Saya seorang Web Developer dengan pengalaman ± 3 tahun menggunakan NextJs, React Js dan juga React Native. tertarik untuk belajar hal baru, terbiasa bekerja dibawah tekanan, bekerja dengan baik dengan tim, terbiasa bekerja remote dan siap menyesuaikan skill sesuai dengan kebutuhan perusahaan."
     },
     "skills": {
       "title_skills": "Keahlian",
@@ -158,6 +158,7 @@
       "tools": ["Postman", "Figma", "Jira"]
     },
     "portofolio": {
+      "tab": ["semua", "perusahaan", "pribadi"],
       "alert": "Peringatan: Beberapa proyek mungkin tidak lagi tersedia karena beberapa faktor (dokumentasi yang hilang, masalah privasi, proyek tidak lagi berjalan).",
       "label_role": "Jabatan",
       "label_description": "Ngapain aja ?",

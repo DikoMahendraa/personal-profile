@@ -158,6 +158,7 @@
       "tools": ["Postman", "Figma", "Jira"]
     },
     "portofolio": {
+      "tab": ["all", "company", "personal"],
       "alert": "Warning: Some projects may no longer be available due to several factors (missing documentation, privacy issues, project no longer running).",
       "label_role": "position",
       "label_description": "What did you do?",

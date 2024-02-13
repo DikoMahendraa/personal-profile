@@ -4,13 +4,94 @@ import Link from 'next/link'
 import { useCallback } from 'react'
 import { useTheme } from 'next-themes'
 import { usePathname, useRouter } from 'next/navigation'
+import { Moon, Sun } from 'lucide-react'
 
 import EnglishFlag from '@/svgs/EnglishFlag'
 import IndonesiaFlag from '@/svgs/IndonesiaFlag '
 import JapanFlag from '@/svgs/JapanFlag'
-import Dark from '@/svgs/Dark'
-import Light from '@/svgs/Light'
 import { Locale } from '@@/i18n-config'
+
+interface Language {
+  locale: string
+  href: string
+  flag: React.ReactNode
+  name: string
+}
+
+interface LanguageItemProps {
+  locale: string
+  href: string
+  flag: React.ReactNode
+  name: string
+}
+
+const languages = [
+  {
+    locale: 'en',
+    href: '/en',
+    flag: <EnglishFlag width={20} height={15} />,
+    name: 'English',
+  },
+  {
+    locale: 'id',
+    href: '/id',
+    flag: <IndonesiaFlag width={20} height={15} />,
+    name: 'Indonesia',
+  },
+  {
+    locale: 'jp',
+    href: '/jp',
+    flag: <JapanFlag width={20} height={15} />,
+    name: 'Japan',
+  },
+]
+
+const LanguageItem: React.FC<LanguageItemProps> = ({
+  locale,
+  href,
+  flag,
+  name,
+}) => {
+  return (
+    <li>
+      <Link locale={locale} href={href}>
+        <span className="flex items-center gap-2">
+          {flag} {name}
+        </span>
+      </Link>
+    </li>
+  )
+}
+
+interface LanguageSelectorProps {
+  languages: Array<Language>
+  defaultValue: React.ReactNode
+}
+
+const LanguageSelector: React.FC<LanguageSelectorProps> = ({
+  languages,
+  defaultValue,
+}) => {
+  return (
+    <div className="relative">
+      <button className="btn dropdown-toggle">{defaultValue}</button>
+      <ul
+        className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+        tabIndex={0}
+      >
+        {languages.map((lang) => (
+          <LanguageItem
+            key={String(Date + lang.name)}
+            locale={lang.locale}
+            href={lang.href}
+            flag={lang.flag}
+            name={lang.name}
+          />
+        ))}
+      </ul>
+    </div>
+  )
+}
 
 export default function Header({
   lang,
@@ -28,7 +109,7 @@ export default function Header({
   const pathname = usePathname()
   const { theme, setTheme } = useTheme()
 
-  const setFlag = () => {
+  const setFlag: () => React.ReactNode = () => {
     switch (lang) {
       case 'en':
         return (
@@ -123,46 +204,24 @@ export default function Header({
             </ul>
           </div>
         </div>
+
         <div className="flex items-center">
           <div className="dropdown dropdown-hover">
-            <button tabIndex={0} className="btn btn-sm m-1">
-              {setFlag()}
-            </button>
-            <ul
-              tabIndex={0}
-              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <Link locale="en" href="/en">
-                  <EnglishFlag width={20} height={15} /> English
-                </Link>
-              </li>
-              <li>
-                <Link locale="id" href="/id">
-                  <IndonesiaFlag width={20} height={15} /> Indonesia
-                </Link>
-              </li>
-              <li>
-                <Link locale="jp" href="/jp">
-                  <JapanFlag width={20} height={15} /> Japan
-                </Link>
-              </li>
-            </ul>
+            <LanguageSelector defaultValue={setFlag()} languages={languages} />
           </div>
 
           <div className="flex items-center space-x-2 ml-4">
-            <p className="text-sm italic capitalize">
-              {theme === 'light' ? <Dark /> : <Light />}
-            </p>
+            <label className="swap swap-rotate">
+              <input
+                type="checkbox"
+                onChange={() =>
+                  theme === 'light' ? setTheme('dark') : setTheme('light')
+                }
+              />
 
-            <input
-              type="checkbox"
-              checked={theme === 'light'}
-              className="toggle toggle-sm"
-              onChange={() =>
-                theme === 'light' ? setTheme('dark') : setTheme('light')
-              }
-            />
+              <Moon className="swap-on text-gray-800" />
+              <Sun className="swap-off text-white" />
+            </label>
           </div>
         </div>
       </div>

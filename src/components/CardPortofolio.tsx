@@ -5,18 +5,21 @@ import React from 'react'
 import Collapse from './Collapse'
 import Image from 'next/image'
 
-export default function CardPortofolio(
-  item: Readonly<{
-    labelDescription: string
-    labelRole: string
-    labelTech: string
-    name: string
-    role: string
-    description: string
-    tech: string
-    images: string
-  }>
-) {
+export type ContentCardProps = Readonly<{
+  name: string
+  role: string
+  description: string
+  tech: string
+  images: string
+}>
+
+export interface CardPortfolioProps extends ContentCardProps {
+  labelDescription: string
+  labelRole: string
+  labelTech: string
+}
+
+export default function CardPortofolio(item: Readonly<CardPortfolioProps>) {
   const onShowModal = () => {
     return (
       document?.getElementById('showProjectDetail') as HTMLElement & {
