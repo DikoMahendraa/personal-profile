@@ -211,17 +211,14 @@ export default function Header({
           </div>
 
           <div className="flex items-center space-x-2 ml-4">
-            <label className="swap swap-rotate">
-              <input
-                type="checkbox"
-                onChange={() =>
-                  theme === 'light' ? setTheme('dark') : setTheme('light')
-                }
-              />
-
-              <Moon className="swap-on text-gray-800" />
-              <Sun className="swap-off text-white" />
-            </label>
+            <button
+              className="text-sm italic capitalize cursor-pointer"
+              onClick={() =>
+                theme === 'light' ? setTheme('dark') : setTheme('light')
+              }
+            >
+              {theme === 'light' ? <Moon /> : <Sun className="text-white" />}
+            </button>
           </div>
         </div>
       </div>
