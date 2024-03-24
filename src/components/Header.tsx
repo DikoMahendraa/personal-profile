@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useCallback } from 'react'
+import { useCallback, useEffect } from 'react'
 import { useTheme } from 'next-themes'
 import { usePathname, useRouter } from 'next/navigation'
 import { Moon, Sun } from 'lucide-react'
@@ -149,6 +149,10 @@ export default function Header({
     [lang, pathname, router]
   )
 
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+  }, [])
+
   return (
     <nav className="bg-white dark:bg-gray-800 sticky top-0 w-full z-10 shadow-lg lg:pr-4 p-4 lg:p-2">
       <div className="lg:container mx-auto flex justify-between items-center">
@@ -156,6 +160,9 @@ export default function Header({
           {content?.map((item) => (
             <div key={item.name} className="p-4 lg:block hidden">
               <button
+                data-testid={
+                  item.name.toLowerCase() === 'portofolio' && 'href-portofolio'
+                }
                 disabled={item.disabled}
                 onClick={() => scrollToSection(item.href, item.scrollable)}
                 className="text-gray-700 font-semibold dark:text-white"
