@@ -203,10 +203,10 @@
         {
           "images": "/portofolio/personal/taskio.png",
           "name": "Task IO",
-          "description": "mencari inspirasi design di dribble, melakukan modifikasi dan menambahkan beberapa UI baru menggunakan tools figma, menerapkan atomic design pattern sebagai folder struktur. menerapkan clean code dan reusable component. slicing UI dan integrasi dengan Supabase",
+          "description": "looked for design inspiration on dribble, made modifications and added some new UI using figma tools, applied the atomic design pattern as a folder structure. implement clean code and reusable components. slicing UI and integration with Supabase",
           "available": true,
-          "role": "NextJs, Typescript, Supabase, TailwindCSS, figma",
-          "tech": "React Native",
+          "role": "Frontend Developer",
+          "tech": "NextJs, Typescript, Supabase, TailwindCSS, figma",
           "link": ""
         }
       ],
