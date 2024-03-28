@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
-    "cypress:open": "cypress open"
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.4",
@@ -31,7 +30,6 @@
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
     "autoprefixer": "^10.0.1",
-    "cypress": "^13.6.4",
     "daisyui": "^4.6.0",
     "eslint": "^8.56.0",
     "eslint-config-next": "14.1.0",

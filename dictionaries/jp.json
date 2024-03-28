@@ -2,37 +2,19 @@
   "profile": {
     "navbar": [
       {
-        "href": "about",
+        "href": "/",
         "name": "私について",
-        "scrollable": true,
+        "scrollable": false,
         "disabled": false
       },
       {
-        "href": "experience",
-        "name": "エクスペリエンス",
-        "scrollable": true,
-        "disabled": false
-      },
-      {
-        "href": "education",
-        "name": "エデュケーション",
-        "scrollable": true,
-        "disabled": false
-      },
-      {
-        "href": "skills",
-        "name": "ノウハウ",
-        "scrollable": true,
-        "disabled": false
-      },
-      {
-        "href": "portofolio",
+        "href": "/portofolio",
         "name": "ポルトフォリオ",
         "scrollable": false,
         "disabled": false
       },
       {
-        "href": "articles",
+        "href": "/articles",
         "name": "記事",
         "scrollable": false,
         "disabled": false
@@ -168,7 +150,7 @@
           "images": "/portofolio/personal/burgerapp.png",
           "name": "Burger City",
           "description": "React Nativeを使用したUIのスライス、React Native CLIアプリケーションのインストールと実行、USBケーブルとWifiネットワークを使用した実デバイス上でのRNプロジェクトの実行。",
-          "available": true,
+          "available": false,
           "role": "Mobile React Native",
           "tech": "React Native",
           "link": ""
@@ -177,7 +159,7 @@
           "images": "/portofolio/personal/tartile.png",
           "name": "Tartil Me",
           "description": "NuxtJsを使用してプロジェクトを初期化します、 ページとコンポーネントをスライスし、きれいなコードを実装する。スラー検索、qoriなどの機能を追加する。",
-          "available": true,
+          "available": false,
           "role": "Frontend Developer",
           "tech": "NuxtJs, Bootstrap",
           "link": ""
@@ -186,7 +168,7 @@
           "images": "/portofolio/personal/doctor.png",
           "name": "My Doctor",
           "description": "RNプロジェクトのセットアップから始まり、コンポーネントのスライス、アトミックデザインパターンの使用、認証とチャット機能のためのfirebaseとの統合など、0からコースに従った。",
-          "available": true,
+          "available": false,
           "role": "Mobile React Native",
           "tech": "React Native, Firebase",
           "link": ""
@@ -198,7 +180,7 @@
           "available": true,
           "role": "NextJs, Typescript, Firebase, TailwindCSS",
           "tech": "React Native",
-          "link": ""
+          "link": "https://financial-planner-ck.vercel.app/login"
         },
         {
           "images": "/portofolio/personal/taskio.png",
@@ -207,7 +189,7 @@
           "available": true,
           "role": "NextJs, Typescript, Supabase, TailwindCSS, figma",
           "tech": "React Native",
-          "link": ""
+          "link": "https://task-io-seven.vercel.app/"
         }
       ],
       "company": [
@@ -217,7 +199,7 @@
           "description": "Cypressを使った自動化のためのQA指導、Jestを使ったユニットテストの実装、本番環境へのアプリケーションのデプロイ方法の学習、AWS amplifyへのブランチの登録方法の学習、Frontendの友人たちとの毎月のセッションの共有など。",
           "role": "Frontend Engineer",
           "tech": "NextJs, Typescript, i18n, Jotai, Zod, React Hook Form, React Query, TailwindCSS, Jest, Cypress",
-          "link": "https://vtrconnect.com",
+          "link": "https://www.vtrconnect.com/welcome",
           "available": true
         },
         {
@@ -227,7 +209,7 @@
           "description": "フロントエンドのバグを修正し、Ask an Expert、Agreepedia、ディスカッションフォーラムなどの新機能を追加しました。また、レスポンシブデザイン（モバイル、タブレット、デスクトップ）への移行作業にも参加しました。",
           "tech": "NextJs, i18n, TailwindCSS, styled-component, redux, react hooks form.",
           "available": true,
-          "link": "agreeculture.id"
+          "link": "https://agreeculture.id/"
         },
         {
           "images": "/portofolio/company/nabati.png",
@@ -236,7 +218,7 @@
           "role": "Frontend Developer",
           "tech": "NextJs, Typescript, i18n, Micro Frontend, AntDesign, Jira, React Storybook, Styled Component.",
           "available": false,
-          "link": "not available to show"
+          "link": ""
         },
         {
           "images": "/portofolio/company/dana.png",
@@ -245,7 +227,7 @@
           "available": true,
           "role": "Frontend Web & Mobile React Native",
           "tech": "React Native, NextJs, Typescript, i18n, React Storybook, AntDesign, Redux.",
-          "link": ""
+          "link": "https://borrower.danasyariah.id/auth/login"
         },
         {
           "images": "/portofolio/company/not-found.png",
@@ -308,8 +290,8 @@
           "role": "Internship Frontend Developer",
           "description": "Woowaダッシュボードに適したテンプレートを選択します, 購入したテンプレートを修正し、必要なディスプレイのニーズに合わせて調整し続ける。CSSフレームワークとステート・マネージメントreduxの使い方を学び、チームワークとコラボレーションのためのツールとしてgitの使い方を学んだ。",
           "tech": "ReactJs, Dashboard Template, Redux, Bootstrap.",
-          "link": "",
-          "available": false
+          "link": "https://go.woo-wa.com/",
+          "available": true
         }
       ]
     }

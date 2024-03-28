@@ -11,7 +11,7 @@ const SectionDescription = ({
   title: string
   items: Array<string>
 }) => (
-  <div className="xs:col-span-2 xs:mt-8">
+  <div className="xs:col-span-2 mt-4">
     <p className="mb-2 text-gray-800 lg:text-lg text-base font-semibold dark:text-white flex items-center gap-2">
       <Code2 /> {title}
     </p>
@@ -29,7 +29,7 @@ export default async function Skills({ lang }: Readonly<{ lang: Locale }>) {
   const t = await getDictionary(lang)
 
   return (
-    <div id="skills" className="mt-10 lg:px-0 px-6 mb-14">
+    <div id="skills" className="lg:mt-10 mt-2 lg:px-0 px-6 mb-14">
       <h1 className="lg:text-2xl text-lg font-semibold text-gray-600 dark:text-white">
         {t.profile.skills.title_skills}
       </h1>

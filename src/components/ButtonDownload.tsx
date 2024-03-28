@@ -1,10 +1,10 @@
 'use client'
 
-import React, { useCallback } from 'react'
+import React, { memo, useCallback } from 'react'
 import { usePathname } from 'next/navigation'
 import { FileDown } from 'lucide-react'
 
-export default function ButtonDownload({ text }: Readonly<{ text: string }>) {
+const ButtonDownload = ({ text }: Readonly<{ text: string }>) => {
   const pathname = usePathname()
 
   const pdfID = '/docs/diko-id.pdf'
@@ -23,14 +23,14 @@ export default function ButtonDownload({ text }: Readonly<{ text: string }>) {
     }
   }, [pathname])
 
-  const handleDownload = () => {
+  const handleDownload = useCallback(() => {
     const link = document.createElement('a')
     link.href = setPdf()
     link.download = 'resume.pdf'
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
-  }
+  }, [setPdf])
 
   return (
     <button
@@ -41,3 +41,5 @@ export default function ButtonDownload({ text }: Readonly<{ text: string }>) {
     </button>
   )
 }
+
+export default memo(ButtonDownload)

@@ -1,15 +1,15 @@
 'use client'
 
 import Link from 'next/link'
-import { useCallback, useEffect } from 'react'
 import { useTheme } from 'next-themes'
-import { usePathname, useRouter } from 'next/navigation'
 import { Moon, Sun } from 'lucide-react'
 
 import EnglishFlag from '@/svgs/EnglishFlag'
 import IndonesiaFlag from '@/svgs/IndonesiaFlag '
 import JapanFlag from '@/svgs/JapanFlag'
 import { Locale } from '@@/i18n-config'
+import { usePathname } from 'next/navigation'
+import { memo, useCallback } from 'react'
 
 interface Language {
   locale: string
@@ -93,7 +93,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
   )
 }
 
-export default function Header({
+const Header = ({
   lang,
   content,
 }: Readonly<{
@@ -104,12 +104,12 @@ export default function Header({
     disabled: boolean
     scrollable: boolean
   }>
-}>) {
-  const router = useRouter()
+}>) => {
   const pathname = usePathname()
+  const lastPath = pathname.split('/').pop()
   const { theme, setTheme } = useTheme()
 
-  const setFlag: () => React.ReactNode = () => {
+  const setFlag: () => React.ReactNode = useCallback(() => {
     switch (lang) {
       case 'en':
         return (
@@ -131,45 +131,32 @@ export default function Header({
           </p>
         )
     }
-  }
+  }, [lang])
 
-  const scrollToSection = useCallback(
-    (sectionId: string, scrollable: boolean) => {
-      const section = document.getElementById(sectionId)
+  const activeTab = useCallback(
+    (params: string, index: number) => {
+      const listUrlActive = index === 0 ? ['en', 'id', 'jp', ''] : params
 
-      if (scrollable) {
-        if (pathname.includes('portofolio') || pathname.includes('articles')) {
-          router.push(`/${lang}`)
-        }
-        section?.scrollIntoView({ behavior: 'smooth' })
-      } else {
-        router.push(`/${lang}/${sectionId}`)
-      }
+      return listUrlActive?.includes(String(lastPath))
+        ? '!text-blue-400 underline'
+        : ''
     },
-    [lang, pathname, router]
+    [lastPath]
   )
-
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-  }, [])
 
   return (
     <nav className="bg-white dark:bg-gray-800 sticky top-0 w-full z-10 shadow-lg lg:pr-4 p-4 lg:p-2">
       <div className="lg:container mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          {content?.map((item) => (
+          {content?.map((item, index) => (
             <div key={item.name} className="p-4 lg:block hidden">
-              <button
-                data-testid={
-                  item.name.toLowerCase() === 'portofolio' && 'href-portofolio'
-                }
-                disabled={item.disabled}
-                onClick={() => scrollToSection(item.href, item.scrollable)}
-                className="text-gray-700 font-semibold dark:text-white"
+              <Link
+                href={`/${lang}/${item.href}`}
+                prefetch={false}
+                className={`text-gray-700 font-semibold dark:text-white ${activeTab(item.href, index)}`}
               >
-                {item.name}{' '}
-                {item.disabled && <i className="text-xs">(coming soon)</i>}
-              </button>
+                {item.name}
+              </Link>
             </div>
           ))}
           <div className="dropdown dropdown-hover lg:hidden flex">
@@ -196,16 +183,14 @@ export default function Header({
               tabIndex={0}
               className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box"
             >
-              {content?.map((item) => (
+              {content?.map((item, index) => (
                 <li key={item.name}>
-                  <button
-                    disabled={!!item.disabled}
-                    onClick={() => scrollToSection(item.href, item.scrollable)}
-                    className="bg-base-100 text-lg btn-wide"
+                  <Link
+                    className={`text-gray-700 font-semibold dark:text-white ${activeTab(item.href, index)}`}
+                    href={`/${lang}/${item.href}`}
                   >
-                    {item.name}{' '}
-                    {item.disabled && <i className="text-xs">(coming soon)</i>}
-                  </button>
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -232,3 +217,5 @@ export default function Header({
     </nav>
   )
 }
+
+export default memo(Header)

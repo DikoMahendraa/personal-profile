@@ -31,8 +31,8 @@ export default async function LeftSide({ lang }: Readonly<{ lang: Locale }>) {
   }
 
   return (
-    <div className="w-full mt-20">
-      <div className="flex items-center justify-center">
+    <div className="w-full px-6 lg:px-0 lg:mt-20">
+      <div className="lg:flex items-center justify-center hidden">
         <div className="relative w-[15rem] h-[15rem] rounded-full overflow-hidden mb-4 border-4 border-gray-400">
           <Image
             alt="image-profile"
@@ -45,15 +45,15 @@ export default async function LeftSide({ lang }: Readonly<{ lang: Locale }>) {
           />
         </div>
       </div>
-      <div className="text-center mt-4">
-        <p className="font-bold text-gray-800 text-2xl dark:text-white">
+      <div className="lg:text-center lg:mt-4 mt-8 lg:mb-0 mb-8">
+        <p className="font-bold text-gray-800 lg:text-2xl text-6xl text-left lg:text-center dark:text-white">
           {t.profile.user.name}
         </p>
-        <p className="text-gray-600 text-lg dark:text-gray-400">
+        <p className="text-gray-600 lg:text-lg text-2xl dark:text-gray-400 text-left lg:text-center">
           {t.profile.user.position}
         </p>
       </div>
-      <div className="mt-6 text-lg">
+      <div className="mt-6 text-lg lg:block hidden">
         <p className="font-semibold text-gray-800 text-lg dark:text-white">
           Whatsapp
         </p>
@@ -68,7 +68,7 @@ export default async function LeftSide({ lang }: Readonly<{ lang: Locale }>) {
           </a>
         </p>
       </div>
-      <div className="mt-4 text-lg">
+      <div className="mt-4 text-lg lg:block hidden">
         <p className="font-semibold text-gray-800 dark:text-white">Email</p>
         <p className="flex items-center text-base gap-2 mt-2 text-white">
           <AtSign size={18} />
@@ -81,7 +81,7 @@ export default async function LeftSide({ lang }: Readonly<{ lang: Locale }>) {
           </a>
         </p>
       </div>
-      <div className="mt-4 text-lg mb-8">
+      <div className="mt-4 text-lg mb-8 lg:block hidden">
         <p className="font-semibold text-lg text-gray-800 dark:text-white">
           {t.profile.user.title_social_media}
         </p>

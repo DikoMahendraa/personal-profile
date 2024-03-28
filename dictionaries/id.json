@@ -2,37 +2,19 @@
   "profile": {
     "navbar": [
       {
-        "href": "about",
+        "href": "/",
         "name": "Tentang Saya",
         "disabled": false,
-        "scrollable": true
+        "scrollable": false
       },
       {
-        "href": "experience",
-        "name": "Pengalaman Kerja",
-        "disabled": false,
-        "scrollable": true
-      },
-      {
-        "href": "education",
-        "name": "Pendidikan",
-        "scrollable": true,
-        "disabled": false
-      },
-      {
-        "href": "skills",
-        "name": "Keahlian",
-        "scrollable": true,
-        "disabled": false
-      },
-      {
-        "href": "portofolio",
+        "href": "/portofolio",
         "name": "Portofolio",
         "scrollable": false,
         "disabled": false
       },
       {
-        "href": "articles",
+        "href": "/articles",
         "name": "Artikel",
         "scrollable": false,
         "disabled": false
@@ -217,7 +199,7 @@
           "description": "Bantu ngerapihin kode yg berantakan buat jadi reusable dan direfactor, benerin bug di code Frontend. terus bantu mentoring QA buat automation pakai cypress. implementasi unit testing pake Jest, belajar cara deploy aplikasi ke production, belajar cara register branch ke AWS amplify, terus belajar sharing session tiap bulan bareng temen2 Frontend dan masih banyak lagi",
           "role": "Frontend Engineer",
           "tech": "NextJs, Typescript, i18n, Jotai, Zod, React Hook Form, React Query, TailwindCSS, Jest, Cypress",
-          "link": "https://vtrconnect.com",
+          "link": "https://www.vtrconnect.com/welcome",
           "available": true
         },
         {
@@ -227,7 +209,7 @@
           "description": "Benerin bug di kode Frontend, nambahin beberapa fitur baru kayak Tanya Ahli, Agreepedia, dan juga Forum Diskusi. aku juga ikut proses migrasi untuk responsive design (mobile, tablet, & desktop). nerapin clean code, dan masih banyak lagi",
           "tech": "NextJs, i18n, TailwindCSS, styled-component, redux, react hooks form.",
           "available": true,
-          "link": "agreeculture.id"
+          "link": "https://agreeculture.id/"
         },
         {
           "images": "/portofolio/company/nabati.png",
@@ -236,15 +218,15 @@
           "role": "Frontend Developer",
           "tech": "NextJs, Typescript, i18n, Micro Frontend, AntDesign, Jira, React Storybook, Styled Component.",
           "available": false,
-          "link": "not available to show"
+          "link": ""
         },
         {
           "images": "/portofolio/company/dana.png",
           "name": "Dana Syariah",
           "description": "Bantu develop dari 0 untuk aplikasi web mulai dari landing page & juga dsahboardnya, instalasi beberapa module/package yg diperlukan, implementasi storybook untuk maintenance component biar proses development jauh lebih cepat, instalasi fitur bahasa (i18n), terus ikut bantu develop aplikasi yg sudah ada menggunakan React Native, nambahin beberapa fitur dan juga refactoring code dan folder struktur yg berantakan.",
-          "available": true,
           "role": "Frontend Web & Mobile React Native",
           "tech": "React Native, NextJs, Typescript, i18n, React Storybook, AntDesign, Redux.",
+          "available": true,
           "link": ""
         },
         {
@@ -289,8 +271,8 @@
           "role": "Junior Frontend Developer",
           "description": "belajar vuejs selama 1 pekan, kemudian impelementasi langsung dengan cara ngedevelop landing page (dengan tampilan UI yg baru) untuk internal perusahaan, belajar bekerja bareng tim, diskusi terkait teknologi baru, dan ngisi sharing session di kantor",
           "tech": "VueJs, Bootstrap",
-          "link": "",
-          "available": false
+          "link": "https://qatros.com/",
+          "available": true
         },
         {
           "images": "/portofolio/company/liveness.png",
@@ -307,8 +289,8 @@
           "role": "Internship Frontend Developer",
           "description": "Melakukan pemilihan template yg cocok untuk woowa Dashboard, modifikasi template yg sudah di beli terus disesuaikan dengan kebutuhan tampilan yg dibutuhkan. belajar menggunakan framework css dan juga state management redux. belajar bekerja dengan tim dan menggunakan git sebagai tools untuk kolaborasi.",
           "tech": "ReactJs, Dashboard Template, Redux, Bootstrap.",
-          "link": "",
-          "available": false
+          "link": "https://go.woo-wa.com/",
+          "available": true
         }
       ]
     }

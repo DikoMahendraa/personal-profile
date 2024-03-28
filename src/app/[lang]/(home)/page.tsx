@@ -21,6 +21,9 @@ export default async function Home({
         </div>
 
         <div className="lg:col-span-2 col-span-1 relative">
+          <div className="lg:hidden">
+            <LeftSide lang={lang} />
+          </div>
           <AboutMe lang={lang} />
           <Experiences lang={lang} />
           <Educations lang={lang} />

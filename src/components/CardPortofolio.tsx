@@ -1,16 +1,19 @@
 'use client'
 
 import { CircleUserRound, Code2, ListTodo } from 'lucide-react'
-import React from 'react'
+import React, { memo } from 'react'
 import Collapse from './Collapse'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export type ContentCardProps = Readonly<{
   name: string
   role: string
   description: string
   tech: string
+  link: string
   images: string
+  available: boolean
 }>
 
 export interface CardPortfolioProps extends ContentCardProps {
@@ -19,19 +22,32 @@ export interface CardPortfolioProps extends ContentCardProps {
   labelTech: string
 }
 
-export default function CardPortofolio(item: Readonly<CardPortfolioProps>) {
-  const onShowModal = () => {
-    return (
-      document?.getElementById('showProjectDetail') as HTMLElement & {
-        showModal: () => void
-      }
-    )?.showModal?.()
-  }
+interface LinkCustomProps {
+  children: React.ReactNode
+  disabled: boolean
+  href: string
+}
+
+const LinkCustom: React.FC<LinkCustomProps> = ({
+  children,
+  disabled,
+  href,
+}) => {
+  return disabled ? (
+    <div>{children}</div>
+  ) : (
+    <Link href={href} target="_blank">
+      {children}
+    </Link>
+  )
+}
+
+const CardPortofolio = (item: Readonly<CardPortfolioProps>) => {
   return (
     <div className="lg:col-span-1 col-span-3 border dark:border-gray-700 border-gray-200 rounded-lg dark:shadow-lg">
       <div className="rounded-md dark:shadow-xl p-4 cursor-pointer hover:bg-gray-100/50 dark:hover:bg-gray-900/10">
         <h2 className="text-xl font-semibold uppercase">{item.name}</h2>
-        <div className="relative h-[15rem] w-full mt-6 mb-4">
+        <div className="relative h-[15rem] aspect-video w-full mt-6 mb-4">
           <Image
             alt="image-profile"
             src={item.images}
@@ -59,13 +75,15 @@ export default function CardPortofolio(item: Readonly<CardPortfolioProps>) {
         />
 
         <div className="mt-4 flex items-center gap-2">
-          <button
-            onClick={onShowModal}
-            className="btn text-white btn-info btn-sm font-normal"
-          >
-            Preview
-          </button>
-          <button className="btn text-white btn-success font-normal btn-sm">
+          <LinkCustom href={item.link} disabled={!item.available}>
+            <button
+              disabled={!item.available}
+              className={`btn text-white btn-sm font-normal ${item.available ? 'btn-info' : 'btn-disabled dark:bg-gray-600 dark:text-white cursor-default'}`}
+            >
+              Preview
+            </button>
+          </LinkCustom>
+          <button className="cursor-default btn text-white btn-success font-normal btn-sm">
             Source
           </button>
         </div>
@@ -73,3 +91,5 @@ export default function CardPortofolio(item: Readonly<CardPortfolioProps>) {
     </div>
   )
 }
+
+export default memo(CardPortofolio)

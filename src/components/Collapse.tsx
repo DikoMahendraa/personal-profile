@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { memo } from 'react'
 
-export default function Collapse({
+const Collapse = ({
   icon,
   label,
   description,
@@ -8,7 +8,7 @@ export default function Collapse({
   icon: React.ReactNode
   label: string
   description: string
-}>) {
+}>) => {
   return (
     <button
       tabIndex={0}
@@ -26,3 +26,5 @@ export default function Collapse({
     </button>
   )
 }
+
+export default memo(Collapse)

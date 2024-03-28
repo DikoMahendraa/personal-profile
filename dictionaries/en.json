@@ -2,37 +2,19 @@
   "profile": {
     "navbar": [
       {
-        "href": "about",
+        "href": "/",
         "name": "About Me",
         "disabled": false,
-        "scrollable": true
+        "scrollable": false
       },
       {
-        "href": "experience",
-        "name": "Experience",
-        "disabled": false,
-        "scrollable": true
-      },
-      {
-        "href": "education",
-        "name": "Education",
-        "disabled": false,
-        "scrollable": true
-      },
-      {
-        "href": "skills",
-        "name": "Skills",
-        "disabled": false,
-        "scrollable": true
-      },
-      {
-        "href": "portofolio",
+        "href": "/portofolio",
         "name": "Portofolio",
         "scrollable": false,
         "disabled": false
       },
       {
-        "href": "articles",
+        "href": "/articles",
         "name": "Articles",
         "scrollable": false,
         "disabled": false
@@ -168,7 +150,7 @@
           "images": "/portofolio/personal/burgerapp.png",
           "name": "Burger City",
           "description": "Slicing UI using React Native, installing and running the React Native CLI application, running RN projects on real devices via usb cable and Wifi network. reusable and refactoring code.",
-          "available": true,
+          "available": false,
           "role": "React Native Developer",
           "tech": "React Native",
           "link": ""
@@ -177,7 +159,7 @@
           "images": "/portofolio/personal/tartile.png",
           "name": "Tartil Me",
           "description": "Initializing the project using NuxtJs, slicing pages and components, implementing clean code. adding some features for searching surahs, qori etc. integrating with data created by the backend.",
-          "available": true,
+          "available": false,
           "role": "Frontend Developer",
           "tech": "NuxtJs, Bootstrap",
           "link": ""
@@ -186,7 +168,7 @@
           "images": "/portofolio/personal/doctor.png",
           "name": "My Doctor",
           "description": "Followed the course from 0, starting from RN project setup, slicing components. using atomic design pattern, integrating with firebase for authentication and for chat features.",
-          "available": true,
+          "available": false,
           "role": "React Native Developer",
           "tech": "React Native, Firebase",
           "link": ""
@@ -198,7 +180,7 @@
           "available": true,
           "role": "Frontend Developer",
           "tech": "NextJs, Typescript, Firebase, TailwindCSS",
-          "link": ""
+          "link": "https://financial-planner-ck.vercel.app/login"
         },
         {
           "images": "/portofolio/personal/taskio.png",
@@ -207,7 +189,7 @@
           "available": true,
           "role": "Frontend Developer",
           "tech": "NextJs, Typescript, Supabase, TailwindCSS, figma",
-          "link": ""
+          "link": "https://task-io-seven.vercel.app/"
         }
       ],
       "company": [
@@ -217,7 +199,7 @@
           "description": "Help clean up messy code to become reusable and refactor, fix bugs in Frontend code. continue to help mentoring QA for automation using cypress. implement unit testing using Jest, learn how to deploy applications to production, learn how to register branches to AWS amplify, continue to learn sharing sessions every month with Frontend friends and much more.",
           "role": "Frontend Engineer",
           "tech": "NextJs, Typescript, i18n, Jotai, Zod, React Hook Form, React Query, TailwindCSS, Jest, Cypress",
-          "link": "https://vtrconnect.com",
+          "link": "https://www.vtrconnect.com/welcome",
           "available": true
         },
         {
@@ -227,7 +209,7 @@
           "description": "Fixed bugs in the Frontend code, added some new features such as Ask an Expert, Agreepedia, and also the Discussion Forum. I also participated in the migration process for responsive design (mobile, tablet, & desktop). nerapin clean code, and many more.",
           "tech": "NextJs, i18n, TailwindCSS, styled-component, redux, react hooks form.",
           "available": true,
-          "link": "agreeculture.id"
+          "link": "https://agreeculture.id/"
         },
         {
           "images": "/portofolio/company/nabati.png",
@@ -236,16 +218,16 @@
           "role": "Frontend Developer",
           "tech": "NextJs, Typescript, i18n, Micro Frontend, AntDesign, Jira, React Storybook, Styled Component.",
           "available": false,
-          "link": "not available to show"
+          "link": ""
         },
         {
           "images": "/portofolio/company/dana.png",
           "name": "Dana Syariah",
           "description": "Help develop from 0 for web applications starting from the landing page & also the dsahboard, installation of several modules / packages needed, implementation of storybooks for component maintenance to make the development process much faster, installation of language features (i18n), continue to help develop existing applications using React Native, add some features and also refactoring code and folder structure that is messy.",
-          "available": true,
           "role": "Frontend Web & Mobile React Native",
           "tech": "React Native, NextJs, Typescript, i18n, React Storybook, AntDesign, Redux.",
-          "link": ""
+          "available": true,
+          "link": "https://borrower.danasyariah.id/auth/login"
         },
         {
           "images": "/portofolio/company/not-found.png",
@@ -289,8 +271,8 @@
           "role": "Junior Frontend Developer",
           "description": "learning vuejs for 1 week, then direct implementation by developing landing pages (with a new UI) for internal companies, learning to work with teams, discussing new technologies, and conducting sharing sessions in the office.",
           "tech": "VueJs, Bootstrap",
-          "link": "",
-          "available": false
+          "link": "https://qatros.com/",
+          "available": true
         },
         {
           "images": "/portofolio/company/liveness.png",
@@ -307,8 +289,8 @@
           "role": "Internship Frontend Developer",
           "description": "Choosing a suitable template for Woowa Dashboard, modifying the template that has been purchased and then adjusting it to the display needs needed. learning to use the css framework and also state management redux. learning to work with a team and using git as a tool for collaboration.",
           "tech": "ReactJs, Dashboard Template, Redux, Bootstrap.",
-          "link": "",
-          "available": false
+          "link": "https://go.woo-wa.com/",
+          "available": true
         }
       ]
     }

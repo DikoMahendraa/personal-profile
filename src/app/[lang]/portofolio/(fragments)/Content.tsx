@@ -1,7 +1,7 @@
 'use client'
 
 import CardPortofolio, { ContentCardProps } from '@/components/CardPortofolio'
-import React, { useState } from 'react'
+import React, { memo, useCallback, useMemo, useState } from 'react'
 
 type ContentProps = {
   itemsCompany: Array<ContentCardProps>
@@ -12,18 +12,22 @@ type ContentProps = {
   tabs: Array<string>
 }
 
-export default function Content({
+const Content = ({
   itemsCompany,
   itemsPersonal,
   labelDescription,
   labelRole,
   labelTech,
   tabs,
-}: Readonly<ContentProps>) {
+}: Readonly<ContentProps>) => {
   const [tab, setTab] = useState<string>(tabs[0])
 
-  const listAllPortofolio = itemsCompany.concat(itemsPersonal)
-  const listPortofolio = (() => {
+  const listAllPortofolio = useMemo(
+    () => itemsCompany.concat(itemsPersonal),
+    [itemsCompany, itemsPersonal]
+  )
+
+  const listPortofolio = useCallback(() => {
     switch (tab) {
       case tabs[1]:
         return itemsCompany
@@ -32,7 +36,7 @@ export default function Content({
       default:
         return listAllPortofolio
     }
-  })()
+  }, [itemsCompany, itemsPersonal, listAllPortofolio, tab, tabs])
 
   return (
     <div>
@@ -57,9 +61,10 @@ export default function Content({
       </div>
 
       <div className="my-6 gap-4 dark:text-gray-200 grid grid-cols-3 pb-16">
-        {listPortofolio.map((item) => (
+        {listPortofolio().map((item) => (
           <CardPortofolio
             {...item}
+            available={item.available}
             labelDescription={labelDescription}
             labelRole={labelRole}
             labelTech={labelTech}
@@ -70,3 +75,5 @@ export default function Content({
     </div>
   )
 }
+
+export default memo(Content)
