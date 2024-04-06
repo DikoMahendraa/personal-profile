@@ -65,47 +65,45 @@ const Header = () => {
   )
 
   return (
-    <MainLayout>
-      <nav className="bg-white dark:bg-gray-800 sticky top-0 w-full z-10">
-        <div className="lg:container mx-auto flex justify-between items-center">
-          <div className="flex items-center">
-            <HeaderItem />
-            <div className="dropdown dropdown-hover lg:hidden flex">
-              <button
-                tabIndex={0}
-                className="btn btn-ghost btn-circle text-gray-300"
+    <nav className="bg-white dark:bg-gray-800 sticky top-0 w-full z-10">
+      <MainLayout className="flex justify-between py-6">
+        <div className="flex items-center">
+          <HeaderItem />
+          <div className="dropdown dropdown-hover lg:hidden flex">
+            <button
+              tabIndex={0}
+              className="btn btn-ghost btn-circle text-gray-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h7"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <div className="flex items-center">
-            <div className="flex items-center space-x-2 ml-4">
-              <button
-                className="text-sm italic capitalize cursor-pointer"
-                onClick={switchDarkMode}
-              >
-                {iconMode}
-              </button>
-            </div>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h7"
+                />
+              </svg>
+            </button>
           </div>
         </div>
-      </nav>
-    </MainLayout>
+
+        <div className="flex items-center">
+          <div className="flex items-center space-x-2 ml-4">
+            <button
+              className="text-sm italic capitalize cursor-pointer"
+              onClick={switchDarkMode}
+            >
+              {iconMode}
+            </button>
+          </div>
+        </div>
+      </MainLayout>
+    </nav>
   )
 }
 

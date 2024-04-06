@@ -196,16 +196,22 @@ const Content = () => {
     }
   }, [listAllPortofolio, tab])
 
+  const switchTab = useCallback((item: string) => setTab(item), [])
+
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div className="sticky dark:bg-gray-800 w-full top-0 z-[4] py-6">
         <div role="tablist">
           {portofolio.tab.map((item: string) => {
             return (
               <button
-                className="relative text-white mr-4 capitalize"
+                className={`relative text-gray-400 mr-4 capitalize font-semibold ${tab === item && 'text-white'}`}
                 key={String(Date + item)}
-                onClick={() => setTab(item)}
+                onClick={() => switchTab(item)}
               >
                 {item}
 
@@ -226,18 +232,25 @@ const Content = () => {
       </div>
 
       <div className="my-6 gap-4 dark:text-gray-200 grid grid-cols-2 pb-16">
-        {listPortofolio().map((item) => (
-          <CardPortofolio
-            {...item}
-            available={item.available}
-            labelDescription={portofolio.label_description}
-            labelRole={portofolio.label_role}
-            labelTech={portofolio.label_tech_used}
+        {listPortofolio().map((item, index) => (
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 20 }}
+            transition={{ delay: Number(`0.${index}`), times: 0 }}
             key={item.name}
-          />
+          >
+            <CardPortofolio
+              {...item}
+              available={item.available}
+              labelDescription={portofolio.label_description}
+              labelRole={portofolio.label_role}
+              labelTech={portofolio.label_tech_used}
+            />
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   )
 }
 

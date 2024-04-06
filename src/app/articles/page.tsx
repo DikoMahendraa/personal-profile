@@ -1,9 +1,17 @@
+'use client'
+
 import { MessageSquareCode } from 'lucide-react'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 export default function PagePortofolio() {
   return (
-    <div className="container mx-auto">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="container mx-auto"
+    >
       <div className="my-6 gap-4 dark:text-gray-200 h-[20rem] flex justify-center items-center w-full">
         <MessageSquareCode className="text-gray-500" size={100} />
         <div>
@@ -13,6 +21,6 @@ export default function PagePortofolio() {
           </h1>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
