@@ -26,14 +26,6 @@ const nextConfig = {
 
     return config
   },
-  async rewrites() {
-    return [
-      {
-        source: '/',
-        destination: '/en',
-      },
-    ]
-  },
   images: {
     remotePatterns: [
       {

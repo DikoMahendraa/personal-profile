@@ -7,19 +7,16 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
-    screens: {
-      xs: '320px',
-      // => @media (min-width: 320px) { ... }
+    extend: {
+      spacing: {
+        unset: 'unset',
+      },
 
-      sm: '576px',
-      // => @media (min-width: 576px) { ... }
-
-      md: '960px',
-      // => @media (min-width: 960px) { ... }
-
-      lg: '1440px',
-      // => @media (min-width: 1440px) { ... }
+      screens: {
+        xs: '426px',
+        lg: '1126px',
+        '3xl': '1876px',
+      },
     },
   },
   darkMode: 'class',

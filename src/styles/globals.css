@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply dark:bg-gray-800 motion-safe:transition-[background-color,color];
+  }
+  .layout {
+    @apply mx-auto max-w-2xl 3xl:max-w-4xl w-[86%];
+  }
+}

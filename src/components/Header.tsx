@@ -1,220 +1,111 @@
 'use client'
 
-import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import { Moon, Sun } from 'lucide-react'
 
-import EnglishFlag from '@/svgs/EnglishFlag'
-import IndonesiaFlag from '@/svgs/IndonesiaFlag '
-import JapanFlag from '@/svgs/JapanFlag'
-import { Locale } from '@@/i18n-config'
 import { usePathname } from 'next/navigation'
-import { memo, useCallback } from 'react'
+import { memo, useCallback, useMemo } from 'react'
+import Link from 'next/link'
 
-interface Language {
-  locale: string
-  href: string
-  flag: React.ReactNode
-  name: string
-}
+import { motion } from 'framer-motion'
+import { MainLayout } from '@/app/(fragments)/MainLayout'
 
-interface LanguageItemProps {
-  locale: string
-  href: string
-  flag: React.ReactNode
-  name: string
-}
-
-const languages = [
+const navbar = [
   {
-    locale: 'en',
-    href: '/en',
-    flag: <EnglishFlag width={20} height={15} />,
-    name: 'English',
+    href: '/',
+    name: 'About Me',
   },
   {
-    locale: 'id',
-    href: '/id',
-    flag: <IndonesiaFlag width={20} height={15} />,
-    name: 'Indonesia',
+    href: '/portofolio',
+    name: 'Portofolio',
   },
   {
-    locale: 'jp',
-    href: '/jp',
-    flag: <JapanFlag width={20} height={15} />,
-    name: 'Japan',
+    href: '/articles',
+    name: 'Articles',
   },
 ]
 
-const LanguageItem: React.FC<LanguageItemProps> = ({
-  locale,
-  href,
-  flag,
-  name,
-}) => {
-  return (
-    <li>
-      <Link locale={locale} href={href}>
-        <span className="flex items-center gap-2">
-          {flag} {name}
-        </span>
-      </Link>
-    </li>
-  )
-}
-
-interface LanguageSelectorProps {
-  languages: Array<Language>
-  defaultValue: React.ReactNode
-}
-
-const LanguageSelector: React.FC<LanguageSelectorProps> = ({
-  languages,
-  defaultValue,
-}) => {
-  return (
-    <div className="relative">
-      <button className="btn dropdown-toggle">{defaultValue}</button>
-      <ul
-        className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
-        tabIndex={0}
-      >
-        {languages.map((lang) => (
-          <LanguageItem
-            key={String(Date + lang.name)}
-            locale={lang.locale}
-            href={lang.href}
-            flag={lang.flag}
-            name={lang.name}
-          />
-        ))}
-      </ul>
-    </div>
-  )
-}
-
-const Header = ({
-  lang,
-  content,
-}: Readonly<{
-  lang: Locale
-  content: Array<{
-    href: string
-    name: string
-    disabled: boolean
-    scrollable: boolean
-  }>
-}>) => {
+const HeaderItem = () => {
   const pathname = usePathname()
-  const lastPath = pathname.split('/').pop()
+
+  return navbar.map((item) => (
+    <div key={item.name} className="py-4 mr-6 lg:block hidden">
+      <Link
+        href={item.href}
+        className="text-gray-700 relative font-semibold dark:text-white"
+      >
+        {item.name}
+
+        {pathname === item.href && (
+          <motion.div
+            className="absolute inset-x-0 h-[2px] -bottom-1 from-gray-800 bg-gradient-to-r dark:from-base-300 dark:bg-unset"
+            layoutId="navbar-desktop"
+            transition={{
+              type: 'tween',
+              duration: 0.25,
+            }}
+          />
+        )}
+      </Link>
+    </div>
+  ))
+}
+
+const Header = () => {
   const { theme, setTheme } = useTheme()
 
-  const setFlag: () => React.ReactNode = useCallback(() => {
-    switch (lang) {
-      case 'en':
-        return (
-          <p className="flex gap-2">
-            <EnglishFlag width={20} height={15} /> English
-          </p>
-        )
-      case 'jp':
-        return (
-          <p className="flex gap-2">
-            <JapanFlag width={20} height={15} /> Japan
-          </p>
-        )
-      case 'id':
-      default:
-        return (
-          <p className="flex gap-2">
-            <IndonesiaFlag width={20} height={15} /> Indonesia
-          </p>
-        )
-    }
-  }, [lang])
+  const switchDarkMode = useCallback(
+    () => (theme === 'light' ? setTheme('dark') : setTheme('light')),
+    [setTheme, theme]
+  )
 
-  const activeTab = useCallback(
-    (params: string, index: number) => {
-      const listUrlActive = index === 0 ? ['en', 'id', 'jp', ''] : params
-
-      return listUrlActive?.includes(String(lastPath))
-        ? '!text-blue-400 underline'
-        : ''
-    },
-    [lastPath]
+  const iconMode = useMemo(
+    () => (theme === 'light' ? <Moon /> : <Sun className="text-white" />),
+    [theme]
   )
 
   return (
-    <nav className="bg-white dark:bg-gray-800 sticky top-0 w-full z-10 shadow-lg lg:pr-4 p-4 lg:p-2">
-      <div className="lg:container mx-auto flex justify-between items-center">
-        <div className="flex items-center">
-          {content?.map((item, index) => (
-            <div key={item.name} className="p-4 lg:block hidden">
-              <Link
-                href={`/${lang}/${item.href}`}
-                prefetch={false}
-                className={`text-gray-700 font-semibold dark:text-white ${activeTab(item.href, index)}`}
+    <MainLayout>
+      <nav className="bg-white dark:bg-gray-800 sticky top-0 w-full z-10">
+        <div className="lg:container mx-auto flex justify-between items-center">
+          <div className="flex items-center">
+            <HeaderItem />
+            <div className="dropdown dropdown-hover lg:hidden flex">
+              <button
+                tabIndex={0}
+                className="btn btn-ghost btn-circle text-gray-300"
               >
-                {item.name}
-              </Link>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h7"
+                  />
+                </svg>
+              </button>
             </div>
-          ))}
-          <div className="dropdown dropdown-hover lg:hidden flex">
-            <button
-              tabIndex={0}
-              className="btn btn-ghost btn-circle text-gray-300"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+          </div>
+
+          <div className="flex items-center">
+            <div className="flex items-center space-x-2 ml-4">
+              <button
+                className="text-sm italic capitalize cursor-pointer"
+                onClick={switchDarkMode}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h7"
-                />
-              </svg>
-            </button>
-            <ul
-              tabIndex={0}
-              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box"
-            >
-              {content?.map((item, index) => (
-                <li key={item.name}>
-                  <Link
-                    className={`text-gray-700 font-semibold dark:text-white ${activeTab(item.href, index)}`}
-                    href={`/${lang}/${item.href}`}
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+                {iconMode}
+              </button>
+            </div>
           </div>
         </div>
-
-        <div className="flex items-center">
-          <div className="dropdown dropdown-hover">
-            <LanguageSelector defaultValue={setFlag()} languages={languages} />
-          </div>
-
-          <div className="flex items-center space-x-2 ml-4">
-            <button
-              className="text-sm italic capitalize cursor-pointer"
-              onClick={() =>
-                theme === 'light' ? setTheme('dark') : setTheme('light')
-              }
-            >
-              {theme === 'light' ? <Moon /> : <Sun className="text-white" />}
-            </button>
-          </div>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </MainLayout>
   )
 }
 
