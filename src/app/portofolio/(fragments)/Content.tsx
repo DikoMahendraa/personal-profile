@@ -209,7 +209,7 @@ const Content = () => {
           {portofolio.tab.map((item: string) => {
             return (
               <button
-                className={`relative text-gray-400 mr-4 capitalize font-semibold ${tab === item && 'text-white'}`}
+                className={`relative mr-4 text-gray-400 capitalize font-semibold ${tab === item && 'dark:!text-white !text-gray-600'}`}
                 key={String(Date + item)}
                 onClick={() => switchTab(item)}
               >
@@ -234,6 +234,7 @@ const Content = () => {
       <div className="my-6 gap-4 dark:text-gray-200 grid grid-cols-2 pb-16">
         {listPortofolio().map((item, index) => (
           <motion.div
+            className="lg:col-span-1 col-span-2 border dark:border-gray-700 border-gray-200 rounded-lg dark:shadow-lg"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 20 }}

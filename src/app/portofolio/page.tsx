@@ -1,9 +1,9 @@
 import React from 'react'
 import { MessageSquareWarning } from 'lucide-react'
 import Content from './(fragments)/Content'
-import { MainLayout } from '../(fragments)/MainLayout'
+import { MainLayout } from '@/layouts/MainLayout'
 
-const PagePortofolio = () => {
+const PortofolioPage = () => {
   return (
     <MainLayout>
       <div
@@ -23,4 +23,4 @@ const PagePortofolio = () => {
   )
 }
 
-export default PagePortofolio
+export default PortofolioPage
