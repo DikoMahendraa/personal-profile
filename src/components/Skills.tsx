@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { memo } from 'react'
 
-import { Locale } from '@@/i18n-config'
-import { getDictionary } from '@@/get-dictionary'
 import { Code2 } from 'lucide-react'
+
+const skills = {
+  title_skills: 'Skills',
+  title_programming: 'Programming Languages',
+  title_library: 'Library / Framework / Services',
+  title_tools: 'Tools',
+  programming: ['Javascript', 'Typescript'],
+  library: [
+    'React Js',
+    'Next Js',
+    'Firebase',
+    'Git',
+    'TailwindCSS',
+    'REST API',
+  ],
+  tools: ['Postman', 'Figma', 'Jira'],
+}
 
 const SectionDescription = ({
   title,
@@ -25,28 +40,22 @@ const SectionDescription = ({
   </div>
 )
 
-export default async function Skills({ lang }: Readonly<{ lang: Locale }>) {
-  const t = await getDictionary(lang)
-
+const Skills = () => {
   return (
-    <div id="skills" className="lg:mt-10 mt-2 lg:px-0 px-6 mb-14">
+    <div id="skills" className="border-t border-gray-50 mt-8 pt-4">
       <h1 className="lg:text-2xl text-lg font-semibold text-gray-600 dark:text-white">
-        {t.profile.skills.title_skills}
+        {skills.title_skills}
       </h1>
       <div className="grid grid-cols-2">
         <SectionDescription
-          items={t.profile.skills.programming}
-          title={t.profile.skills.title_programming}
+          items={skills.programming}
+          title={skills.title_programming}
         />
-        <SectionDescription
-          items={t.profile.skills.tools}
-          title={t.profile.skills.title_tools}
-        />
+        <SectionDescription items={skills.tools} title={skills.title_tools} />
       </div>
-      <SectionDescription
-        items={t.profile.skills.library}
-        title={t.profile.skills.title_library}
-      />
+      <SectionDescription items={skills.library} title={skills.title_library} />
     </div>
   )
 }
+
+export default memo(Skills)

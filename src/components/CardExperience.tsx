@@ -1,5 +1,5 @@
 import { Building, CalendarDays, MapPin, UserRound } from 'lucide-react'
-import React from 'react'
+import React, { memo } from 'react'
 
 interface CardExperienceProps {
   title?: string
@@ -12,7 +12,7 @@ interface CardExperienceProps {
   techUsed: string
 }
 
-export default function CardExperience({
+const CardExperience = ({
   company,
   techTitle,
   techUsed,
@@ -21,9 +21,9 @@ export default function CardExperience({
   position,
   time,
   title,
-}: Readonly<CardExperienceProps>) {
+}: Readonly<CardExperienceProps>) => {
   return (
-    <div className="p-4">
+    <div>
       {title && (
         <h1 className="lg:text-2xl text-lg font-semibold text-gray-800 dark:text-white">
           {title}
@@ -32,20 +32,20 @@ export default function CardExperience({
       <div>
         <div className="lg:flex sm:flex mt-4 justify-between items-center xs:grid sm grid-cols-2">
           <div className="xs:col-span-2">
-            <p className="lg:text-xl text-base font-semibold text-gray-800 dark:text-white flex items-center gap-2">
+            <p className="text-base font-semibold text-gray-800 dark:text-white flex items-center gap-2">
               <Building />
               {company}
             </p>
-            <p className="lg:text-lg text-base font-normal text-gray-500 mt-2 dark:text-gray-400 flex items-center gap-2">
+            <p className="text-base font-normal text-gray-500 mt-2 dark:text-gray-400 flex items-center gap-2">
               <UserRound /> {position}
             </p>
           </div>
           <div className="xs:col-span-2 xs:mt-4 lg:mt-0">
-            <p className="lg:text-base text-sm text-gray-500 dark:text-gray-300 flex items-center gap-2">
+            <p className="text-base  text-gray-500 dark:text-gray-300 flex items-center gap-2">
               <CalendarDays size={18} />
               {time}
             </p>
-            <p className="lg:text-base text-sm text-gray-500 mt-2 dark:text-gray-300 flex items-center gap-2">
+            <p className="text-base  text-gray-500 mt-2 dark:text-gray-300 flex items-center gap-2">
               <MapPin size={18} />
               {location}
             </p>
@@ -68,3 +68,5 @@ export default function CardExperience({
     </div>
   )
 }
+
+export default memo(CardExperience)

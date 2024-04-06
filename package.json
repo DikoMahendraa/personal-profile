@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.4",
+    "framer-motion": "^11.0.25",
     "lucide-react": "^0.323.0",
     "negotiator": "^0.6.3",
     "next": "14.1.0",
