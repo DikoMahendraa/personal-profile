@@ -7,3 +7,4 @@ i18n: https://github.com/vercel/next.js/tree/canary/examples/app-dir-i18n-routin
 vercel issue i18n on not-found page: https://github.com/vercel/next.js/issues/50699
 reference for git action: https://t-i-show.medium.com/build-a-ci-cd-environment-with-github-actions-eslint-prettier-ee725c5fe2ab
 meta tag generator: https://metatags.io/
+husky: https://typicode.github.io/husky/get-started.html
