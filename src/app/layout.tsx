@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description:
       'I am web developer with ± 3 years of experience using NextJs, React Js and also React Native',
     url: 'https://cocome.vercel.app',
-    siteName: 'cocome.vercel.app',
+    siteName: 'My Profile',
     images: [
       {
         url: '/me.webp',
