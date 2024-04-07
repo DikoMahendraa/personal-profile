@@ -256,4 +256,4 @@ const Content = () => {
   )
 }
 
-export default memo(Content)
+export default Content

@@ -14,6 +14,7 @@ const Profile = () => {
             src="/me.webp"
             fill
             priority
+            sizes="(max-width: 768px) 100vw, 33vw"
             quality={50}
           />
         </div>

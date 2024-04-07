@@ -66,7 +66,7 @@ const Header = () => {
 
   return (
     <nav className="bg-white dark:bg-gray-800 sticky top-0 w-full z-10">
-      <MainLayout className="flex justify-between py-3">
+      <MainLayout className="layout flex justify-between py-3">
         <div className="flex items-center">
           <HeaderItem />
           <div className="dropdown dropdown-hover lg:hidden flex">

@@ -72,7 +72,7 @@ const PortfolioDetailPage = () => {
   const basePublicUrl = routeBasedCompanies || routeBasedPersonal
 
   return (
-    <MainLayout>
+    <MainLayout className="layout">
       <Link href="/portofolio">
         <ArrowLeft className="text-white" />
       </Link>

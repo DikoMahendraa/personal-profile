@@ -6,7 +6,7 @@ import Skills from '@/components/Skills'
 
 const HomePage = () => {
   return (
-    <MainLayout>
+    <MainLayout className="layout">
       <Profile />
       <Experiences />
       <Educations />

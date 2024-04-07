@@ -7,7 +7,7 @@ const Content = dynamic(() => import('./(fragments)/Content'), { ssr: false })
 
 const PortofolioPage = () => {
   return (
-    <MainLayout>
+    <MainLayout className="layout">
       <div
         role="alert"
         className="alert bg-yellow-500 border-none lg:mt-10 mt-4 mb-5 flex items-start"

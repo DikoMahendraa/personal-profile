@@ -8,6 +8,7 @@ type P = {
 
 export const MainLayout = (props: React.PropsWithChildren<P>) => {
   const styles = ['layout', props.className].join(' ')
+
   return (
     <motion.main
       initial={{ opacity: 0 }}

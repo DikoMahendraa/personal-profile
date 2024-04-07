@@ -1,8 +1,8 @@
-import '@/styles/globals.css'
-
 import { Providers } from '@/themes/providers'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+
+import '@/styles/globals.css'
 
 export default function RootLayout({
   children,
