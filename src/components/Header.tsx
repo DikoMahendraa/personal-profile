@@ -9,6 +9,7 @@ import Link from 'next/link'
 
 import { motion } from 'framer-motion'
 import { MainLayout } from '@/layouts/MainLayout'
+import { useViewportSize } from '@/hooks/useViewport'
 
 const navbar = [
   {
@@ -30,7 +31,7 @@ const HeaderItem: React.FC<{ pathname: string }> = ({ pathname }) => {
     <div key={item.name} className="py-4 mr-6 lg:block hidden">
       <Link
         href={item.href}
-        className="text-gray-700 relative text-base dark:text-white"
+        className={`relative dark:text-gray-400 ${pathname === item.href && 'dark:text-white font-semibold'}`}
       >
         {item.name}
 
@@ -52,6 +53,8 @@ const HeaderItem: React.FC<{ pathname: string }> = ({ pathname }) => {
 const Header = () => {
   const pathname = usePathname()
   const { theme, setTheme } = useTheme()
+  const viewport = useViewportSize()
+  const isDesktop = viewport.width > 1240
 
   const switchDarkMode = useCallback(
     () => (theme === 'light' ? setTheme('dark') : setTheme('light')),
@@ -67,42 +70,45 @@ const Header = () => {
     <nav className="bg-white dark:bg-gray-800 sticky top-0 w-full z-10">
       <MainLayout className="layout flex justify-between py-3">
         <div className="flex items-center">
-          <HeaderItem pathname={pathname} />
-          <div className="dropdown dropdown-hover lg:hidden flex">
-            <button
-              tabIndex={0}
-              className="btn btn-ghost btn-circle text-gray-300"
-            >
-              <Menu />
-            </button>
+          {isDesktop ? (
+            <HeaderItem pathname={pathname} />
+          ) : (
+            <div className="dropdown dropdown-hover lg:hidden flex">
+              <button
+                tabIndex={0}
+                className="btn btn-ghost btn-circle text-gray-300"
+              >
+                <Menu />
+              </button>
 
-            <ul
-              tabIndex={0}
-              className="dropdown-content z-[1] menu py-2 shadow bg-gray-800 rounded-box w-[10rem]"
-            >
-              {navbar?.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className={`relative text-base dark:text-gray-400 ${pathname === item.href && 'dark:text-white font-semibold'}`}
-                  >
-                    {item.name}
+              <ul
+                tabIndex={0}
+                className="dropdown-content z-[1] menu py-2 shadow bg-gray-800 rounded-box w-[10rem]"
+              >
+                {navbar?.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className={`relative text-base dark:text-gray-400 ${pathname === item.href && 'dark:text-white font-semibold'}`}
+                    >
+                      {item.name}
 
-                    {pathname === item.href && (
-                      <motion.span
-                        className="absolute right-0 left-24 h-[4px] bottom-[1.1rem] from-gray-800 bg-gradient-to-r dark:from-base-300 dark:bg-unset"
-                        layoutId="navbar-desktop-mobile"
-                        transition={{
-                          type: 'tween',
-                          duration: 0.25,
-                        }}
-                      />
-                    )}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+                      {pathname === item.href && (
+                        <motion.span
+                          className="absolute right-0 left-24 h-[4px] bottom-[1.1rem] from-gray-800 bg-gradient-to-r dark:from-base-300 dark:bg-unset"
+                          layoutId="navbar-desktop-mobile"
+                          transition={{
+                            type: 'tween',
+                            duration: 0.25,
+                          }}
+                        />
+                      )}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
 
         <div className="flex items-center">
