@@ -17,6 +17,7 @@ export type ContentCardProps = Readonly<{
 export interface CardPortfolioProps extends ContentCardProps {
   labelDescription: string
   labelRole: string
+  viewDetail: string
   labelTech: string
 }
 
@@ -40,37 +41,39 @@ const LinkCustom: React.FC<LinkCustomProps> = ({
   )
 }
 
-const CardPortofolio = (item: Readonly<CardPortfolioProps>) => {
+const CardPortofolio = (props: Readonly<CardPortfolioProps>) => {
   return (
-    <div className="rounded-md dark:shadow-xl p-4 cursor-pointer hover:bg-gray-100/50 dark:hover:bg-gray-900/10">
-      <h2 className="text-lg font-semibold capitalize">{item.name}</h2>
-      <div className="relative aspect-video w-full mt-6 mb-4">
-        <Image
-          alt="image-profile"
-          src={item.images}
-          fill
-          layout="contain"
-          priority
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          quality={50}
-          className="rounded-md"
-        />
-      </div>
+    <Link href={props.viewDetail}>
+      <div className="rounded-md dark:shadow-xl p-4 cursor-pointer hover:bg-gray-100/50 dark:hover:bg-gray-900/10">
+        <h2 className="text-lg font-semibold capitalize">{props.name}</h2>
+        <div className="relative aspect-video w-full mt-6 mb-4">
+          <Image
+            alt="image-profile"
+            src={props.images}
+            fill
+            layout="contain"
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            quality={50}
+            className="rounded-md"
+          />
+        </div>
 
-      <div className="mt-4 flex items-center gap-2">
-        <LinkCustom href={item.link} disabled={!item.available}>
-          <button
-            disabled={!item.available}
-            className={`btn text-white btn-sm font-normal ${item.available ? 'btn-info' : 'btn-disabled dark:bg-gray-600 dark:text-white cursor-default'}`}
-          >
-            Preview
+        <div className="mt-4 flex items-center gap-2">
+          <LinkCustom href={props.link} disabled={!props.available}>
+            <button
+              disabled={!props.available}
+              className={`btn text-white btn-sm font-normal ${props.available ? 'btn-info' : 'btn-disabled dark:bg-gray-600 dark:text-white cursor-default'}`}
+            >
+              Preview
+            </button>
+          </LinkCustom>
+          <button className="cursor-default btn text-white btn-success font-normal btn-sm">
+            Source
           </button>
-        </LinkCustom>
-        <button className="cursor-default btn text-white btn-success font-normal btn-sm">
-          Source
-        </button>
+        </div>
       </div>
-    </div>
+    </Link>
   )
 }
 

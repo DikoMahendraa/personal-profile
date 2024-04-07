@@ -87,7 +87,7 @@ const portofolio = {
     },
     {
       images: '/portofolio/company/nabati.png',
-      name: 'Dashboard Zeus & Hermes',
+      name: 'Dashboard Zeus Hermes',
       description:
         'Maintenance of Zeus dashboard and also Hermes for product management, add some CRUD features in the dashboard. integration with Rest API. and add translation feature (i18n) in the dashboard.',
       role: 'Frontend Developer',
@@ -107,7 +107,7 @@ const portofolio = {
     },
     {
       images: '/portofolio/company/not-found.png',
-      name: 'Mirocks Insurance - India',
+      name: 'Mirocks Insurance',
       description:
         'I actually learned more here, starting from communicating and presenting in English. learning new technologies such as GraphQL and Typescript, learning about clean code. and fixing some bugs in the interface, adding some new features such as uploading documents and form validation.',
       role: 'Internship Frontend Developer',
@@ -243,6 +243,7 @@ const Content = () => {
           >
             <CardPortofolio
               {...item}
+              viewDetail={`/portofolio/${item.name.toLowerCase().replace(/ /g, '-')}`}
               available={item.available}
               labelDescription={portofolio.label_description}
               labelRole={portofolio.label_role}
