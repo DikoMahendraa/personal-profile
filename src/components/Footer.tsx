@@ -1,5 +1,3 @@
-import { memo } from 'react'
-
 const Footer = () => {
   return (
     <footer className="h-20 flex items-center justify-center">
@@ -11,4 +9,4 @@ const Footer = () => {
   )
 }
 
-export default memo(Footer)
+export default Footer

@@ -16,13 +16,13 @@ const PortfolioDetailPage = () => {
   const imageCount = useCallback(() => {
     switch (lastPathname) {
       case 'vtr':
-        return []
+        return [1, 2, 3, 4, 5, 6, 7]
       case 'agreeculture.id':
         return [1, 2, 3, 4, 5, 6, 7, 8]
       case 'dashboard-zeus-hermes':
         return []
       case 'dana-syariah':
-        return []
+        return [1, 2, 3, 4, 5, 6]
       case 'certie':
         return []
       case 'dashboard-zurich-insurance':
@@ -32,7 +32,7 @@ const PortfolioDetailPage = () => {
       case 'landing-page-qatros':
         return [1, 2, 3, 4, 5, 6]
       case 'woowa-dashboard':
-        return []
+        return [1, 2, 3]
       case 'liveness-detection':
         return []
       case 'tartil-me':
@@ -74,19 +74,16 @@ const PortfolioDetailPage = () => {
   return (
     <MainLayout>
       <Link href="/portofolio">
-        <button className="dark:text-white btn btn-outline">
-          <ArrowLeft />
-          Back
-        </button>
+        <ArrowLeft className="text-white" />
       </Link>
 
-      <div className="my-10">
-        <p className="dark:text-white text-3xl font-bold text-gray-800">
-          TartileMe
+      <div className="my-6">
+        <p className="dark:text-white lg:text-3xl text-2xl font-bold uppercase text-gray-800">
+          {lastPathname.split('-').join(' ')}
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 mt-12">
+      <div className="grid grid-cols-1 gap-6 mt-6">
         {imageCount().map((item, index) => {
           const imageSrc = `/portofolio/${basePublicUrl}/${lastPathname}/${index + 1}.webp`
 

@@ -32,7 +32,7 @@ const HeaderItem = () => {
     <div key={item.name} className="py-4 mr-6 lg:block hidden">
       <Link
         href={item.href}
-        className="text-gray-700 relative font-semibold dark:text-white"
+        className="text-gray-700 relative text-base dark:text-white"
       >
         {item.name}
 
@@ -66,7 +66,7 @@ const Header = () => {
 
   return (
     <nav className="bg-white dark:bg-gray-800 sticky top-0 w-full z-10">
-      <MainLayout className="flex justify-between py-6">
+      <MainLayout className="flex justify-between py-3">
         <div className="flex items-center">
           <HeaderItem />
           <div className="dropdown dropdown-hover lg:hidden flex">
