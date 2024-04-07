@@ -44,7 +44,7 @@ const portofolio = {
       link: '',
     },
     {
-      images: '/portofolio/personal/financial.png',
+      images: '/portofolio/personal/financial.webp',
       name: 'Financial Planner',
       description:
         'Determine the technology to be used, apply atomic design pattern as a folder structure. apply clean code and reusable components. integration with firebase.',
@@ -87,7 +87,7 @@ const portofolio = {
     },
     {
       images: '/portofolio/company/nabati.png',
-      name: 'Dashboard Zeus & Hermes',
+      name: 'Dashboard Zeus Hermes',
       description:
         'Maintenance of Zeus dashboard and also Hermes for product management, add some CRUD features in the dashboard. integration with Rest API. and add translation feature (i18n) in the dashboard.',
       role: 'Frontend Developer',
@@ -107,7 +107,7 @@ const portofolio = {
     },
     {
       images: '/portofolio/company/not-found.png',
-      name: 'Mirocks Insurance - India',
+      name: 'Mirocks Insurance',
       description:
         'I actually learned more here, starting from communicating and presenting in English. learning new technologies such as GraphQL and Typescript, learning about clean code. and fixing some bugs in the interface, adding some new features such as uploading documents and form validation.',
       role: 'Internship Frontend Developer',
@@ -196,16 +196,22 @@ const Content = () => {
     }
   }, [listAllPortofolio, tab])
 
+  const switchTab = useCallback((item: string) => setTab(item), [])
+
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div className="sticky dark:bg-gray-800 w-full top-0 z-[4] py-6">
         <div role="tablist">
           {portofolio.tab.map((item: string) => {
             return (
               <button
-                className="relative text-white mr-4 capitalize"
+                className={`relative mr-4 text-gray-400 capitalize font-semibold ${tab === item && 'dark:!text-white !text-gray-600'}`}
                 key={String(Date + item)}
-                onClick={() => setTab(item)}
+                onClick={() => switchTab(item)}
               >
                 {item}
 
@@ -226,18 +232,27 @@ const Content = () => {
       </div>
 
       <div className="my-6 gap-4 dark:text-gray-200 grid grid-cols-2 pb-16">
-        {listPortofolio().map((item) => (
-          <CardPortofolio
-            {...item}
-            available={item.available}
-            labelDescription={portofolio.label_description}
-            labelRole={portofolio.label_role}
-            labelTech={portofolio.label_tech_used}
+        {listPortofolio().map((item, index) => (
+          <motion.div
+            className="lg:col-span-1 col-span-2 border dark:border-gray-700 border-gray-200 rounded-lg dark:shadow-lg"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 20 }}
+            transition={{ delay: Number(`0.${index}`), times: 0 }}
             key={item.name}
-          />
+          >
+            <CardPortofolio
+              {...item}
+              viewDetail={`/portofolio/${item.name.toLowerCase().replace(/ /g, '-')}`}
+              available={item.available}
+              labelDescription={portofolio.label_description}
+              labelRole={portofolio.label_role}
+              labelTech={portofolio.label_tech_used}
+            />
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   )
 }
 

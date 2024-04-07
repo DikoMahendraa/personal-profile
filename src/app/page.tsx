@@ -1,10 +1,10 @@
 import Profile from '@/components/Profile'
-import { MainLayout } from './(fragments)/MainLayout'
+import { MainLayout } from '@/layouts/MainLayout'
 import Experiences from '@/components/Experiences'
 import Educations from '@/components/Educations'
 import Skills from '@/components/Skills'
 
-export default function Home() {
+const HomePage = () => {
   return (
     <MainLayout>
       <Profile />
@@ -14,3 +14,5 @@ export default function Home() {
     </MainLayout>
   )
 }
+
+export default HomePage

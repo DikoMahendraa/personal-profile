@@ -17,6 +17,7 @@ export type ContentCardProps = Readonly<{
 export interface CardPortfolioProps extends ContentCardProps {
   labelDescription: string
   labelRole: string
+  viewDetail: string
   labelTech: string
 }
 
@@ -40,15 +41,15 @@ const LinkCustom: React.FC<LinkCustomProps> = ({
   )
 }
 
-const CardPortofolio = (item: Readonly<CardPortfolioProps>) => {
+const CardPortofolio = (props: Readonly<CardPortfolioProps>) => {
   return (
-    <div className="lg:col-span-1 col-span-2 border dark:border-gray-700 border-gray-200 rounded-lg dark:shadow-lg">
+    <Link href={props.viewDetail}>
       <div className="rounded-md dark:shadow-xl p-4 cursor-pointer hover:bg-gray-100/50 dark:hover:bg-gray-900/10">
-        <h2 className="text-lg font-semibold capitalize">{item.name}</h2>
+        <h2 className="text-lg font-semibold capitalize">{props.name}</h2>
         <div className="relative aspect-video w-full mt-6 mb-4">
           <Image
             alt="image-profile"
-            src={item.images}
+            src={props.images}
             fill
             layout="contain"
             priority
@@ -59,10 +60,10 @@ const CardPortofolio = (item: Readonly<CardPortfolioProps>) => {
         </div>
 
         <div className="mt-4 flex items-center gap-2">
-          <LinkCustom href={item.link} disabled={!item.available}>
+          <LinkCustom href={props.link} disabled={!props.available}>
             <button
-              disabled={!item.available}
-              className={`btn text-white btn-sm font-normal ${item.available ? 'btn-info' : 'btn-disabled dark:bg-gray-600 dark:text-white cursor-default'}`}
+              disabled={!props.available}
+              className={`btn text-white btn-sm font-normal ${props.available ? 'btn-info' : 'btn-disabled dark:bg-gray-600 dark:text-white cursor-default'}`}
             >
               Preview
             </button>
@@ -72,7 +73,7 @@ const CardPortofolio = (item: Readonly<CardPortfolioProps>) => {
           </button>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 
