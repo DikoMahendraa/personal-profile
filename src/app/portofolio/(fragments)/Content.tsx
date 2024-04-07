@@ -44,7 +44,7 @@ const portofolio = {
       link: '',
     },
     {
-      images: '/portofolio/personal/financial.png',
+      images: '/portofolio/personal/financial.webp',
       name: 'Financial Planner',
       description:
         'Determine the technology to be used, apply atomic design pattern as a folder structure. apply clean code and reusable components. integration with firebase.',
