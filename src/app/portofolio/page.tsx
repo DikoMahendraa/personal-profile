@@ -1,7 +1,9 @@
 import React from 'react'
 import { MessageSquareWarning } from 'lucide-react'
-import Content from './(fragments)/Content'
 import { MainLayout } from '@/layouts/MainLayout'
+import dynamic from 'next/dynamic'
+
+const Content = dynamic(() => import('./(fragments)/Content'), { ssr: false })
 
 const PortofolioPage = () => {
   return (
