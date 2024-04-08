@@ -2,8 +2,32 @@ import React from 'react'
 import { MessageSquareWarning } from 'lucide-react'
 import { MainLayout } from '@/layouts/MainLayout'
 import dynamic from 'next/dynamic'
+import { Metadata } from 'next'
 
 const Content = dynamic(() => import('./(fragments)/Content'), { ssr: false })
+
+export const metadata: Metadata = {
+  title: 'Diko | Portofolio',
+  metadataBase: new URL('https://cocome.vercel.app/portofolio'),
+  description:
+    'These are some of the applications that I have developed while studying and working',
+  openGraph: {
+    title: `Hi, I'am Diko Mahendra`,
+    description:
+      'These are some of the applications that I have developed while studying and working',
+    url: 'https://cocome.vercel.app/portofolio',
+    siteName: 'My Profile',
+    images: [
+      {
+        url: '/me.webp',
+        width: 800,
+        height: 600,
+        alt: 'coco-profile-mobile',
+      },
+    ],
+    type: 'profile',
+  },
+}
 
 const PortofolioPage = () => {
   return (
