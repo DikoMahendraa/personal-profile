@@ -6,10 +6,12 @@ import '@/styles/globals.css'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  title: 'Home | Profile',
+  metadataBase: new URL('https://cocome.vercel.app'),
   openGraph: {
     title: `Hi, I'am Diko Mahendra`,
     description:
-      'I am web developer with ± 3 years of experience using NextJs, React Js and also React Native',
+      'Hi, I am Diko Mahendra. Frontend Engineer experience using NextJs, React Js and also React Native',
     url: 'https://cocome.vercel.app',
     siteName: 'My Profile',
     images: [
@@ -26,8 +28,7 @@ export const metadata: Metadata = {
         alt: 'coco-profile-desktop',
       },
     ],
-    locale: 'en_US',
-    type: 'website',
+    type: 'profile',
   },
 }
 
