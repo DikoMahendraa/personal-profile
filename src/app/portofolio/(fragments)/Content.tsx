@@ -5,7 +5,7 @@ import React, { useCallback, useMemo, useState } from 'react'
 
 import { motion } from 'framer-motion'
 
-const portofolio = {
+export const portofolio = {
   tab: ['all', 'company', 'personal'],
   alert:
     'Warning: Some projects may no longer be available due to several factors (missing documentation, privacy issues, project no longer running).',
@@ -66,7 +66,7 @@ const portofolio = {
   ],
   company: [
     {
-      images: '/portofolio/company/vtr.png',
+      images: '/portofolio/company/vtr.webp',
       name: 'VTR',
       description:
         'Help clean up messy code to become reusable and refactor, fix bugs in Frontend code. continue to help mentoring QA for automation using cypress. implement unit testing using Jest, learn how to deploy applications to production, learn how to register branches to AWS amplify, continue to learn sharing sessions every month with Frontend friends and much more.',
@@ -76,7 +76,7 @@ const portofolio = {
       available: true,
     },
     {
-      images: '/portofolio/company/agree.png',
+      images: '/portofolio/company/agree.webp',
       name: 'Agreeculture.id',
       role: 'Frontend Engineer',
       description:
@@ -86,7 +86,7 @@ const portofolio = {
       link: 'https://agreeculture.id/',
     },
     {
-      images: '/portofolio/company/nabati.png',
+      images: '/portofolio/company/nabati.webp',
       name: 'Dashboard Zeus Hermes',
       description:
         'Maintenance of Zeus dashboard and also Hermes for product management, add some CRUD features in the dashboard. integration with Rest API. and add translation feature (i18n) in the dashboard.',
@@ -96,7 +96,7 @@ const portofolio = {
       link: '',
     },
     {
-      images: '/portofolio/company/dana.png',
+      images: '/portofolio/company/dana.webp',
       name: 'Dana Syariah',
       description:
         'Help develop from 0 for web applications starting from the landing page & also the dsahboard, installation of several modules / packages needed, implementation of storybooks for component maintenance to make the development process much faster, installation of language features (i18n), continue to help develop existing applications using React Native, add some features and also refactoring code and folder structure that is messy.',
@@ -106,7 +106,7 @@ const portofolio = {
       link: 'https://borrower.danasyariah.id/auth/login',
     },
     {
-      images: '/portofolio/company/not-found.png',
+      images: '/portofolio/company/mirocks.webp',
       name: 'Mirocks Insurance',
       description:
         'I actually learned more here, starting from communicating and presenting in English. learning new technologies such as GraphQL and Typescript, learning about clean code. and fixing some bugs in the interface, adding some new features such as uploading documents and form validation.',
@@ -116,7 +116,7 @@ const portofolio = {
       available: false,
     },
     {
-      images: '/portofolio/company/certie.png',
+      images: '/portofolio/company/certie.webp',
       name: 'Certie',
       description:
         'create a web application from 0, discuss with BE, PM and also the client regarding the project to be worked on, find a UI template that is suitable for the project. learn UI/UX and figma as design tools, create project architecture with atomic design patterns. then deploy the project to cpanel.',
@@ -126,7 +126,7 @@ const portofolio = {
       available: false,
     },
     {
-      images: '/portofolio/company/hobids.png',
+      images: '/portofolio/company/hobids.webp',
       name: 'Hobids',
       description:
         'Create a web application from 0, discuss with BE, PM and also the client regarding the project to be worked on, realize the UI figma into the code. determine the folder architecture in FE, and present to the client regarding the appearance and prototype that has been done.',
@@ -136,7 +136,7 @@ const portofolio = {
       available: false,
     },
     {
-      images: '/portofolio/company/zurich.png',
+      images: '/portofolio/company/zurich.webp',
       name: 'Dashboard Zurich Insurance',
       description:
         'Create dashboard management from 0, add some analytics features, signed docs, activity logs, user management, and also all data (pending, invalid, rejected and verified), work with the team. then apply state management using vuex.',
@@ -146,7 +146,7 @@ const portofolio = {
       available: false,
     },
     {
-      images: '/portofolio/company/qatros.png',
+      images: '/portofolio/company/qatros.webp',
       name: 'Landing Page Qatros',
       role: 'Junior Frontend Developer',
       description:
@@ -156,7 +156,7 @@ const portofolio = {
       available: true,
     },
     {
-      images: '/portofolio/company/liveness.png',
+      images: '/portofolio/company/liveness.webp',
       name: 'Liveness Detection',
       role: 'Junior Frontend Developer',
       description:
@@ -166,7 +166,7 @@ const portofolio = {
       available: false,
     },
     {
-      images: '/portofolio/company/woowa.png',
+      images: '/portofolio/company/woowa.webp',
       name: 'Woowa Dashboard',
       role: 'Internship Frontend Developer',
       description:
@@ -177,6 +177,7 @@ const portofolio = {
     },
   ],
 }
+
 const Content = () => {
   const [tab, setTab] = useState<string>(portofolio.tab[0])
 
