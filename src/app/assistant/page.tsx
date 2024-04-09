@@ -1,5 +1,5 @@
+import CardAssistant from '@/components/CardAssistant'
 import { MainLayout } from '@/layouts/MainLayout'
-import { MessageSquareCode } from 'lucide-react'
 import { Metadata } from 'next'
 import React from 'react'
 
@@ -28,15 +28,12 @@ export const metadata: Metadata = {
 
 const AssistantPage = () => {
   return (
-    <MainLayout className="layout h-screen">
-      <div className="my-6 gap-4 dark:text-gray-200 h-[20rem] flex justify-center items-center w-full">
-        <MessageSquareCode className="text-gray-500" size={100} />
-        <div>
-          <h1 className="text-2xl italic font-semibold">Coming Soon</h1>
-          <h1 className="text-xl italic font-normal text-gray-500 mt-2">
-            Under Development
-          </h1>
-        </div>
+    <MainLayout className="layout">
+      <div className="my-6 gap-4 dark:text-gray-200">
+        <p className="text-xl font-semibold">
+          Tools and all the sources that I use
+        </p>
+        <CardAssistant />
       </div>
     </MainLayout>
   )
