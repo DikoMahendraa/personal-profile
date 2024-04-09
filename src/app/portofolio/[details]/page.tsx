@@ -74,7 +74,7 @@ const PortfolioDetailPage = () => {
   return (
     <MainLayout className="layout">
       <Link href="/portofolio">
-        <ArrowLeft className="text-white" />
+        <ArrowLeft className="text-white dark:text-cyan-300" />
       </Link>
 
       <div className="my-6">
@@ -98,7 +98,6 @@ const PortfolioDetailPage = () => {
             >
               <Image
                 fill
-                // style={{ objectFit: 'contain' }}
                 alt="portofolio-image-index"
                 quality={50}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

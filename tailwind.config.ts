@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        ['primary-dark-soft']: '#0f1929',
+        ['primary-dark']: '#0f1624',
+      },
       spacing: {
         unset: 'unset',
       },
