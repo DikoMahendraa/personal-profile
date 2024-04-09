@@ -29,13 +29,13 @@ const HeaderItem: React.FC<{ pathname: string }> = ({ pathname }) => {
     <div key={item.name} className="py-4 mr-6 lg:block hidden">
       <Link
         href={item.href}
-        className={`relative dark:text-gray-400 ${pathname === item.href && 'dark:text-white font-semibold'}`}
+        className={`relative dark:text-gray-400 ${pathname === item.href && 'dark:!text-cyan-300 font-semibold'}`}
       >
         {item.name}
 
         {pathname === item.href && (
           <motion.div
-            className="absolute inset-x-0 h-[2px] -bottom-1 from-gray-800 bg-gradient-to-r dark:from-base-300 dark:bg-unset"
+            className="absolute inset-x-0 h-px -bottom-1 from-primary-dark-soft bg-gradient-to-r dark:from-cyan-300/50 dark:bg-unset"
             layoutId="navbar-desktop"
             transition={{
               type: 'tween',
@@ -63,7 +63,7 @@ const Header = () => {
   )
 
   return (
-    <nav className="bg-white dark:bg-gray-800 sticky top-0 w-full z-10">
+    <nav className="bg-white dark:bg-primary-dark sticky top-0 w-full z-10">
       <div className="layout flex items-center justify-between py-4">
         <div className="flex items-center">
           <HeaderItem pathname={pathname} />
@@ -83,13 +83,13 @@ const Header = () => {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className={`relative flex items-center text-base dark:text-gray-400 ${pathname === item.href && 'dark:text-white font-semibold'}`}
+                    className={`relative flex items-center text-base dark:text-gray-400 ${pathname === item.href && 'dark:!text-cyan-300 font-semibold'}`}
                   >
                     {item.name}
 
                     {pathname === item.href && (
                       <motion.span
-                        className="absolute right-0 left-24 h-[4px] rounded-full from-gray-800 bg-gradient-to-r dark:from-base-300 dark:bg-unset"
+                        className="absolute right-0 left-24 h-px rounded-full from-primary-dark-soft bg-gradient-to-r dark:from-cyan-300/50  dark:bg-unset"
                         layoutId="navbar-desktop-mobile"
                         transition={{
                           type: 'tween',
