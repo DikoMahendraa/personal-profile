@@ -21,6 +21,14 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'www.pngtowebp.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.candycode.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'awesomedevin.github.io',
+      },
     ],
   },
 }

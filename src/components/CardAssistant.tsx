@@ -166,6 +166,16 @@ const frontendTools = [
     url: 'https://trello.com/',
     icon: 'https://static-00.iconduck.com/assets.00/trello-icon-512x512-tvmznu7l.png',
   },
+  {
+    name: 'Zustand',
+    url: 'https://zustand.surge.sh/',
+    icon: 'https://awesomedevin.github.io/zustand-vue/en/img/bear.png',
+  },
+  {
+    name: 'Jotai',
+    url: 'https://github.com/pmndrs/jotai',
+    icon: 'https://cdn.candycode.com/jotai/jotai-mascot.png',
+  },
 ]
 
 export default function CardAssistant() {
