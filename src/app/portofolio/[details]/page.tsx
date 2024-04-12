@@ -71,6 +71,10 @@ const PortfolioDetailPage = () => {
 
   const basePublicUrl = routeBasedCompanies || routeBasedPersonal
 
+  const horizontalLayout = ['burger-city', 'financial-planner'].includes(
+    lastPathname
+  )
+
   return (
     <MainLayout className="layout">
       <Link href="/portofolio">
@@ -83,7 +87,9 @@ const PortfolioDetailPage = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 mt-6">
+      <div
+        className={`grid gap-6 mt-6 ${horizontalLayout ? 'grid-cols-3' : 'grid-cols-1'}`}
+      >
         {imageCount().map((item, index) => {
           const imageSrc = `/portofolio/${basePublicUrl}/${lastPathname}/${index + 1}.webp`
 
@@ -93,7 +99,7 @@ const PortfolioDetailPage = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
               transition={{ delay: Number(`0.${index}`), times: 0 }}
-              className="relative aspect-video"
+              className={`relative  ${horizontalLayout ? 'h-[30rem]' : 'aspect-video'}`}
               key={item}
             >
               <Image
