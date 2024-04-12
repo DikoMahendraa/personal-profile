@@ -29,6 +29,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'awesomedevin.github.io',
       },
+      {
+        protocol: 'https',
+        hostname: 'miro.medium.com',
+      },
     ],
   },
 }

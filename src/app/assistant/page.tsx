@@ -1,29 +1,11 @@
 import CardAssistant from '@/components/CardAssistant'
+import { metadataAssistantPage } from '@/constants/seo'
 import { MainLayout } from '@/layouts/MainLayout'
 import { Metadata } from 'next'
 import React from 'react'
 
 export const metadata: Metadata = {
-  title: 'Diko | Assistant',
-  metadataBase: new URL('https://cocome.vercel.app/assistant'),
-  description:
-    'This is a tool that I often use when developing applications from the Frontend side',
-  openGraph: {
-    title: `Hi, I'am Diko Mahendra`,
-    description:
-      'This is a tool that I often use when developing applications from the Frontend side',
-    url: 'https://cocome.vercel.app/assistant',
-    siteName: 'My Profile',
-    images: [
-      {
-        url: '/me.webp',
-        width: 800,
-        height: 600,
-        alt: 'coco-profile-mobile',
-      },
-    ],
-    type: 'profile',
-  },
+  ...metadataAssistantPage,
 }
 
 const AssistantPage = () => {
