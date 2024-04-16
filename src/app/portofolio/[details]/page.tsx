@@ -88,7 +88,7 @@ const PortfolioDetailPage = () => {
       </div>
 
       <div
-        className={`grid gap-6 mt-6 ${horizontalLayout ? 'grid-cols-3' : 'grid-cols-1'}`}
+        className={`grid gap-6 mt-6 ${horizontalLayout ? 'lg:grid-cols-2 grid-cols-1' : 'grid-cols-1'}`}
       >
         {imageCount().map((item, index) => {
           const imageSrc = `/portofolio/${basePublicUrl}/${lastPathname}/${index + 1}.webp`
@@ -99,7 +99,7 @@ const PortfolioDetailPage = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
               transition={{ delay: Number(`0.${index}`), times: 0 }}
-              className={`relative  ${horizontalLayout ? 'h-[30rem]' : 'aspect-video'}`}
+              className={`relative  ${horizontalLayout ? 'lg:h-[30rem] h-[667px]' : 'aspect-video'}`}
               key={item}
             >
               <Image
