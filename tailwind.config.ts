@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      aspectRatio: {
+        video: '16/9',
+        mobile: '9/16',
+      },
       fontFamily: {
         poppins: ['var(--font-poppins)'],
       },

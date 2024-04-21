@@ -5,75 +5,29 @@ import { ArrowLeft } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import React, { useCallback } from 'react'
 
 import { motion } from 'framer-motion'
+import {
+  allImageAssets,
+  companyAssets,
+  personalAssets,
+} from '@/constants/listAssets'
 
 const PortfolioDetailPage = () => {
   const pathname = usePathname()
   const lastPathname = pathname.split('/').pop() as string
 
-  const imageCount = useCallback(() => {
-    switch (lastPathname) {
-      case 'vtr':
-        return [1, 2, 3, 4, 5, 6, 7]
-      case 'agreeculture.id':
-        return [1, 2, 3, 4, 5, 6, 7, 8]
-      case 'dashboard-zeus-hermes':
-        return []
-      case 'dana-syariah':
-        return [1, 2, 3, 4, 5, 6]
-      case 'certie':
-        return []
-      case 'dashboard-zurich-insurance':
-        return [1, 2, 3, 4, 5]
-      case 'mirocks-insurance':
-        return [1, 2, 3, 4, 5, 6, 7, 8, 9]
-      case 'landing-page-qatros':
-        return [1, 2, 3, 4, 5, 6]
-      case 'woowa-dashboard':
-        return [1, 2, 3]
-      case 'liveness-detection':
-        return []
-      case 'tartil-me':
-        return [1, 2, 3, 4, 5, 6]
-      case 'burger-city':
-        return [1, 2, 3, 4, 5, 6, 7, 8, 9]
-      case 'financial-planner':
-        return [1, 2, 3, 4, 5, 6, 7, 8, 9]
-      default:
-        return []
-    }
-  }, [lastPathname])
-
   const routeBasedCompanies =
-    [
-      'vtr',
-      'agreeculture.id',
-      'dashboard-zeus-hermes',
-      'dana-syariah',
-      'mirocks-insurance',
-      'certie',
-      'dashboard-zurich-insurance',
-      'landing-page-qatros',
-      'woowa-dashboard',
-      'liveness-detection',
-    ].includes(lastPathname) && 'company'
+    Object.keys(companyAssets).includes(lastPathname) && 'company'
 
   const routeBasedPersonal =
-    [
-      'task-io',
-      'my-doctor',
-      'financial-planner',
-      'tartil-me',
-      'burger-city',
-    ].includes(lastPathname) && 'personal'
+    Object.keys(personalAssets).includes(lastPathname) && 'personal'
 
   const basePublicUrl = routeBasedCompanies || routeBasedPersonal
 
-  const horizontalLayout = ['burger-city', 'financial-planner'].includes(
-    lastPathname
-  )
+  const verticalLayout = Object.keys(personalAssets)
+    .filter((key) => key !== 'task-io')
+    .includes(lastPathname)
 
   return (
     <MainLayout className="layout">
@@ -88,18 +42,20 @@ const PortfolioDetailPage = () => {
       </div>
 
       <div
-        className={`grid gap-6 mt-6 ${horizontalLayout ? 'lg:grid-cols-2 grid-cols-1' : 'grid-cols-1'}`}
+        className={`grid h-full gap-6 mt-6 ${verticalLayout ? 'lg:grid-cols-2 grid-cols-1' : 'grid-cols-1'}`}
       >
-        {imageCount().map((item, index) => {
-          const imageSrc = `/portofolio/${basePublicUrl}/${lastPathname}/${index + 1}.webp`
+        {// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
+        allImageAssets[lastPathname]?.map((item: number) => {
+          const imageSrc = `/portofolio/${basePublicUrl}/${lastPathname}/${item + 1}.webp`
 
           return (
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
-              transition={{ delay: Number(`0.${index}`), times: 0 }}
-              className={`relative  ${horizontalLayout ? 'lg:h-[30rem] h-[667px]' : 'aspect-video'}`}
+              transition={{ delay: Number(`0.${item}`), times: 0 }}
+              className={`relative  ${verticalLayout ? 'aspect-mobile' : 'aspect-video'}`}
               key={item}
             >
               <Image
