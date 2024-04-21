@@ -26,7 +26,7 @@ const PortfolioDetailPage = () => {
   const basePublicUrl = routeBasedCompanies || routeBasedPersonal
 
   const verticalLayout = [...Object.keys(personalAssets), 'hobids']
-    .filter((key) => key !== 'task-io')
+    .filter((key) => !['task-io', 'tartil-me'].includes(key))
     .includes(lastPathname)
 
   return (
