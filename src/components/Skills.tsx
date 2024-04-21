@@ -27,12 +27,15 @@ const SectionDescription = ({
   items: Array<string>
 }) => (
   <div className="xs:col-span-2 mt-4">
-    <p className="mb-2 text-gray-800 lg:text-lg text-base font-semibold dark:text-white flex items-center gap-2">
-      <Code2 /> {title}
+    <p className="mb-2 text-gray-800 lg:text-lg text-base font-semibold dark:text-cyan-500 flex items-center gap-2">
+      <Code2 size={16} /> {title}
     </p>
     <ul className="list-disc list-item ml-5">
       {items.map((item) => (
-        <li key={item} className="text-gray-600 text-base dark:text-gray-300">
+        <li
+          key={item}
+          className="text-gray-600 lg:text-base mb-1 text-sm dark:text-gray-300"
+        >
           {item}
         </li>
       ))}
@@ -46,13 +49,11 @@ const Skills = () => {
       <h1 className="lg:text-2xl text-lg font-semibold text-gray-600 dark:text-white">
         {skills.title_skills}
       </h1>
-      <div className="grid">
-        <SectionDescription
-          items={skills.programming}
-          title={skills.title_programming}
-        />
-        <SectionDescription items={skills.tools} title={skills.title_tools} />
-      </div>
+      <SectionDescription
+        items={skills.programming}
+        title={skills.title_programming}
+      />
+      <SectionDescription items={skills.tools} title={skills.title_tools} />
       <SectionDescription items={skills.library} title={skills.title_library} />
     </div>
   )
