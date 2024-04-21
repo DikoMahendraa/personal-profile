@@ -26,4 +26,4 @@ jobs:
       - name: ESLint
         run: npm run lint .
       - name: Prettier
-        run: npm run prettier --write .
+        run: npm run format --write .
