@@ -28,30 +28,31 @@ const Educations = () => {
       <div className="mt-4">
         <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
           {educations.schools.map((item, index) => (
-            <li key={item.name}>
-              <hr />
-              <div className="timeline-middle">
+            <li key={item.name} className="mb-4">
+              <hr className="lg:inline-block hidden" />
+              <div className="hidden lg:flex timeline-middle">
                 <GraduationCap className="dark:text-cyan-300" />
               </div>
               <div
-                className={`${index === 0 ? 'timeline-start' : 'timeline-end'} timeline-box dark:bg-primary-dark-soft`}
+                className={`${index === 0 ? 'timeline-start' : 'timeline-end'} lg:timeline-box lg:dark:bg-primary-dark-soft`}
               >
-                <p className="text-lg flex items-center gap-2 font-semibold dark:text-white">
-                  <GraduationCap className="dark:text-cyan-300" />
+                <p className="lg:text-lg text-base flex gap-2 font-semibold dark:text-cyan-500">
                   {item.name}
                 </p>
-                <p className="text-base dark:text-gray-300">{item.major}</p>
+                <p className="lg:text-base text-sm dark:text-gray-300">
+                  {item.major}
+                </p>
                 <hr className="my-2 dark:bg-primary-dark" />
-                <p className="text-base dark:text-gray-300 flex items-center gap-2">
+                <p className="lg:text-base text-sm dark:text-gray-300 flex gap-2">
                   <CalendarFold size={16} />
                   {item.since}
                 </p>
-                <p className="text-base dark:text-gray-300 flex items-center gap-2">
+                <p className="lg:text-base text-sm dark:text-gray-300 flex gap-2">
                   <MapPin size={16} />
                   {item.place}
                 </p>
               </div>
-              <hr />
+              <hr className="lg:inline-block hidden" />
             </li>
           ))}
         </ul>

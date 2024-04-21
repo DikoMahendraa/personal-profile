@@ -22,7 +22,7 @@ const Profile = () => {
           <p className="dark:text-white mb-6 text-gray-700 lg:text-5xl text-4xl font-bold">
             Hi, {`I'm`} <br /> <span className="capitalize">Diko Mahendra</span>
           </p>
-          <p className="flex items-center gap-2">
+          <p className="flex items-center lg:text-base text-sm gap-2">
             <Phone size={18} className="dark:text-white text-gray-700" />
             <a
               target="_blank"
@@ -32,7 +32,7 @@ const Profile = () => {
               082384898030
             </a>
           </p>
-          <p className="flex items-center gap-2 mt-2 mb-4">
+          <p className="flex items-center lg:text-base text-sm gap-2 mt-2 mb-4">
             <AtSign size={18} className="text-white" />
             <a
               target="_blank"
@@ -45,7 +45,7 @@ const Profile = () => {
           <ButtonDownload text="Resume" />
         </div>
       </div>
-      <div className="text-base dark:text-gray-300">
+      <div className="lg:text-base text-sm dark:text-gray-300">
         <p className="lg:max-w-[90%]">
           I am web developer with ± 3 years of experience using NextJs, React Js
           and also React Native. interested in learning new things, used to

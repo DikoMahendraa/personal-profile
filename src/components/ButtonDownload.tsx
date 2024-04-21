@@ -16,7 +16,7 @@ const ButtonDownload = ({ text }: Readonly<{ text: string }>) => {
   return (
     <button
       onClick={handleDownload}
-      className="dark:hover:bg-cyan-300/35 transition hover:bg-primary-dark/20 dark:text-cyan-300 flex items-center px-4 py-2 font-semibold border dark:border-cyan-300/35 rounded-sm gap-2 dark:bg-cyan-300/20"
+      className="dark:hover:bg-cyan-300/35 lg:text-base text-sm transition hover:bg-primary-dark/20 dark:text-cyan-300 flex items-center px-4 py-2 font-semibold border dark:border-cyan-300/35 rounded-sm gap-2 dark:bg-cyan-300/20"
     >
       <FileDown size={16} /> {text}
     </button>

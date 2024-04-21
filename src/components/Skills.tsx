@@ -46,7 +46,7 @@ const Skills = () => {
       <h1 className="lg:text-2xl text-lg font-semibold text-gray-600 dark:text-white">
         {skills.title_skills}
       </h1>
-      <div className="grid grid-cols-2">
+      <div className="grid">
         <SectionDescription
           items={skills.programming}
           title={skills.title_programming}
