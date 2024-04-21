@@ -11,10 +11,10 @@
     "prepare": "husky"
   },
   "engines": {
-    "node": "18",
+    "node": ">=18.17",
     "yarn": "please-use-npm",
-    "npm": "10.2.0",
-    "pnpm": "please-use-npm"
+    "pnpm": "please-use-npm",
+    "bun": "please-use-npm"
   },
   "dependencies": {
     "framer-motion": "^11.0.25",
