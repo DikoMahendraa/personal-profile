@@ -23,7 +23,7 @@ const CardExperience = ({
   title,
 }: Readonly<CardExperienceProps>) => {
   return (
-    <div>
+    <div className="mb-6">
       {title && (
         <h1 className="lg:text-2xl text-lg font-semibold text-gray-800 dark:text-white">
           {title}
@@ -32,7 +32,7 @@ const CardExperience = ({
       <div>
         <div className="lg:flex sm:flex mt-4 justify-between items-center xs:grid sm grid-cols-2">
           <div className="xs:col-span-2">
-            <p className="text-base font-semibold text-gray-800 dark:text-white flex items-center gap-2">
+            <p className="text-base lg:text-lg font-semibold text-gray-800 dark:text-white flex items-center gap-2">
               <Building />
               {company}
             </p>

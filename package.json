@@ -10,6 +10,12 @@
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
     "prepare": "husky"
   },
+  "engines": {
+    "node": "18",
+    "yarn": "please-use-npm",
+    "npm": "10.2.0",
+    "pnpm": "please-use-npm"
+  },
   "dependencies": {
     "framer-motion": "^11.0.25",
     "lucide-react": "^0.323.0",

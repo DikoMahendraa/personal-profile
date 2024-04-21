@@ -19,7 +19,7 @@ const Profile = () => {
           />
         </div>
         <div>
-          <p className="dark:text-white mb-6 text-gray-700 text-5xl font-bold">
+          <p className="dark:text-white mb-6 text-gray-700 lg:text-5xl text-4xl font-bold">
             Hi, {`I'm`} <br /> <span className="capitalize">Diko Mahendra</span>
           </p>
           <p className="flex items-center gap-2">

@@ -47,7 +47,7 @@ const PortfolioDetailPage = () => {
         {// eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-expect-error
         allImageAssets[lastPathname]?.map((item: number) => {
-          const imageSrc = `/portofolio/${basePublicUrl}/${lastPathname}/${item + 1}.webp`
+          const imageSrc = `/portofolio/${basePublicUrl}/${lastPathname}/${item}.webp`
 
           return (
             <motion.div
@@ -60,8 +60,9 @@ const PortfolioDetailPage = () => {
             >
               <Image
                 fill
-                alt="portofolio-image-index"
+                alt={`portofolio-image-${lastPathname}-${item}`}
                 quality={50}
+                priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 src={imageSrc}
               />

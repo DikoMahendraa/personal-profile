@@ -59,6 +59,23 @@ const experiences = {
         `Collaborated effectively with front-end (FE), back-end (BE), and Product Management (PM) teams to deliver successful projects.`,
       ],
     },
+    {
+      name: 'Dana Syariah',
+      position: 'Freelance Frontend Web & Mobile React Native',
+      techonology:
+        'Git, NextJS, Typescript, i18n, React Query, React Hooks Form',
+      title_tech_used: 'Technology & Tools used:',
+      time: 'Jan 2022 - May 2022',
+      country: 'Bandung, Indonesia',
+      description: [
+        `Led the development of a web-based application from scratch, encompassing lender and borrower dashboards.`,
+        `Defined the application architecture and selected appropriate libraries, demonstrating strong technical judgment.`,
+        `Developed a mobile application using React Native, incorporating language-specific features and complex logic for lender profit simulation.`,
+        `Presented development progress and features to clients, fostering clear communication and client buy-in.`,
+        `Integrated the application with back-end endpoints, ensuring seamless data flow.`,
+        `Collaborated effectively with front-end, back-end, and Product Management teams for successful project delivery.`,
+      ],
+    },
   ],
 }
 
