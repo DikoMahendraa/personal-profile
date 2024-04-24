@@ -220,6 +220,14 @@ export const frontendTools = [
         url: 'https://pixelied.com/convert/png-converter/png-to-webp',
       },
       {
+        name: 'Icon Duck',
+        url: 'https://iconduck.com/icons/',
+      },
+      {
+        name: 'Lucide Icons',
+        url: 'https://lucide.dev/icons/',
+      },
+      {
         name: 'Gemini',
         url: 'https://gemini.google.com/',
       },
