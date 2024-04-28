@@ -16,16 +16,16 @@ export const portofolio = {
       tech: 'React Native',
       link: '',
     },
-    {
-      images: '/portofolio/personal/tartile.png',
-      name: 'Tartil Me',
-      description:
-        'Initializing the project using NuxtJs, slicing pages and components, implementing clean code. adding some features for searching surahs, qori etc. integrating with data created by the backend.',
-      available: false,
-      role: 'Frontend Developer',
-      tech: 'NuxtJs, Bootstrap',
-      link: '',
-    },
+    // {
+    //   images: '/portofolio/personal/tartile.png',
+    //   name: 'Tartil Me',
+    //   description:
+    //     'Initializing the project using NuxtJs, slicing pages and components, implementing clean code. adding some features for searching surahs, qori etc. integrating with data created by the backend.',
+    //   available: false,
+    //   role: 'Frontend Developer',
+    //   tech: 'NuxtJs, Bootstrap',
+    //   link: '',
+    // },
     {
       images: '/portofolio/personal/doctor.png',
       name: 'My Doctor',
@@ -46,16 +46,16 @@ export const portofolio = {
       tech: 'NextJs, Typescript, Firebase, TailwindCSS',
       link: 'https://financial-planner-ck.vercel.app/login',
     },
-    {
-      images: '/portofolio/personal/taskio.png',
-      name: 'Task IO',
-      description:
-        'looked for design inspiration on dribble, made modifications and added some new UI using figma tools, applied the atomic design pattern as a folder structure. implement clean code and reusable components. slicing UI and integration with Supabase',
-      available: true,
-      role: 'Frontend Developer',
-      tech: 'NextJs, Typescript, Supabase, TailwindCSS, figma',
-      link: 'https://task-io-seven.vercel.app/',
-    },
+    // {
+    //   images: '/portofolio/personal/taskio.png',
+    //   name: 'Task IO',
+    //   description:
+    //     'looked for design inspiration on dribble, made modifications and added some new UI using figma tools, applied the atomic design pattern as a folder structure. implement clean code and reusable components. slicing UI and integration with Supabase',
+    //   available: true,
+    //   role: 'Frontend Developer',
+    //   tech: 'NextJs, Typescript, Supabase, TailwindCSS, figma',
+    //   link: 'https://task-io-seven.vercel.app/',
+    // },
   ],
   company: [
     {
@@ -67,6 +67,16 @@ export const portofolio = {
       tech: 'NextJs, Typescript, i18n, Jotai, Zod, React Hook Form, React Query, TailwindCSS, Jest, Cypress',
       link: 'https://www.vtrconnect.com/welcome',
       available: true,
+      primary_desc: ` <div>
+      <p>The application connects tenants, landlords, and professionals in the property rental process. It features several main functions:</p>
+      <ul><br />
+          <li><strong>Recons:</strong> This likely refers to a function related to "reconciliation" or organizing financial or transactional information for the parties involved.</li> <br />
+          <li><strong>Connect:</strong> This function facilitates the connection and interaction between tenants, landlords, and professionals involved in property rental.</li><br />
+          <li><strong>Manager (Landlord, Tenant, Professional):</strong> This feature serves as a management tool, enabling landlords, tenants, and professionals to oversee various aspects of the rental process.</li><br />
+          <li><strong>Profile:</strong> This section allows users to create and manage their personal profiles within the application.</li><br />
+      </ul>
+      <p>Each of these functions plays a crucial role in streamlining and enhancing the property rental experience by fostering communication, organization, and efficient management.</p>
+  </div>`,
     },
     {
       images: '/portofolio/company/agree.webp',
@@ -108,16 +118,16 @@ export const portofolio = {
       link: '',
       available: false,
     },
-    {
-      images: '/portofolio/company/certie.webp',
-      name: 'Certie',
-      description:
-        'create a web application from 0, discuss with BE, PM and also the client regarding the project to be worked on, find a UI template that is suitable for the project. learn UI/UX and figma as design tools, create project architecture with atomic design patterns. then deploy the project to cpanel.',
-      role: 'Frontend Engineer',
-      tech: 'ReactJs, Nextjs, Javascript, TailwindCSS, Ant Design, Redux.',
-      link: '',
-      available: false,
-    },
+    // {
+    //   images: '/portofolio/company/certie.webp',
+    //   name: 'Certie',
+    //   description:
+    //     'create a web application from 0, discuss with BE, PM and also the client regarding the project to be worked on, find a UI template that is suitable for the project. learn UI/UX and figma as design tools, create project architecture with atomic design patterns. then deploy the project to cpanel.',
+    //   role: 'Frontend Engineer',
+    //   tech: 'ReactJs, Nextjs, Javascript, TailwindCSS, Ant Design, Redux.',
+    //   link: '',
+    //   available: false,
+    // },
     {
       images: '/portofolio/company/hobids.webp',
       name: 'Hobids',
@@ -158,16 +168,16 @@ export const portofolio = {
       link: '',
       available: false,
     },
-    {
-      images: '/portofolio/company/woowa.webp',
-      name: 'Woowa Dashboard',
-      role: 'Internship Frontend Developer',
-      description:
-        'Choosing a suitable template for Woowa Dashboard, modifying the template that has been purchased and then adjusting it to the display needs needed. learning to use the css framework and also state management redux. learning to work with a team and using git as a tool for collaboration.',
-      tech: 'ReactJs, Dashboard Template, Redux, Bootstrap.',
-      link: 'https://go.woo-wa.com/',
-      available: true,
-    },
+    // {
+    //   images: '/portofolio/company/woowa.webp',
+    //   name: 'Woowa Dashboard',
+    //   role: 'Internship Frontend Developer',
+    //   description:
+    //     'Choosing a suitable template for Woowa Dashboard, modifying the template that has been purchased and then adjusting it to the display needs needed. learning to use the css framework and also state management redux. learning to work with a team and using git as a tool for collaboration.',
+    //   tech: 'ReactJs, Dashboard Template, Redux, Bootstrap.',
+    //   link: 'https://go.woo-wa.com/',
+    //   available: true,
+    // },
   ],
 }
 

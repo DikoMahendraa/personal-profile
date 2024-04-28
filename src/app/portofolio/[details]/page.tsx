@@ -12,6 +12,7 @@ import {
   companyAssets,
   personalAssets,
 } from '@/constants/listAssets'
+import { portofolio } from '@/constants/portofolio'
 
 const PortfolioDetailPage = () => {
   const pathname = usePathname()
@@ -69,6 +70,16 @@ const PortfolioDetailPage = () => {
             </motion.div>
           )
         })}
+      </div>
+      <div className="my-6">
+        <div
+          className="dark:text-gray-400 lg:text-base text-xs"
+          dangerouslySetInnerHTML={{
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
+            __html: portofolio[basePublicUrl][0].primary_desc,
+          }}
+        />
       </div>
     </MainLayout>
   )
