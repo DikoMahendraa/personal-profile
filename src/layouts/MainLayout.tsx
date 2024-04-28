@@ -7,7 +7,7 @@ type P = {
 }
 
 export const MainLayout = (props: React.PropsWithChildren<P>) => {
-  const styles = ['layout', props.className].join(' ')
+  const styles = ['layout min-h-[100vh]', props.className].join(' ')
 
   return (
     <motion.main

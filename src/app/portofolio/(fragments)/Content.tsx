@@ -4,42 +4,9 @@ import CardPortofolio from '@/components/CardPortofolio'
 import React, { useCallback, useMemo, useState } from 'react'
 
 import { motion } from 'framer-motion'
-import { portofolio } from '@/constants/portofolio'
+import { listFilterPortofolio, portofolio } from '@/constants/portofolio'
 import Image from 'next/image'
-import { ChevronDown } from 'lucide-react'
-
-const listFilter = [
-  {
-    name: 'React Js',
-    value: 'react',
-    icons:
-      'https://static-00.iconduck.com/assets.00/react-icon-512x456-2ynx529a.png',
-  },
-  {
-    name: 'React Native',
-    value: 'react-native',
-    icons:
-      'https://static-00.iconduck.com/assets.00/react-icon-512x456-2ynx529a.png',
-  },
-  {
-    name: 'Next Js',
-    value: 'next',
-    icons:
-      'https://static-00.iconduck.com/assets.00/nextjs-icon-512x512-y563b8iq.png',
-  },
-  {
-    name: 'Vue Js',
-    value: 'vue',
-    icons:
-      'https://static-00.iconduck.com/assets.00/vue-icon-512x442-q8uxz5az.png',
-  },
-  {
-    name: 'Nuxt Js',
-    value: 'nuxt',
-    icons:
-      'https://static-00.iconduck.com/assets.00/nuxt-icon-icon-512x380-dm4zv5l3.png',
-  },
-] as const
+import { ChevronDown, FolderGit2 } from 'lucide-react'
 
 const Content = () => {
   const [tab, setTab] = useState<string>(portofolio.tab[0])
@@ -123,7 +90,10 @@ const Content = () => {
                 }}
                 className="dark:text-white lg:bg-none w-full active:bg-cyan-300/10"
               >
-                <span className="hidden lg:flex"> Filter by</span>
+                <span className="hidden lg:flex dark:text-gray-400">
+                  {' '}
+                  Filter by
+                </span>
                 {showFilter ? (
                   <motion.span
                     layoutId="navbar-filter-portofolio-hide"
@@ -164,13 +134,13 @@ const Content = () => {
                   }}
                   className="dark:text-gray-300 w-[10rem] z-[4] rounded-md bg-white top-10 py-2 dark:bg-primary-dark absolute lg:left-[-3rem] left-[-7rem]"
                 >
-                  {listFilter.map((item) => (
+                  {listFilterPortofolio.map((item) => (
                     <li
                       onClick={() => setFilter(item.name)}
                       className={`dark:hover:bg-cyan-300/25 rounded-md dark:hover:text-cyan-300 ${filter === item.name ? 'dark:text-cyan-300 dark:bg-cyan-300/25' : ''}`}
                       key={item.name}
                     >
-                      <p className="flex items-center gap-2">
+                      <p className="flex items-center gap-2 capitalize">
                         <Image
                           priority
                           alt={`image-${item.name}`}
@@ -178,7 +148,7 @@ const Content = () => {
                           width={20}
                           height={20}
                         />
-                        {item.name}
+                        {item.name.toLowerCase().replace('js', '')}
                       </p>
                     </li>
                   ))}
@@ -198,7 +168,7 @@ const Content = () => {
         </div>
       </div>
 
-      <div className="my-6 gap-4 dark:text-gray-200 grid grid-cols-2 pb-16">
+      <div className=" my-6 gap-4 dark:text-gray-200 grid grid-cols-2 pb-16">
         {listFilterByTech().map((item, index) => (
           <motion.div
             className="lg:col-span-1 col-span-2 border dark:bg-primary-dark-soft dark:border-cyan-300/30 hover:bg-cyan-300/25 rounded-lg dark:hover:bg-cyan-300/25 transition-colors"
@@ -219,6 +189,20 @@ const Content = () => {
           </motion.div>
         ))}
       </div>
+      {listFilterByTech().length === 0 && (
+        <motion.div
+          className="w-full flex-col items-center justify-center "
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <div className="flex justify-center mb-4">
+            <FolderGit2 className="dark:text-gray-400" size={40} />
+          </div>
+          <p className="text-center text-gray-400 dark:text-gray-500">
+            There is no portfolio available yet.
+          </p>
+        </motion.div>
+      )}
     </motion.div>
   )
 }

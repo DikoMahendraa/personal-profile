@@ -15,7 +15,7 @@ export const companyAssets = {
 export const personalAssets = {
   'tartil-me': [1, 2, 3, 4, 5, 6],
   'burger-city': [1, 2, 3, 4, 5, 6, 7, 8, 9],
-  'financial-planner': [1, 2, 3, 4, 5, 6, 7, 8, 9],
+  'financial-planner': [1, 2, 3, 4, 5, 6, 7, 8],
   'my-doctor': [1, 2, 3, 4, 5, 6, 7, 8, 9],
   'task-io': [1, 2, 3, 4, 5, 6],
 }

@@ -170,3 +170,36 @@ export const portofolio = {
     },
   ],
 }
+
+export const listFilterPortofolio = [
+  {
+    name: 'React Js',
+    value: 'react',
+    icons:
+      'https://static-00.iconduck.com/assets.00/react-icon-512x456-2ynx529a.png',
+  },
+  {
+    name: 'React Native',
+    value: 'react-native',
+    icons:
+      'https://static-00.iconduck.com/assets.00/react-icon-512x456-2ynx529a.png',
+  },
+  {
+    name: 'Next Js',
+    value: 'next',
+    icons:
+      'https://static-00.iconduck.com/assets.00/nextjs-icon-512x512-y563b8iq.png',
+  },
+  {
+    name: 'Vue Js',
+    value: 'vue',
+    icons:
+      'https://static-00.iconduck.com/assets.00/vue-icon-512x442-q8uxz5az.png',
+  },
+  {
+    name: 'Nuxt Js',
+    value: 'nuxt',
+    icons:
+      'https://static-00.iconduck.com/assets.00/nuxt-icon-icon-512x380-dm4zv5l3.png',
+  },
+] as const

@@ -239,6 +239,10 @@ export const frontendTools = [
         name: 'i18n - UI language',
         url: 'https://www.i18n.com/',
       },
+      {
+        name: 'JSDoc',
+        url: 'https://jsdoc.app/about-getting-started',
+      },
     ],
   },
   {
