@@ -3,7 +3,7 @@ import React, { memo } from 'react'
 
 interface CardExperienceProps {
   title?: string
-  list: string[]
+  list: Readonly<Array<string>>
   company: string
   position: string
   time: string

@@ -220,6 +220,14 @@ export const frontendTools = [
         url: 'https://pixelied.com/convert/png-converter/png-to-webp',
       },
       {
+        name: 'Icon Duck',
+        url: 'https://iconduck.com/icons/',
+      },
+      {
+        name: 'Lucide Icons',
+        url: 'https://lucide.dev/icons/',
+      },
+      {
         name: 'Gemini',
         url: 'https://gemini.google.com/',
       },
@@ -230,6 +238,10 @@ export const frontendTools = [
       {
         name: 'i18n - UI language',
         url: 'https://www.i18n.com/',
+      },
+      {
+        name: 'JSDoc',
+        url: 'https://jsdoc.app/about-getting-started',
       },
     ],
   },
