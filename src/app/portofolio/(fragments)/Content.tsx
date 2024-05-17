@@ -14,7 +14,7 @@ const Content = () => {
   const [showFilter, setshowFilter] = useState<boolean>(false)
 
   const listAllPortofolio = useMemo(
-    () => portofolio.company.concat(portofolio.personal),
+    () => portofolio.company.concat(portofolio?.personal),
     []
   )
 
@@ -90,10 +90,12 @@ const Content = () => {
                 }}
                 className="dark:text-white lg:bg-none w-full active:bg-cyan-300/10"
               >
-                <span className="hidden lg:flex dark:text-gray-400">
-                  {' '}
+                <p className="hidden lg:flex dark:text-gray-400">
                   Filter by
-                </span>
+                  <span className="text-cyan-300 font-semibold ml-2">
+                    {filter.trim()}
+                  </span>
+                </p>
                 {showFilter ? (
                   <motion.span
                     layoutId="navbar-filter-portofolio-hide"
@@ -132,7 +134,7 @@ const Content = () => {
                     opacity: 0,
                     x: 20,
                   }}
-                  className="dark:text-gray-300 w-[10rem] z-[4] rounded-md bg-white top-10 py-2 dark:bg-primary-dark absolute lg:left-[-3rem] left-[-7rem]"
+                  className="dark:text-gray-300 w-[12rem] z-[4] rounded-md bg-white top-10 py-2 dark:bg-primary-dark absolute lg:left-[-3rem] left-[-7rem] pr-2"
                 >
                   {listFilterPortofolio.map((item) => (
                     <li

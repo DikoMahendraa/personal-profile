@@ -15,6 +15,16 @@ export const portofolio = {
       role: 'React Native Developer',
       tech: 'React Native',
       link: '',
+      primary_desc: ` <div>
+      <p>The application connects tenants, landlords, and professionals in the property rental process. It features several main functions:</p>
+      <ul><br />
+          <li><strong>Recons:</strong> This likely refers to a function related to "reconciliation" or organizing financial or transactional information for the parties involved.</li> <br />
+          <li><strong>Connect:</strong> This function facilitates the connection and interaction between tenants, landlords, and professionals involved in property rental.</li><br />
+          <li><strong>Manager (Landlord, Tenant, Professional):</strong> This feature serves as a management tool, enabling landlords, tenants, and professionals to oversee various aspects of the rental process.</li><br />
+          <li><strong>Profile:</strong> This section allows users to create and manage their personal profiles within the application.</li><br />
+      </ul>
+      <p>Each of these functions plays a crucial role in streamlining and enhancing the property rental experience by fostering communication, organization, and efficient management.</p>
+  </div>`,
     },
     {
       images: '/portofolio/personal/doctor.png',
@@ -25,6 +35,16 @@ export const portofolio = {
       role: 'React Native Developer',
       tech: 'React Native, Firebase',
       link: '',
+      primary_desc: ` <div>
+      <p>The application connects tenants, landlords, and professionals in the property rental process. It features several main functions:</p>
+      <ul><br />
+          <li><strong>Recons:</strong> This likely refers to a function related to "reconciliation" or organizing financial or transactional information for the parties involved.</li> <br />
+          <li><strong>Connect:</strong> This function facilitates the connection and interaction between tenants, landlords, and professionals involved in property rental.</li><br />
+          <li><strong>Manager (Landlord, Tenant, Professional):</strong> This feature serves as a management tool, enabling landlords, tenants, and professionals to oversee various aspects of the rental process.</li><br />
+          <li><strong>Profile:</strong> This section allows users to create and manage their personal profiles within the application.</li><br />
+      </ul>
+      <p>Each of these functions plays a crucial role in streamlining and enhancing the property rental experience by fostering communication, organization, and efficient management.</p>
+  </div>`,
     },
     {
       images: '/portofolio/personal/financial.webp',
@@ -35,6 +55,16 @@ export const portofolio = {
       role: 'Frontend Developer',
       tech: 'NextJs, Typescript, Firebase, TailwindCSS',
       link: 'https://financial-planner-ck.vercel.app/login',
+      primary_desc: ` <div>
+      <p>The application connects tenants, landlords, and professionals in the property rental process. It features several main functions:</p>
+      <ul><br />
+          <li><strong>Recons:</strong> This likely refers to a function related to "reconciliation" or organizing financial or transactional information for the parties involved.</li> <br />
+          <li><strong>Connect:</strong> This function facilitates the connection and interaction between tenants, landlords, and professionals involved in property rental.</li><br />
+          <li><strong>Manager (Landlord, Tenant, Professional):</strong> This feature serves as a management tool, enabling landlords, tenants, and professionals to oversee various aspects of the rental process.</li><br />
+          <li><strong>Profile:</strong> This section allows users to create and manage their personal profiles within the application.</li><br />
+      </ul>
+      <p>Each of these functions plays a crucial role in streamlining and enhancing the property rental experience by fostering communication, organization, and efficient management.</p>
+  </div>`,
     },
   ],
   company: [
@@ -67,6 +97,16 @@ export const portofolio = {
       tech: 'NextJs, i18n, TailwindCSS, styled-component, redux, react hooks form.',
       available: true,
       link: 'https://agreeculture.id/',
+      primary_desc: ` <div>
+      <p>The application connects tenants, landlords, and professionals in the property rental process. It features several main functions:</p>
+      <ul><br />
+          <li><strong>Recons:</strong> This likely refers to a function related to "reconciliation" or organizing financial or transactional information for the parties involved.</li> <br />
+          <li><strong>Connect:</strong> This function facilitates the connection and interaction between tenants, landlords, and professionals involved in property rental.</li><br />
+          <li><strong>Manager (Landlord, Tenant, Professional):</strong> This feature serves as a management tool, enabling landlords, tenants, and professionals to oversee various aspects of the rental process.</li><br />
+          <li><strong>Profile:</strong> This section allows users to create and manage their personal profiles within the application.</li><br />
+      </ul>
+      <p>Each of these functions plays a crucial role in streamlining and enhancing the property rental experience by fostering communication, organization, and efficient management.</p>
+  </div>`,
     },
     {
       images: '/portofolio/company/nabati.webp',
@@ -77,6 +117,16 @@ export const portofolio = {
       tech: 'NextJs, Typescript, i18n, Micro Frontend, AntDesign, Jira, React Storybook, Styled Component.',
       available: false,
       link: '',
+      primary_desc: ` <div>
+      <p>The application connects tenants, landlords, and professionals in the property rental process. It features several main functions:</p>
+      <ul><br />
+          <li><strong>Recons:</strong> This likely refers to a function related to "reconciliation" or organizing financial or transactional information for the parties involved.</li> <br />
+          <li><strong>Connect:</strong> This function facilitates the connection and interaction between tenants, landlords, and professionals involved in property rental.</li><br />
+          <li><strong>Manager (Landlord, Tenant, Professional):</strong> This feature serves as a management tool, enabling landlords, tenants, and professionals to oversee various aspects of the rental process.</li><br />
+          <li><strong>Profile:</strong> This section allows users to create and manage their personal profiles within the application.</li><br />
+      </ul>
+      <p>Each of these functions plays a crucial role in streamlining and enhancing the property rental experience by fostering communication, organization, and efficient management.</p>
+  </div>`,
     },
     {
       images: '/portofolio/company/dana.webp',
@@ -87,6 +137,16 @@ export const portofolio = {
       tech: 'React Native, NextJs, Typescript, i18n, React Storybook, AntDesign, Redux.',
       available: true,
       link: 'https://borrower.danasyariah.id/auth/login',
+      primary_desc: ` <div>
+      <p>The application connects tenants, landlords, and professionals in the property rental process. It features several main functions:</p>
+      <ul><br />
+          <li><strong>Recons:</strong> This likely refers to a function related to "reconciliation" or organizing financial or transactional information for the parties involved.</li> <br />
+          <li><strong>Connect:</strong> This function facilitates the connection and interaction between tenants, landlords, and professionals involved in property rental.</li><br />
+          <li><strong>Manager (Landlord, Tenant, Professional):</strong> This feature serves as a management tool, enabling landlords, tenants, and professionals to oversee various aspects of the rental process.</li><br />
+          <li><strong>Profile:</strong> This section allows users to create and manage their personal profiles within the application.</li><br />
+      </ul>
+      <p>Each of these functions plays a crucial role in streamlining and enhancing the property rental experience by fostering communication, organization, and efficient management.</p>
+  </div>`,
     },
     {
       images: '/portofolio/company/mirocks.webp',
@@ -97,6 +157,16 @@ export const portofolio = {
       tech: 'GraphQL, typescript, Nextjs, AntDesign Pro, i18n, Redux.',
       link: '',
       available: false,
+      primary_desc: ` <div>
+      <p>The application connects tenants, landlords, and professionals in the property rental process. It features several main functions:</p>
+      <ul><br />
+          <li><strong>Recons:</strong> This likely refers to a function related to "reconciliation" or organizing financial or transactional information for the parties involved.</li> <br />
+          <li><strong>Connect:</strong> This function facilitates the connection and interaction between tenants, landlords, and professionals involved in property rental.</li><br />
+          <li><strong>Manager (Landlord, Tenant, Professional):</strong> This feature serves as a management tool, enabling landlords, tenants, and professionals to oversee various aspects of the rental process.</li><br />
+          <li><strong>Profile:</strong> This section allows users to create and manage their personal profiles within the application.</li><br />
+      </ul>
+      <p>Each of these functions plays a crucial role in streamlining and enhancing the property rental experience by fostering communication, organization, and efficient management.</p>
+  </div>`,
     },
     {
       images: '/portofolio/company/hobids.webp',
@@ -107,6 +177,16 @@ export const portofolio = {
       tech: 'ReactJs, Nextjs, Javascript, TailwindCSS, Ant Design, Redux.',
       link: '',
       available: false,
+      primary_desc: ` <div>
+      <p>The application connects tenants, landlords, and professionals in the property rental process. It features several main functions:</p>
+      <ul><br />
+          <li><strong>Recons:</strong> This likely refers to a function related to "reconciliation" or organizing financial or transactional information for the parties involved.</li> <br />
+          <li><strong>Connect:</strong> This function facilitates the connection and interaction between tenants, landlords, and professionals involved in property rental.</li><br />
+          <li><strong>Manager (Landlord, Tenant, Professional):</strong> This feature serves as a management tool, enabling landlords, tenants, and professionals to oversee various aspects of the rental process.</li><br />
+          <li><strong>Profile:</strong> This section allows users to create and manage their personal profiles within the application.</li><br />
+      </ul>
+      <p>Each of these functions plays a crucial role in streamlining and enhancing the property rental experience by fostering communication, organization, and efficient management.</p>
+  </div>`,
     },
     {
       images: '/portofolio/company/zurich.webp',
@@ -117,6 +197,16 @@ export const portofolio = {
       tech: 'VueJs, NuxtJs, Vuetify, Vuex.',
       link: '',
       available: false,
+      primary_desc: ` <div>
+      <p>The application connects tenants, landlords, and professionals in the property rental process. It features several main functions:</p>
+      <ul><br />
+          <li><strong>Recons:</strong> This likely refers to a function related to "reconciliation" or organizing financial or transactional information for the parties involved.</li> <br />
+          <li><strong>Connect:</strong> This function facilitates the connection and interaction between tenants, landlords, and professionals involved in property rental.</li><br />
+          <li><strong>Manager (Landlord, Tenant, Professional):</strong> This feature serves as a management tool, enabling landlords, tenants, and professionals to oversee various aspects of the rental process.</li><br />
+          <li><strong>Profile:</strong> This section allows users to create and manage their personal profiles within the application.</li><br />
+      </ul>
+      <p>Each of these functions plays a crucial role in streamlining and enhancing the property rental experience by fostering communication, organization, and efficient management.</p>
+  </div>`,
     },
     {
       images: '/portofolio/company/qatros.webp',
@@ -127,6 +217,16 @@ export const portofolio = {
       tech: 'VueJs, Bootstrap',
       link: 'https://qatros.com/',
       available: true,
+      primary_desc: ` <div>
+      <p>The application connects tenants, landlords, and professionals in the property rental process. It features several main functions:</p>
+      <ul><br />
+          <li><strong>Recons:</strong> This likely refers to a function related to "reconciliation" or organizing financial or transactional information for the parties involved.</li> <br />
+          <li><strong>Connect:</strong> This function facilitates the connection and interaction between tenants, landlords, and professionals involved in property rental.</li><br />
+          <li><strong>Manager (Landlord, Tenant, Professional):</strong> This feature serves as a management tool, enabling landlords, tenants, and professionals to oversee various aspects of the rental process.</li><br />
+          <li><strong>Profile:</strong> This section allows users to create and manage their personal profiles within the application.</li><br />
+      </ul>
+      <p>Each of these functions plays a crucial role in streamlining and enhancing the property rental experience by fostering communication, organization, and efficient management.</p>
+  </div>`,
     },
     {
       images: '/portofolio/company/liveness.webp',
@@ -137,6 +237,16 @@ export const portofolio = {
       tech: 'Bootstrap, NuxtJs, ThreeJs, Blender, Liveness Module',
       link: '',
       available: false,
+      primary_desc: ` <div>
+      <p>The application connects tenants, landlords, and professionals in the property rental process. It features several main functions:</p>
+      <ul><br />
+          <li><strong>Recons:</strong> This likely refers to a function related to "reconciliation" or organizing financial or transactional information for the parties involved.</li> <br />
+          <li><strong>Connect:</strong> This function facilitates the connection and interaction between tenants, landlords, and professionals involved in property rental.</li><br />
+          <li><strong>Manager (Landlord, Tenant, Professional):</strong> This feature serves as a management tool, enabling landlords, tenants, and professionals to oversee various aspects of the rental process.</li><br />
+          <li><strong>Profile:</strong> This section allows users to create and manage their personal profiles within the application.</li><br />
+      </ul>
+      <p>Each of these functions plays a crucial role in streamlining and enhancing the property rental experience by fostering communication, organization, and efficient management.</p>
+  </div>`,
     },
   ],
 }
