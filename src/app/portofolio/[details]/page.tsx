@@ -79,10 +79,14 @@ const PortfolioDetailPage = () => {
         <div
           className="dark:text-gray-400 lg:text-base text-xs"
           dangerouslySetInnerHTML={{
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
             __html: portofolio[basePublicUrl][0].primary_desc,
           }}
         />
         <Link
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-expect-error
           href={portofolio[basePublicUrl][0].link}
           target="_blank"
           className="btn btn-info my-2 btn-sm text-white text-xs"
