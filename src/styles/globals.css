@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply dark:bg-primary-dark motion-safe:transition-[background-color,color];
+    @apply dark:bg-primary-dark motion-safe:transition-[background-color,color] min-h-[100vh] relative lg:pb-[10rem] pb-[5rem];
   }
   .layout {
     @apply mx-auto max-w-2xl 3xl:max-w-4xl w-[86%];
