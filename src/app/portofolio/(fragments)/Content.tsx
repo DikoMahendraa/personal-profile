@@ -7,8 +7,27 @@ import { motion } from 'framer-motion'
 import { listFilterPortofolio, portofolio } from '@/constants/portofolio'
 import Image from 'next/image'
 import { ChevronDown, FolderGit2 } from 'lucide-react'
+import { useRouter } from 'next/navigation'
+
+import { useAtom } from 'jotai'
+import { atomWithStorage } from 'jotai/utils'
+
+type TDetailPortofolio = {
+  description: string
+  url: string
+}
+
+type TPropsViewDetails = TDetailPortofolio & { name: string }
+
+export const detailPortofolio = atomWithStorage<Partial<TDetailPortofolio>>(
+  'detail',
+  {}
+)
 
 const Content = () => {
+  const router = useRouter()
+  const [, setDetailPortofolio] =
+    useAtom<Partial<TDetailPortofolio>>(detailPortofolio)
   const [tab, setTab] = useState<string>(portofolio.tab[0])
   const [filter, setFilter] = useState<string>('')
   const [showFilter, setshowFilter] = useState<boolean>(false)
@@ -48,6 +67,17 @@ const Content = () => {
   }, [filter, listPortofolio])
 
   const switchTab = useCallback((item: string) => setTab(item), [])
+
+  const onPreviewDetail = useCallback(
+    ({ name, description, url }: TPropsViewDetails) => {
+      const baseUrl = `/portofolio/${name.toLowerCase().replace(/ /g, '-')}`
+
+      router.push(baseUrl)
+
+      setDetailPortofolio({ description, url })
+    },
+    [router, setDetailPortofolio]
+  )
 
   return (
     <motion.div
@@ -182,7 +212,13 @@ const Content = () => {
           >
             <CardPortofolio
               {...item}
-              viewDetail={`/portofolio/${item.name.toLowerCase().replace(/ /g, '-')}`}
+              onPreview={() =>
+                onPreviewDetail({
+                  name: item.name,
+                  description: item.primary_desc,
+                  url: item.link,
+                })
+              }
               available={item.available}
               labelDescription={portofolio.label_description}
               labelRole={portofolio.label_role}

@@ -2,7 +2,6 @@
 
 import React, { memo } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export type ContentCardProps = Readonly<{
   name: string
@@ -17,26 +16,27 @@ export type ContentCardProps = Readonly<{
 export interface CardPortfolioProps extends ContentCardProps {
   labelDescription: string
   labelRole: string
-  viewDetail: string
+  onPreview: () => void
   labelTech: string
 }
 
 const CardPortofolio = (props: Readonly<CardPortfolioProps>) => {
   return (
-    <Link href={props.viewDetail}>
-      <div className="rounded-md cursor-pointer hover:bg-gray-100/50 dark:hover:bg-gray-900/10">
-        <h2 className="text-base font-semibold capitalize p-4">{props.name}</h2>
-        <div className="relative aspect-video w-full">
-          <Image
-            alt="image-profile"
-            src={props.images}
-            fill
-            priority
-            className="rounded-md"
-          />
-        </div>
+    <div
+      onClick={props.onPreview}
+      className="rounded-md cursor-pointer hover:bg-gray-100/50 dark:hover:bg-gray-900/10"
+    >
+      <h2 className="text-base font-semibold capitalize p-4">{props.name}</h2>
+      <div className="relative aspect-video w-full">
+        <Image
+          alt="image-profile"
+          src={props.images}
+          fill
+          priority
+          className="rounded-md"
+        />
       </div>
-    </Link>
+    </div>
   )
 }
 

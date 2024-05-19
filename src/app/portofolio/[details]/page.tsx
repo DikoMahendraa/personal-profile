@@ -12,12 +12,17 @@ import {
   companyAssets,
   personalAssets,
 } from '@/constants/listAssets'
-import { portofolio } from '@/constants/portofolio'
 import { experiences } from '@/constants/experiences'
+import { useAtomValue } from 'jotai'
+import { detailPortofolio } from '../(fragments)/Content'
 
 const PortfolioDetailPage = () => {
   const pathname = usePathname()
   const lastPathname = pathname.split('/').pop() as string
+
+  const _detailPortofolio = useAtomValue(detailPortofolio)
+
+  console.log({ _detailPortofolio })
 
   const routeBasedCompanies =
     Object.keys(companyAssets).includes(lastPathname) && 'company'
@@ -79,15 +84,11 @@ const PortfolioDetailPage = () => {
         <div
           className="dark:text-gray-400 lg:text-base text-xs"
           dangerouslySetInnerHTML={{
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-expect-error
-            __html: portofolio[basePublicUrl][0].primary_desc,
+            __html: _detailPortofolio.description as TrustedHTML,
           }}
         />
         <Link
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-expect-error
-          href={portofolio[basePublicUrl][0].link}
+          href={String(_detailPortofolio.url)}
           target="_blank"
           className="btn btn-info my-2 btn-sm text-white text-xs"
         >
