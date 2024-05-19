@@ -1,8 +1,8 @@
 import React from 'react'
 import { MessageSquareWarning } from 'lucide-react'
-import { MainLayout } from '@/layouts/MainLayout'
 import { Metadata } from 'next'
-import Content from './(fragments)/Content'
+import { MainLayout } from '@/layouts/MainLayout'
+import ContentPortofolio from './(fragments)/Content'
 import { metadataPortofolioPage } from '@/constants/seo'
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ const PortofolioPage = () => {
         </p>
       </div>
 
-      <Content />
+      <ContentPortofolio />
     </MainLayout>
   )
 }

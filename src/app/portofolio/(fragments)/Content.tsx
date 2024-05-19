@@ -134,7 +134,7 @@ const Content = () => {
                     opacity: 0,
                     x: 20,
                   }}
-                  className="dark:text-gray-300 w-[12rem] z-[4] rounded-md bg-white top-10 py-2 dark:bg-primary-dark absolute lg:left-[-3rem] left-[-7rem] pr-2"
+                  className="dark:text-gray-300 lg:w-[12rem] w-[11rem] z-[4] rounded-md bg-white top-10 py-2 dark:bg-primary-dark absolute lg:left-[-3rem] left-[-7rem] pr-2"
                 >
                   {listFilterPortofolio.map((item) => (
                     <li
@@ -142,20 +142,20 @@ const Content = () => {
                       className={`dark:hover:bg-cyan-300/25 rounded-md dark:hover:text-cyan-300 ${filter === item.name ? 'dark:text-cyan-300 dark:bg-cyan-300/25' : ''}`}
                       key={item.name}
                     >
-                      <p className="flex items-center gap-2 capitalize">
+                      <p className="flex items-center lg:text-sm text-xs gap-2 capitalize">
                         <Image
                           priority
                           alt={`image-${item.name}`}
                           src={item.icons}
-                          width={20}
-                          height={20}
+                          width={15}
+                          height={15}
                         />
                         {item.name.toLowerCase().replace('js', '')}
                       </p>
                     </li>
                   ))}
                   <button
-                    className="btn btn-outline btn-sm w-full mt-2 btn-error"
+                    className="btn btn-outline lg:btn-sm btn-xs w-full mt-2 btn-error"
                     onClick={() => {
                       setFilter('')
                       setshowFilter(false)
