@@ -12,22 +12,16 @@ import { useRouter } from 'next/navigation'
 import { useAtom } from 'jotai'
 import { atomWithStorage } from 'jotai/utils'
 
-type TDetailPortofolio = {
-  description: string
-  url: string
-}
+type TDetailPortofolio = (typeof portofolio)['personal'][0]
 
-type TPropsViewDetails = TDetailPortofolio & { name: string }
-
-export const detailPortofolio = atomWithStorage<Partial<TDetailPortofolio>>(
+export const detailPortofolio = atomWithStorage<TDetailPortofolio>(
   'detail',
-  {}
+  {} as TDetailPortofolio
 )
 
 const Content = () => {
   const router = useRouter()
-  const [, setDetailPortofolio] =
-    useAtom<Partial<TDetailPortofolio>>(detailPortofolio)
+  const [, setDetailPortofolio] = useAtom<TDetailPortofolio>(detailPortofolio)
   const [tab, setTab] = useState<string>(portofolio.tab[0])
   const [filter, setFilter] = useState<string>('')
   const [showFilter, setshowFilter] = useState<boolean>(false)
@@ -51,11 +45,9 @@ const Content = () => {
   const listFilterByTech = useCallback(() => {
     if (filter.length > 0) {
       return listPortofolio().filter((item) => {
-        const splitTech = item.tech
-          .split(',')
-          .map((tech) =>
-            tech.trim().toLowerCase().replace('js', '').replace(/ /g, '')
-          )
+        const splitTech = (item.tech as Array<string>)?.map((tech) =>
+          tech.trim().toLowerCase().replace('js', '').replace(/ /g, '')
+        )
 
         return splitTech.includes(
           filter.toLowerCase().replace('js', '').replace(/ /g, '')
@@ -69,12 +61,12 @@ const Content = () => {
   const switchTab = useCallback((item: string) => setTab(item), [])
 
   const onPreviewDetail = useCallback(
-    ({ name, description, url }: TPropsViewDetails) => {
-      const baseUrl = `/portofolio/${name.toLowerCase().replace(/ /g, '-')}`
+    ({ ...item }: TDetailPortofolio) => {
+      const baseUrl = `/portofolio/${item.name.toLowerCase().replace(/ /g, '-')}`
 
       router.push(baseUrl)
 
-      setDetailPortofolio({ description, url })
+      setDetailPortofolio({ ...item })
     },
     [router, setDetailPortofolio]
   )
@@ -212,14 +204,7 @@ const Content = () => {
           >
             <CardPortofolio
               {...item}
-              onPreview={() =>
-                onPreviewDetail({
-                  name: item.name,
-                  description: item.primary_desc,
-                  url: item.link,
-                })
-              }
-              available={item.available}
+              onPreview={() => onPreviewDetail(item as TDetailPortofolio)}
               labelDescription={portofolio.label_description}
               labelRole={portofolio.label_role}
               labelTech={portofolio.label_tech_used}

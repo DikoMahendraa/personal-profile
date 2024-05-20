@@ -7,11 +7,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 import { motion } from 'framer-motion'
-import {
-  allImageAssets,
-  companyAssets,
-  personalAssets,
-} from '@/constants/listAssets'
 import { experiences } from '@/constants/experiences'
 import { useAtomValue } from 'jotai'
 import { detailPortofolio } from '../(fragments)/Content'
@@ -22,19 +17,7 @@ const PortfolioDetailPage = () => {
 
   const _detailPortofolio = useAtomValue(detailPortofolio)
 
-  console.log({ _detailPortofolio })
-
-  const routeBasedCompanies =
-    Object.keys(companyAssets).includes(lastPathname) && 'company'
-
-  const routeBasedPersonal =
-    Object.keys(personalAssets).includes(lastPathname) && 'personal'
-
-  const basePublicUrl = routeBasedCompanies || routeBasedPersonal
-
-  const verticalLayout = [...Object.keys(personalAssets), 'hobids']
-    .filter((key) => !['task-io', 'tartil-me'].includes(key))
-    .includes(lastPathname)
+  const isDesktop = _detailPortofolio.layout_type?.includes('desktop')
 
   return (
     <MainLayout className="layout">
@@ -49,12 +32,10 @@ const PortfolioDetailPage = () => {
       </div>
 
       <div
-        className={`grid h-full gap-6 mt-6 ${verticalLayout ? 'lg:grid-cols-2 grid-cols-1' : 'grid-cols-1'}`}
+        className={`grid h-full gap-6 mt-6 ${!isDesktop ? 'lg:grid-cols-2 grid-cols-1' : 'grid-cols-1'}`}
       >
-        {// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error
-        allImageAssets[lastPathname]?.map((item: number) => {
-          const imageSrc = `/portofolio/${basePublicUrl}/${lastPathname}/${item}.webp`
+        {_detailPortofolio.assets?.map((item: number) => {
+          const imageSrc = `/portofolio/${_detailPortofolio.type}/${lastPathname}/${item}.webp`
 
           return (
             <motion.div
@@ -62,7 +43,7 @@ const PortfolioDetailPage = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
               transition={{ delay: Number(`0.${item}`), times: 0 }}
-              className={`relative  ${verticalLayout ? 'aspect-mobile' : 'aspect-video'}`}
+              className={`relative  ${!isDesktop ? 'aspect-mobile' : 'aspect-video'}`}
               key={item}
             >
               <Image
@@ -84,11 +65,11 @@ const PortfolioDetailPage = () => {
         <div
           className="dark:text-gray-400 lg:text-base text-xs"
           dangerouslySetInnerHTML={{
-            __html: _detailPortofolio.description as TrustedHTML,
+            __html: _detailPortofolio.about as TrustedHTML,
           }}
         />
         <Link
-          href={String(_detailPortofolio.url)}
+          href={String(_detailPortofolio.link)}
           target="_blank"
           className="btn btn-info my-2 btn-sm text-white text-xs"
         >
@@ -98,21 +79,15 @@ const PortfolioDetailPage = () => {
           some things {`I'm`} working on
         </p>
         <ul className="list-disc lg:text-base text-xs dark:text-gray-400">
-          {experiences.company[0].description.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
+          {_detailPortofolio?.todo?.map((item) => <li key={item}>{item}</li>)}
         </ul>
         <p className="dark:text-cyan-300 lg:text-lg text-sm font-semibold capitalize lg:my-6 my-2">
           technology used
         </p>
         <ul className="list-disc lg:text-base text-xs dark:text-gray-400">
-          {experiences.company[0].techonology
-            .replace('(', '')
-            .replace(')', '')
-            .split(', ')
-            .map((item) => (
-              <li key={item}>{item}</li>
-            ))}
+          {experiences.company[0].description.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
       </div>
     </MainLayout>

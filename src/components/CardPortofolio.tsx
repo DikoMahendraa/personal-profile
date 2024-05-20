@@ -5,12 +5,7 @@ import Image from 'next/image'
 
 export type ContentCardProps = Readonly<{
   name: string
-  role: string
-  description: string
-  tech: string
-  link: string
   images: string
-  available: boolean
 }>
 
 export interface CardPortfolioProps extends ContentCardProps {
