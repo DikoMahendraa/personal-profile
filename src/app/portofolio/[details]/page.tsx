@@ -7,7 +7,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 import { motion } from 'framer-motion'
-import { experiences } from '@/constants/experiences'
 import { useAtomValue } from 'jotai'
 import { detailPortofolio } from '../(fragments)/Content'
 
@@ -79,14 +78,20 @@ const PortfolioDetailPage = () => {
           some things {`I'm`} working on
         </p>
         <ul className="list-disc lg:text-base text-xs dark:text-gray-400">
-          {_detailPortofolio?.todo?.map((item) => <li key={item}>{item}</li>)}
+          {_detailPortofolio?.todo?.map((item) => (
+            <li className="mb-4" key={item}>
+              {item}
+            </li>
+          ))}
         </ul>
         <p className="dark:text-cyan-300 lg:text-lg text-sm font-semibold capitalize lg:my-6 my-2">
           technology used
         </p>
         <ul className="list-disc lg:text-base text-xs dark:text-gray-400">
-          {experiences.company[0].description.map((item) => (
-            <li key={item}>{item}</li>
+          {_detailPortofolio?.tech?.map((item) => (
+            <li className="capitalize" key={item}>
+              {item}
+            </li>
           ))}
         </ul>
       </div>

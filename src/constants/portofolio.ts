@@ -96,11 +96,8 @@ export const portofolio = {
         'i18n',
         'Jotai',
         'Zod',
-        'React',
-        'Hook',
-        'Form',
-        'React',
-        'Query',
+        'React Hook Form',
+        'React Query',
         'TailwindCSS',
         'Jest',
         'Cypress',
@@ -132,9 +129,7 @@ export const portofolio = {
         'TailwindCSS',
         'styled-component',
         'redux',
-        'react',
-        'hooks',
-        'form',
+        'react hooks form',
       ],
       available: true,
       link: 'https://agreeculture.id/',
@@ -172,7 +167,16 @@ export const portofolio = {
       ],
       available: false,
       link: '',
-      about: ``,
+      about: `<p>eDOT offers integrated business solutions for various industries, including:</p>
+
+      <br />
+      <ul>
+      <li><strong>ERP (Enterprise Resource Planning)</strong>: Helps manage inventory, automate tasks, and gain real-time insights for successful business growth. (<a href="#">Learn more about ERP</a>)</li>
+      <br />
+      <li><strong>E-Commerce</strong>: Enables businesses to sell online through mobile and desktop web applications.</li>
+      <br />
+      <li><strong>Logistics</strong>: Provides efficient logistics services to ensure your products reach customers quickly and safely.</li>
+      </ul>`,
     },
     {
       todo: experiences.company[3].description,
@@ -182,10 +186,19 @@ export const portofolio = {
       images: '/portofolio/company/dana.webp',
       name: 'Dana Syariah',
       role: 'Frontend Web & Mobile React Native',
-      tech: 'React Native, NextJs, Typescript, i18n, React Storybook, AntDesign, Redux.',
+      tech: [
+        'React Native',
+        'NextJs',
+        'Typescript',
+        'i18n',
+        'React Storybook',
+        'AntDesign',
+        'Redux.',
+      ],
       available: true,
-      link: 'https://borrower.danasyariah.id/auth/login',
-      about: ``,
+      link: 'https://borrower.danasyariah.id',
+      about: `<p><strong>DanaSyariah.id</strong> provides services for funders to make their assets and funds productive according to Sharia principles and safe from the returns of buying and selling property activities. <br /><br /> The projects funded are those that have passed verification by the DanaSyariah.id team, with several conditions including having buyers or even purchasers already.</p>
+      `,
     },
     {
       layout_type: 'desktop',
@@ -193,20 +206,37 @@ export const portofolio = {
       assets: [1, 2, 3, 4, 5, 6, 7, 8, 9],
       images: '/portofolio/company/mirocks.webp',
       name: 'Mirocks Insurance',
-      todo: [''],
+      todo: [
+        'Learning GraphQL: Implemented responsive design using Tailwind CSS, ensuring optimal viewing across desktop, tablet, and mobile devices.',
+        'GraphQL Integration: Introduced new features to benefit landlords, tenants, and professional users.',
+        'User Activity Log Display: Wrote comprehensive unit tests for each component, utility, and page, guaranteeing code stability.',
+        'English Communication: Adopted clean coding practices and upgraded project dependencies to their latest versions.',
+        'Clean Code Practices: Established a well-organized folder structure for improved project maintainability.',
+      ],
       role: 'Internship Frontend Developer',
       tech: [
         'GraphQL',
         'typescript',
         'Nextjs',
-        'AntDesign',
-        'Pro',
+        'AntDesign Pro',
         'i18n',
         'Redux',
       ],
       link: '',
       available: false,
-      about: ``,
+      about: `<p>InsVault Insurance is an innovative insurance app designed to help you efficiently manage your insurance needs. Developed by a dedicated individual, InsVault Insurance offers a range of intuitive and useful features to ensure your insurance requirements are met effectively.</p>
+      <br />
+      <p><strong>Key Features:</strong></p>
+      <br />
+      
+      <p><strong>Balance:</strong> Easily monitor your insurance balance and transactions, so you always know your financial position regarding insurance.</p>
+      <br />
+      <p><strong>Referral:</strong> Earn extra benefits by inviting friends or family to use InsVault Insurance through our referral feature.</p>
+      <br />
+      <p><strong>Profile:</strong> Manage your personal information and insurance details effortlessly, all in one secure and organized place.</p>
+      <br />
+      
+      <p>InsVault Insurance provides ease and convenience in managing your insurance, ensuring you get optimal protection without the hassle.</p>`,
     },
     {
       layout_type: 'desktop',
@@ -249,7 +279,7 @@ export const portofolio = {
       name: 'Landing Page Qatros',
       role: 'Junior Frontend Developer',
       todo: [''],
-      tech: ['VueJs, Bootstrap'],
+      tech: ['VueJs', 'Bootstrap'],
       link: 'https://qatros.com/',
       available: true,
       about: ``,
