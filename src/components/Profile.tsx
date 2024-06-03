@@ -1,8 +1,9 @@
 import React, { memo } from 'react'
 import Image from 'next/image'
-import { AtSign, Phone } from 'lucide-react'
+import { AtSign, Github, Phone } from 'lucide-react'
 
 import ButtonDownload from './ButtonDownload'
+import Link from 'next/link'
 
 const Profile = () => {
   return (
@@ -42,7 +43,17 @@ const Profile = () => {
               diko.dev99@gmail.com
             </a>
           </p>
-          <ButtonDownload text="Resume" />
+          <div className="flex gap-4">
+            <ButtonDownload text="Resume" />
+
+            <Link
+              target="_blank"
+              href="https://github.com/DikoMahendraa"
+              className="btn bg-cyan-800/35 border-none hover:bg-cyan-700"
+            >
+              <Github className="dark:text-cyan-300" />
+            </Link>
+          </div>
         </div>
       </div>
       <div className="lg:text-base text-sm dark:text-gray-300">

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -20,7 +20,7 @@
     "framer-motion": "^11.0.25",
     "jotai": "^2.8.0",
     "lucide-react": "^0.323.0",
-    "next": "14.1.0",
+    "next": "^14.2.3",
     "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
@@ -41,6 +41,7 @@
     "eslint-config-next": "14.1.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.2",
     "husky": "^9.0.11",
     "postcss": "^8",
     "prettier": "^3.2.4"

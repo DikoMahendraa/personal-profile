@@ -9,9 +9,28 @@ export const portofolio = {
   label_tech_used: 'What are the technologies used?',
   personal: [
     {
+      layout_type: 'desktop',
+      type: 'personal',
+      assets: 6,
+      images: '/portofolio/personal/staycations.webp',
+      name: 'Staycations',
+      todo: [
+        'Implemented Zod and React Hooks Form.',
+        'Created validation forms.',
+        'Sliced UI using Shadcn/UI and Tailwind CSS.',
+        'Implemented linter, pre-commit hooks, clean code, and responsive design',
+      ],
+      available: false,
+      role: 'Frontend Developer',
+      tech: ['NextJs', 'Typescript', 'Shadcn/UI', 'Zod', 'React Hooks Form'],
+      link: 'https://cocome-staycation.vercel.app/',
+      about:
+        '<p>This is a practice application that I use to hone my CSS and JavaScript skills, utilizing NextJS and integrating React Hook Form for input form validation in hotel bookings. I focused on implementing clean code and reusable components, using NextJS to create responsive displays for both web and desktop.</p>',
+    },
+    {
       layout_type: 'mobile',
       type: 'personal',
-      assets: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      assets: 9,
       images: '/portofolio/personal/burgerapp.png',
       name: 'Burger City',
       todo: [
@@ -30,7 +49,7 @@ export const portofolio = {
     {
       layout_type: 'mobile',
       type: 'personal',
-      assets: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      assets: 9,
       images: '/portofolio/personal/doctor.png',
       name: 'My Doctor',
       todo: [
@@ -53,7 +72,7 @@ export const portofolio = {
     {
       layout_type: 'mobile',
       type: 'personal',
-      assets: [1, 2, 3, 4, 5, 6, 7, 8],
+      assets: 8,
       images: '/portofolio/personal/financial.webp',
       name: 'Financial Planner',
       todo: [
@@ -74,7 +93,7 @@ export const portofolio = {
     {
       layout_type: 'desktop',
       type: 'company',
-      assets: [1, 2, 3, 4, 5, 6, 7],
+      assets: 7,
       images: '/portofolio/company/vtr.webp',
       name: 'VTR',
       todo: experiences.company[0].description,
@@ -107,7 +126,7 @@ export const portofolio = {
     {
       layout_type: 'desktop',
       type: 'company',
-      assets: [1, 2, 3, 4, 5, 6, 7, 8],
+      assets: 8,
       images: '/portofolio/company/agree.webp',
       name: 'Agreeculture.id',
       role: 'Frontend Engineer',
@@ -139,7 +158,7 @@ export const portofolio = {
     {
       layout_type: 'desktop',
       type: 'company',
-      assets: [1],
+      assets: 1,
       images: '/portofolio/company/nabati.webp',
       name: 'Dashboard Zeus Hermes',
       todo: experiences.company[2].description,
@@ -171,7 +190,7 @@ export const portofolio = {
       todo: experiences.company[3].description,
       layout_type: 'desktop',
       type: 'company',
-      assets: [1, 2, 3, 4, 5, 6],
+      assets: 6,
       images: '/portofolio/company/dana.webp',
       name: 'Dana Syariah',
       role: 'Frontend Web & Mobile React Native',
@@ -192,7 +211,7 @@ export const portofolio = {
     {
       layout_type: 'desktop',
       type: 'company',
-      assets: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      assets: 9,
       images: '/portofolio/company/mirocks.webp',
       name: 'Mirocks Insurance',
       todo: [
@@ -230,7 +249,7 @@ export const portofolio = {
     {
       layout_type: 'mobile',
       type: 'company',
-      assets: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+      assets: 11,
       images: '/portofolio/company/hobids.webp',
       name: 'Hobids',
       todo: [
@@ -264,7 +283,7 @@ export const portofolio = {
     {
       layout_type: 'desktop',
       type: 'company',
-      assets: [1, 2, 3, 4, 5],
+      assets: 5,
       images: '/portofolio/company/zurich.webp',
       name: 'Dashboard Zurich Insurance',
       todo: [
@@ -294,7 +313,7 @@ export const portofolio = {
     {
       type: 'company',
       layout_type: 'desktop',
-      assets: [1, 2, 3, 4, 5, 6],
+      assets: 6,
       images: '/portofolio/company/qatros.webp',
       name: 'Landing Page Qatros',
       role: 'Junior Frontend Developer',
@@ -317,7 +336,7 @@ export const portofolio = {
     {
       layout_type: 'desktop',
       type: 'company',
-      assets: [1, 2, 3, 4, 5],
+      assets: 5,
       images: '/portofolio/company/liveness.webp',
       name: 'Liveness Detection',
       role: 'Junior Frontend Developer',

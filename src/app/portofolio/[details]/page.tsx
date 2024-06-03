@@ -35,21 +35,21 @@ const PortfolioDetailPage = () => {
       <div
         className={`grid h-full gap-6 mt-6 ${!isDesktop ? 'lg:grid-cols-2 grid-cols-1' : 'grid-cols-1'}`}
       >
-        {_detailPortofolio.assets?.map((item: number) => {
-          const imageSrc = `/portofolio/${_detailPortofolio.type}/${lastPathname}/${item}.webp`
+        {[...Array(_detailPortofolio.assets)].map((_, index) => {
+          const imageSrc = `/portofolio/${_detailPortofolio.type}/${lastPathname}/${index + 1}.webp`
 
           return (
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
-              transition={{ delay: Number(`0.${item}`), times: 0 }}
+              transition={{ delay: Number(`0.${index}`), times: 0 }}
               className={`relative  ${!isDesktop ? 'aspect-mobile' : 'aspect-video'}`}
-              key={item}
+              key={index}
             >
               <Image
                 fill
-                alt={`portofolio-image-${lastPathname}-${item}`}
+                alt={`portofolio-image-${lastPathname}-${index}`}
                 quality={50}
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
