@@ -13,10 +13,12 @@ import { detailPortofolio } from '../(fragments)/Content'
 const PortfolioDetailPage = () => {
   const pathname = usePathname()
   const lastPathname = pathname.split('/').pop() as string
-
   const _detailPortofolio = useAtomValue(detailPortofolio)
-
   const isDesktop = _detailPortofolio.layout_type?.includes('desktop')
+
+  const onViewDetails = (url: string) => {
+    window.open(url, '_blank')
+  }
 
   return (
     <MainLayout className="layout">
@@ -67,13 +69,22 @@ const PortfolioDetailPage = () => {
             __html: _detailPortofolio.about as TrustedHTML,
           }}
         />
-        <Link
-          href={String(_detailPortofolio.link)}
-          target="_blank"
-          className="btn btn-info my-2 btn-sm text-white text-xs"
+        <button
+          onClick={
+            _detailPortofolio.available
+              ? () => onViewDetails(_detailPortofolio.link)
+              : () => ({})
+          }
+          className={`btn btn-ghost mt-4 
+            ${
+              !_detailPortofolio.available
+                ? 'disabled:text-gray-400 disabled:bg-gray-600'
+                : 'bg-cyan-600 text-white'
+            }`}
+          disabled={!_detailPortofolio.available}
         >
           Visit Site
-        </Link>
+        </button>
         <p className="dark:text-cyan-300 lg:text-lg text-sm font-semibold capitalize lg:my-6 my-2">
           some things {`I'm`} working on
         </p>
