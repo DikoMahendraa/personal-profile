@@ -20,7 +20,7 @@ export const portofolio = {
         'Sliced UI using Shadcn/UI and Tailwind CSS.',
         'Implemented linter, pre-commit hooks, clean code, and responsive design',
       ],
-      available: false,
+      available: true,
       role: 'Frontend Developer',
       tech: ['NextJs', 'Typescript', 'Shadcn/UI', 'Zod', 'React Hooks Form'],
       link: 'https://cocome-staycation.vercel.app/',
