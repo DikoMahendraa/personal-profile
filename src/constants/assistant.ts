@@ -220,6 +220,10 @@ export const frontendTools = [
         url: 'https://pixelied.com/convert/png-converter/png-to-webp',
       },
       {
+        name: 'Readme.so Editor',
+        url: 'https://readme.so/editor',
+      },
+      {
         name: 'Icon Duck',
         url: 'https://iconduck.com/icons/',
       },
