@@ -1,6 +1,6 @@
 # Personal Profile
 
-Hi, welcome to personal profile.
+Hi, welcome to my personal profile.
 
 ## Tech
 
@@ -35,13 +35,13 @@ src
 Clone the project
 
 ```bash
-  git clone https://github.com/DikoMahendraa/staycation-landing-page
+  git clone https://github.com/DikoMahendraa/personal-profile
 ```
 
 Go to the project directory
 
 ```bash
-  cd staycation-landing-page
+  cd personal-profile
 ```
 
 Install dependencies
