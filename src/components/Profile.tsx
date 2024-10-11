@@ -58,7 +58,7 @@ const Profile = () => {
       </div>
       <div className="lg:text-base text-sm dark:text-gray-300">
         <p className="lg:max-w-[90%]">
-          I am web developer with ± 3 years of experience using NextJs, React Js
+          I am web developer with ± 4 years of experience using NextJs, React Js
           and also React Native. interested in learning new things, used to
           working under pressure, working well with team, used to working
           remotely and ready to adjust skills according to company needs.

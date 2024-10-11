@@ -2,9 +2,23 @@ export const experiences = {
   title_experience: 'Experiences',
   company: [
     {
+      name: 'PT. Bank Rakyat Indonesia, Tbk.',
+      position: 'Frontend Engineer',
+      time: 'Juny 2024 - presently',
+      country: 'Jakarta, Indonesia',
+      techonology:
+        'Git, NextJS, Typescript, (Jest, RTL, Cypress), i18n, React Query, React Hooks Form, Jotai, Zod, TailwindCSS.',
+      title_tech_used: 'Technology & Tools used:',
+      description: [
+        `WEB KARTU KREDIT - Developed and led the end-to-end integration of a credit card website, incorporating all content (widgets/components) with Drupal. Created a seamless system where users can easily rearrange widget positions through Drupal's content management. Implemented BRI's coding standards and ensured that all components were fully optimized for responsive web design on mobile devices.
+        `,
+        `MAIN WEBSITE BRI - Oversaw the integration and functionality of nearly 99% of the main website content, built entirely through Drupal's content management system, including header, footer, banners, and more. Tasked with ensuring all widgets and components created by the front-end team functioned and adhered to the various style variants defined in Drupal. Ensured code quality by fixing errors in both code and design, resolved issues in production mode, and implemented clean code architecture with a focus on responsive web design.`,
+      ],
+    },
+    {
       name: 'Virtual Spirit Sdn Bhd',
-      position: 'Frontend Developer',
-      time: 'April 2023 - presently',
+      position: 'Frontend Engineer',
+      time: 'April 2023 - September 2024',
       country: 'Slangor - Malaysia',
       techonology:
         'Git, NextJS, Typescript, (Jest, RTL, Cypress), i18n, React Query, React Hooks Form, Jotai, Zod, TailwindCSS.',
@@ -18,6 +32,7 @@ export const experiences = {
         `Developed interactive component stories using Storybook for efficient UI development.`,
         `Collaborated with front-end (FE), back-end (BE), Quality Assurance (QA), and Product Management (PM) teams for seamless project execution.`,
         `Participated in the deployment process, including code promotion, branch registration with AWS Amplify, and environment variable management within AWS.`,
+        `PIC for make E2E testing using cypress and ensure the test works well`,
       ],
     },
     {
