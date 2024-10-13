@@ -29,7 +29,7 @@ const HeaderItem: React.FC<{ pathname: string }> = ({ pathname }) => {
     <div key={item.name} className="py-4 mr-6 lg:block hidden">
       <Link
         href={item.href}
-        className={`relative dark:text-gray-400 ${pathname === item.href && 'dark:!text-cyan-300 font-semibold'}`}
+        className={`relative dark:text-gray-400 dark:hover:text-cyan-600/80 ${pathname === item.href && 'dark:!text-cyan-300 font-semibold'}`}
       >
         {item.name}
 
@@ -83,7 +83,7 @@ const Header = () => {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className={`relative flex items-center text-base dark:text-gray-400 ${pathname === item.href && 'dark:!text-cyan-300 font-semibold'}`}
+                    className={`relative flex items-center text-base hover:text-red-500 dark:text-gray-400 ${pathname === item.href && 'dark:!text-cyan-300 font-semibold'}`}
                   >
                     {item.name}
 

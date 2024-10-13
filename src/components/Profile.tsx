@@ -9,14 +9,15 @@ const Profile = () => {
   return (
     <div className="w-full flex-col items-center mt-10">
       <div className="flex gap-4 items-center mb-6">
-        <div className="relative lg:block w-[15rem] h-[15rem] hidden overflow-hidden border-4 border-gray-700">
+        <div className="relative lg:block w-[15rem] h-[15rem] hidden overflow-hidden border-4 border-cyan-500/30 rounded-xl">
           <Image
             alt="image-profile"
-            src="/me.webp"
+            src="/me.jpg"
             fill
             priority
+            className="object-cover"
             sizes="(max-width: 768px) 7.5rem, 15rem"
-            quality={25}
+            quality={100}
           />
         </div>
         <div>

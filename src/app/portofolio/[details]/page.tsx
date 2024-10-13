@@ -44,15 +44,14 @@ const PortfolioDetailPage = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
               transition={{ delay: Number(`0.${index}`), times: 0 }}
-              className={`relative  ${!isDesktop ? 'aspect-mobile' : 'aspect-video'}`}
+              className={`relative rounded-lg ${!isDesktop ? 'aspect-mobile' : 'w-full min-h-[25rem] h-full'}`}
               key={index}
             >
               <Image
                 fill
                 alt={`portofolio-image-${lastPathname}-${index}`}
-                quality={50}
                 priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-contain"
                 src={imageSrc}
               />
             </motion.div>
