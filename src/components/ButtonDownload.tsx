@@ -2,13 +2,9 @@
 
 import React, { memo, useCallback } from 'react'
 import { FileDown } from 'lucide-react'
-import { sendGAEvent } from '@next/third-parties/google'
 
 const ButtonDownload = ({ text }: Readonly<{ text: string }>) => {
   const handleDownload = useCallback(() => {
-    sendGAEvent('event', 'button-download', {
-      value: 'button donwload diklik',
-    })
     const link = document.createElement('a')
     link.href = '/docs/diko-en.pdf'
     link.download = 'resume.pdf'

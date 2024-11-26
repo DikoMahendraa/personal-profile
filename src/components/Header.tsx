@@ -7,8 +7,6 @@ import { usePathname } from 'next/navigation'
 import { memo, useCallback, useMemo } from 'react'
 import Link from 'next/link'
 
-import { sendGAEvent } from '@next/third-parties/google'
-
 import { motion } from 'framer-motion'
 
 const navbar = [
@@ -55,9 +53,6 @@ const Header = () => {
   const { theme, setTheme } = useTheme()
 
   const switchDarkMode = useCallback(() => {
-    sendGAEvent('event', 'dark-mode', {
-      value: 'switch button dark-mode clicked',
-    })
     theme === 'light' ? setTheme('dark') : setTheme('light')
   }, [setTheme, theme])
 
