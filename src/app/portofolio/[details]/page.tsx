@@ -36,7 +36,7 @@ const PortfolioDetailPage = () => {
         className={`grid h-full gap-6 mt-6 ${!isDesktop ? 'lg:grid-cols-2 grid-cols-1' : 'grid-cols-1'}`}
       >
         {[...Array(_detailPortofolio.assets)].map((_, index) => {
-          const imageSrc = `/portofolio/${_detailPortofolio.type}/${lastPathname}/${index + 1}.webp`
+          const imageSrc = `/portofolio/${_detailPortofolio.type}/${lastPathname}/${index + 1}.png`
 
           return (
             <motion.div
@@ -44,15 +44,17 @@ const PortfolioDetailPage = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
               transition={{ delay: Number(`0.${index}`), times: 0 }}
-              className={`relative rounded-lg ${!isDesktop ? 'aspect-mobile' : 'w-full min-h-[25rem] h-full'}`}
               key={index}
+              className="relative w-full rounded-lg overflow-hidden"
             >
               <Image
-                fill
-                alt={`portofolio-image-${lastPathname}-${index}`}
-                priority
-                className="object-contain"
                 src={imageSrc}
+                alt={`portfolio-image-${lastPathname}-${index}`}
+                priority
+                layout="responsive" // Ensures full-width with height auto-adjusted based on aspect ratio
+                width={1920} // Example width; adjust based on your design
+                height={1080} // Example height; aspect ratio will be maintained
+                className="rounded-lg bg-white"
               />
             </motion.div>
           )

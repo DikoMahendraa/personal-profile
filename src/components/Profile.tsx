@@ -24,22 +24,22 @@ const Profile = () => {
           <p className="dark:text-white mb-6 text-gray-700 lg:text-5xl text-4xl font-bold">
             Hi, {`I'm`} <br /> <span className="capitalize">Diko Mahendra</span>
           </p>
-          <p className="flex items-center lg:text-base text-sm gap-2">
-            <Phone size={18} className="dark:text-white text-gray-700" />
+          <p className="flex items-center w-min lg:text-base text-gray-700 dark:text-white hover:!text-cyan-500 text-sm gap-2">
+            <Phone size={18} />
             <a
               target="_blank"
               href="https://wa.me/082384898030"
-              className="dark:text-white text-gray-700"
+              className="dark:text-white text-gray-700 hover:!text-cyan-500"
             >
               082384898030
             </a>
           </p>
-          <p className="flex items-center lg:text-base text-sm gap-2 mt-2 mb-4">
-            <AtSign size={18} className="text-white" />
+          <p className="flex w-min items-center hover:!text-cyan-500 dark:text-white lg:text-base text-sm gap-2 mt-2 mb-4">
+            <AtSign size={18} />
             <a
               target="_blank"
-              href="https://wa.me/082384898030"
-              className="dark:text-white text-gray-700"
+              href="mailto:diko.dev99@gmail.com"
+              className="dark:text-white text-gray-700 hover:!text-cyan-500 "
             >
               diko.dev99@gmail.com
             </a>

@@ -10,13 +10,24 @@ const skills = {
   programming: ['Javascript', 'Typescript'],
   library: [
     'React Js',
+    'Git',
+    'React Native',
+    'Dart/Flutter',
     'Next Js',
     'Firebase',
     'Git',
     'TailwindCSS',
     'REST API',
+    'Docker',
+    'Google Cloud Platform (GCP)',
+    'Zod/Yup',
+    'GraphQL',
+    'React Hooks Form',
+    'Tanstack Query',
+    'E2E Automation (Cypress)',
+    'Unit Test (RTL, Jest)',
   ],
-  tools: ['Postman', 'Figma', 'Jira'],
+  tools: ['Postman', 'Figma', 'Jira', 'Trello', 'Insomnia', 'Swagger'],
 }
 
 const SectionDescription = ({

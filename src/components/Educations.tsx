@@ -14,7 +14,7 @@ const educations = {
       name: 'Pondok IT QODR',
       major: 'Frontend Developer',
       since: 'Jul 2019 - Jan 2022',
-      place: 'Bantul Dligno, Yogyakarta - Indonesia',
+      place: 'Bantul Dlingo, Yogyakarta - Indonesia',
     },
   ],
 }

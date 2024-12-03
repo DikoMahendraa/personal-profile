@@ -9,7 +9,7 @@ const baseMetadata = {
     siteName: 'My Profile',
     images: [
       {
-        url: '/me.webp',
+        url: '/me.jpg',
         width: 400,
         height: 100,
         alt: 'coco-profile-mobile',

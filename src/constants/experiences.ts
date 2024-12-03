@@ -4,7 +4,7 @@ export const experiences = {
     {
       name: 'PT. Bank Rakyat Indonesia, Tbk.',
       position: 'Frontend Engineer',
-      time: 'Juny 2024 - presently',
+      time: 'Juny 2024 - December 2024',
       country: 'Jakarta, Indonesia',
       techonology:
         'Git, NextJS, Typescript, i18n, TailwindCSS, Dynamic Widget.',

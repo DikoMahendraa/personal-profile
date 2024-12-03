@@ -39,8 +39,8 @@ export const portofolio = {
     {
       layout_type: 'desktop',
       type: 'personal',
-      assets: 6,
-      images: '/portofolio/personal/staycations.webp',
+      assets: 3,
+      images: '/portofolio/personal/staycations.png',
       name: 'Staycations',
       todo: [
         'Implemented Zod and React Hooks Form.',
@@ -56,9 +56,9 @@ export const portofolio = {
         '<p>This is a practice application that I use to hone my CSS and JavaScript skills, utilizing NextJS and integrating React Hook Form for input form validation in hotel bookings. I focused on implementing clean code and reusable components, using NextJS to create responsive displays for both web and desktop.</p>',
     },
     {
-      layout_type: 'mobile',
+      layout_type: 'desktop',
       type: 'personal',
-      assets: 9,
+      assets: 5,
       images: '/portofolio/personal/burgerapp.png',
       name: 'Burger City',
       todo: [
@@ -75,9 +75,9 @@ export const portofolio = {
       about: `<p>is an application developed for learning and practicing React Native mobile app development. <br /> The goal of this application is to allow users to order food online without having to visit the restaurant. It features various functionalities such as a food menu, saving favorite items, and the checkout process. This application solely focuses on the UI and does not include integration.</p>`,
     },
     {
-      layout_type: 'mobile',
+      layout_type: 'desktop',
       type: 'personal',
-      assets: 9,
+      assets: 3,
       images: '/portofolio/personal/doctor.png',
       name: 'My Doctor',
       todo: [
@@ -98,10 +98,10 @@ export const portofolio = {
       </p>`,
     },
     {
-      layout_type: 'mobile',
+      layout_type: 'desktop',
       type: 'personal',
-      assets: 8,
-      images: '/portofolio/personal/financial.webp',
+      assets: 5,
+      images: '/portofolio/personal/financial.png',
       name: 'Financial Planner',
       todo: [
         'Initialized project using Next.js.',
@@ -121,8 +121,8 @@ export const portofolio = {
     {
       layout_type: 'desktop',
       type: 'company',
-      assets: 7,
-      images: '/portofolio/company/vtr.webp',
+      assets: 5,
+      images: '/portofolio/company/vtr.png',
       name: 'VTR',
       todo: experiences.company[0].description,
       role: 'Frontend Engineer',
@@ -154,8 +154,8 @@ export const portofolio = {
     {
       layout_type: 'desktop',
       type: 'company',
-      assets: 8,
-      images: '/portofolio/company/agree.webp',
+      assets: 2,
+      images: '/portofolio/company/agree.png',
       name: 'Agreeculture.id',
       role: 'Frontend Engineer',
       todo: experiences.company[1].description,
@@ -186,13 +186,14 @@ export const portofolio = {
     {
       layout_type: 'desktop',
       type: 'company',
-      assets: 1,
-      images: '/portofolio/company/nabati.webp',
-      name: 'Dashboard Zeus Hermes',
+      assets: 5,
+      images: '/portofolio/company/nabati.png',
+      name: 'PT Kaldu Sari Nabati Indonesia',
       todo: experiences.company[2].description,
       role: 'Frontend Developer',
       tech: [
         'NextJs',
+        'React Native',
         'Typescript',
         'i18n',
         'Micro Frontend',
@@ -218,8 +219,8 @@ export const portofolio = {
       todo: experiences.company[3].description,
       layout_type: 'desktop',
       type: 'company',
-      assets: 6,
-      images: '/portofolio/company/dana.webp',
+      assets: 3,
+      images: '/portofolio/company/dana.png',
       name: 'Dana Syariah',
       role: 'Frontend Web & Mobile React Native',
       tech: [
@@ -240,7 +241,7 @@ export const portofolio = {
       layout_type: 'desktop',
       type: 'company',
       assets: 9,
-      images: '/portofolio/company/mirocks.webp',
+      images: '/portofolio/company/mirocks.png',
       name: 'Mirocks Insurance',
       todo: [
         'Learning GraphQL: Implemented responsive design using Tailwind CSS, ensuring optimal viewing across desktop, tablet, and mobile devices.',
@@ -275,10 +276,10 @@ export const portofolio = {
       <p>InsVault Insurance provides ease and convenience in managing your insurance, ensuring you get optimal protection without the hassle.</p>`,
     },
     {
-      layout_type: 'mobile',
+      layout_type: 'desktop',
       type: 'company',
-      assets: 11,
-      images: '/portofolio/company/hobids.webp',
+      assets: 6,
+      images: '/portofolio/company/hobids.png',
       name: 'Hobids',
       todo: [
         'Discussing with the client to determine the product/application flow to be developed.',
@@ -312,7 +313,7 @@ export const portofolio = {
       layout_type: 'desktop',
       type: 'company',
       assets: 5,
-      images: '/portofolio/company/zurich.webp',
+      images: '/portofolio/company/zurich.png',
       name: 'Dashboard Zurich Insurance',
       todo: [
         'Studied Vue.js and Nuxt.js frameworks intensively for 7 days before starting development.',
@@ -342,7 +343,7 @@ export const portofolio = {
       type: 'company',
       layout_type: 'desktop',
       assets: 6,
-      images: '/portofolio/company/qatros.webp',
+      images: '/portofolio/company/qatros.png',
       name: 'Landing Page Qatros',
       role: 'Junior Frontend Developer',
       todo: [
@@ -364,8 +365,8 @@ export const portofolio = {
     {
       layout_type: 'desktop',
       type: 'company',
-      assets: 5,
-      images: '/portofolio/company/liveness.webp',
+      assets: 3,
+      images: '/portofolio/company/liveness.png',
       name: 'Liveness Detection',
       role: 'Junior Frontend Developer',
       todo: [
