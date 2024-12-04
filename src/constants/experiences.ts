@@ -7,7 +7,7 @@ export const experiences = {
       time: 'Juny 2024 - December 2024',
       country: 'Jakarta, Indonesia',
       techonology:
-        'Git, NextJS, Typescript, i18n, TailwindCSS, Dynamic Widget.',
+        'Git, NextJS, Typescript, i18n, TailwindCSS, Drupal, Docker, Jenkins, Linter, Husky',
       title_tech_used: 'Technology & Tools used:',
       description: [
         `WEB KARTU KREDIT - Developed and led the end-to-end integration of a credit card website, incorporating all content (widgets/components) with Drupal. Created a seamless system where users can easily rearrange widget positions through Drupal's content management. Implemented BRI's coding standards and ensured that all components were fully optimized for responsive web design on mobile devices.

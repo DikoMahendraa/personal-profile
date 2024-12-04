@@ -26,6 +26,7 @@ const skills = {
     'Tanstack Query',
     'E2E Automation (Cypress)',
     'Unit Test (RTL, Jest)',
+    'Framer Motion',
   ],
   tools: ['Postman', 'Figma', 'Jira', 'Trello', 'Insomnia', 'Swagger'],
 }

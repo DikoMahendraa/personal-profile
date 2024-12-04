@@ -121,10 +121,66 @@ export const portofolio = {
     {
       layout_type: 'desktop',
       type: 'company',
+      assets: 3,
+      images: '/portofolio/company/main-website.png',
+      name: 'BRI Main Website',
+      todo: [
+        'Ensured page performance through code optimization',
+        'Implemented clean and maintainable code practices',
+        'Focused on creating reusable and type-safe components',
+        'Leveraged the powerful features of Next.js, including server and client components, to enhance functionality and scalability',
+        'Performed deployment using Jenkins, Kubernets',
+      ],
+      role: 'Frontend Engineer',
+      tech: [
+        'NextJs',
+        'Typescript',
+        'TailwindCSS',
+        'Framer motion',
+        'i18n',
+        'Jenkins',
+        'Kubernetes',
+        'Docker',
+      ],
+      link: 'https://bri-corpsite.dev-kjt.id/web/kartukredit',
+      available: true,
+      about: `This landing page is designed to be highly dynamic, with all its content managed within Drupal, a content management system. This setup allows the owner to easily customize the layout, text, and images on the landing page as desired, without needing to rewrite any code each time they want to update the content. This is an incredibly innovative concept as it enables companies to save costs by simplifying content management. My role was to ensure the page's performance by optimizing clean, reusable, and type-safe code. Additionally, I leveraged the powerful features of Next.js, including server and client components, to maximize efficiency and scalability.`,
+    },
+    {
+      layout_type: 'desktop',
+      type: 'company',
+      assets: 4,
+      images: '/portofolio/company/kartu-kredit.png',
+      name: 'BRI Kartu Kredit',
+      todo: [
+        'Ensured page performance through code optimization',
+        'Implemented clean and maintainable code practices',
+        'Focused on creating reusable and type-safe components',
+        'Leveraged the powerful features of Next.js, including server and client components, to enhance functionality and scalability',
+        'Performed deployment using Jenkins, Kubernets',
+      ],
+      role: 'Frontend Engineer',
+      tech: [
+        'NextJs',
+        'Typescript',
+        'TailwindCSS',
+        'Framer motion',
+        'i18n',
+        'Jenkins',
+        'Kubernetes',
+        'Docker',
+      ],
+      link: 'https://bri-corpsite.dev-kjt.id/web/kartukredit',
+      available: true,
+      about: `This landing page is designed to be highly dynamic, with all its content managed within Drupal, a content management system. This setup allows the owner to easily customize the layout, text, and images on the landing page as desired, without needing to rewrite any code each time they want to update the content. This is an incredibly innovative concept as it enables companies to save costs by simplifying content management. My role was to ensure the page's performance by optimizing clean, reusable, and type-safe code. Additionally, I leveraged the powerful features of Next.js, including server and client components, to maximize efficiency and scalability.`,
+    },
+    {
+      layout_type: 'desktop',
+      type: 'company',
       assets: 5,
       images: '/portofolio/company/vtr.png',
       name: 'VTR',
-      todo: experiences.company[0].description,
+      todo: experiences.company[1].description,
       role: 'Frontend Engineer',
       tech: [
         'NextJs',
@@ -143,9 +199,9 @@ export const portofolio = {
       about: `<div>
       <p>The application connects tenants, landlords, and professionals in the property rental process. It features several main functions:</p>
       <ul><br />
-          <li><strong>Recons:</strong> This likely refers to a function related to "reconciliation" or organizing financial or transactional information for the parties involved.</li> <br />
-          <li><strong>Connect:</strong> This function facilitates the connection and interaction between tenants, landlords, and professionals involved in property rental.</li><br />
-          <li><strong>Manager (Landlord, Tenant, Professional):</strong> This feature serves as a management tool, enabling landlords, tenants, and professionals to oversee various aspects of the rental process.</li><br />
+          <strong>Recons:</strong> This likely refers to a function related to "reconciliation" or organizing financial or transactional information for the parties involved.< <br />
+          <strong>Connect:</strong> This function facilitates the connection and interaction between tenants, landlords, and professionals involved in property rental.<<br />
+          <strong>Manager (Landlord, Tenant, Professional):</strong> This feature serves as a management tool, enabling landlords, tenants, and professionals to oversee various aspects of the rental process.</li><br />
           <li><strong>Profile:</strong> This section allows users to create and manage their personal profiles within the application.</li><br />
       </ul>
       <p>Each of these functions plays a crucial role in streamlining and enhancing the property rental experience by fostering communication, organization, and efficient management.</p>

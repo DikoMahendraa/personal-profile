@@ -87,7 +87,7 @@ const PortfolioDetailPage = () => {
           Visit Site
         </button>
         <p className="dark:text-cyan-300 lg:text-lg text-sm font-semibold capitalize lg:my-6 my-2">
-          some things {`I'm`} working on
+          What I worked on
         </p>
         <ul className="list-disc lg:text-base text-xs dark:text-gray-400">
           {_detailPortofolio?.todo?.map((item) => (
